@@ -533,5 +533,8 @@ bd2017_79$conf_mmc[bd2017_79$conf_tele == 'Baja o nula confianza' & bd2017_79$co
 frq(bd2017_79$conf_mmc)
 
 # Eliminar variables
-bd2017_79 <- select(bd2017_79, -conf_iglesiaev, -conf_iglesiacat, -conf_movestudiantil, -conf_fiscales, -conf_muni, -conf_sindicatos, -conf_radios, -conf_tele, -conf_diarios, -conf_pdi, -conf_carabineros, -conf_emppub)
+bd2015_74 <- select (bd2015_74, -conf_gobierno)
+bd2016_76 <- select (bd2016_76, -conf_gobierno, -conf_carabineros, -conf_gobierno, -conf_muni, conf_pdi, -conf_fiscales, -conf_pdi)
+bd2016_78 <- select (bd2016_78, -conf_gobierno)
+bd2017_79 <- select (bd2017_79, -conf_gobierno, -conf_iglesiaev, -conf_iglesiacat, -conf_movestudiantil, -conf_fiscales, -conf_muni, -conf_sindicatos, -conf_radios, -conf_tele, -conf_diarios, -conf_pdi, -conf_carabineros, -conf_emppub)
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
