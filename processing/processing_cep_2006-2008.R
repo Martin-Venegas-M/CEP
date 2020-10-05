@@ -301,6 +301,9 @@ bd2008_58$conf_mmc[bd2008_58$conf_tele == 'Baja o nula confianza' & bd2008_58$co
 frq(bd2008_58$conf_mmc)
 
 ### Sacar variables de confianza que no usaremos.
-### 2000-2002: CEP 44
+### 2006-2008: CEP 54
+bd2006_54 <- select(bd2006_54, -TE_2P4c, -TE_2P4e, -TE_2P4f, -TE_2P4g, -TE_2P4h)
+
+### 2006-2008: CEP 58
 bd2008_58 <- select(bd2008_58,-conf_iglesiacat, -conf_iglesiaev ,-conf_gobierno, -conf_radios, -conf_tele, -conf_tele, -conf_sindicatos, -conf_carabineros, -conf_diarios) 
 
