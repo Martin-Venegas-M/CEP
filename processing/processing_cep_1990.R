@@ -116,13 +116,13 @@ bd1990_14$edad <- car::recode(bd1990_14$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) 
 bd1990_14$sexo <- car::recode(bd1990_14$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1990: CEP 15
-bd1990_15$nse  <- car::recode(bd1990_15$nse, "1 = 'ABC1'; 2 = 'C3'; 3 = 'C2'; 4 = 'D'; 5 = 'E'", as.factor = T)
+bd1990_15$nse  <- car::recode(bd1990_15$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
 bd1990_15$esc <- car::recode(bd1990_15$esc, "c(1,2) = '0-3'; c(3,4) = '3-4'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
 bd1990_15$edad <- car::recode(bd1990_15$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
 bd1990_15$sexo <- car::recode(bd1990_15$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1990: CEP 16
-bd1990_16$nse  <- car::recode(bd1990_16$nse, "1 = 'ABC1'; 2 = 'C3'; 3 = 'C2'; 4 = 'D'; 5 = 'E'", as.factor = T)
+bd1990_16$nse  <- car::recode(bd1990_16$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
 bd1990_16$esc <- car::recode(bd1990_16$esc, "c(1,2) = '0-3'; c(3,4) = '3-4'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
 bd1990_16$edad <- car::recode(bd1990_16$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
 bd1990_16$sexo <- car::recode(bd1990_16$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
@@ -160,20 +160,20 @@ bd1990_16$conf_altosffaa <- car::recode(bd1990_16$conf_altosffaa, "1 = 'Poca con
 bd1990_16$conf_diremp <- car::recode(bd1990_16$conf_diremp, "1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
 bd1990_16$conf_dircortesup <- car::recode(bd1990_16$conf_dircortesup, "1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
 
-#---- 3.2.3 Otros ajustes ----
+#---- 3.2.3 Otros  ajustes ----
 ## 1990: CEP 16
 ### Construccion variable iglesia en calidad de institucion
-
 # Se guarda este bloque de codigos bajo la misma razon que arriba.
 #bd1990_16$iglesia[bd1990_16$conf_iglesiacat == 'Mucha confianza' | bd1990_16$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 #bd1990_16$iglesia[bd1990_16$conf_iglesiacat == 'Algo confianza' | bd1990_16$conf_iglesiaev == 'Algo confianza'] <- 'Algo confianza'
 #bd1990_16$iglesia[bd1990_16$conf_iglesiacat == 'Poca confianza' | bd1990_16$conf_iglesiaev == 'Poca confianza'] <- 'Poca confianza'
 
-
 bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Mucha o algo confianza' | bd1990_16$conf_iglesiaev == 'Mucha o algo confianza'] <- 'Mucha o algo confianza'
 bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Poca confianza' | bd1990_16$conf_iglesiaev == 'Poca confianza'] <- 'Poca confianza'
 
+### Eliminación de variables no utilzadas
 bd1990_16 <- select(bd1990_16, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete) # Sacar variables de confianza que no usaremos.
+
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
 
 

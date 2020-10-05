@@ -156,7 +156,6 @@ frq(bd2008_58$edad) # Edad
 frq(bd2008_58$sexo) # Sexo
 
 
-
 #---- 3.1.2 Recodificación ----
 # Remover etiquetas
 bd2006_52 <- sjlabelled::remove_all_labels(bd2006_52)
@@ -300,4 +299,8 @@ bd2008_58$conf_mmc[bd2008_58$conf_tele == 'Baja o nula confianza' & bd2008_58$co
 
 # Ver frecuencia variable nueva
 frq(bd2008_58$conf_mmc)
+
+### Sacar variables de confianza que no usaremos.
+### 2000-2002: CEP 44
+bd2008_58 <- select(bd2008_58,-conf_iglesiacat, -conf_iglesiaev ,-conf_gobierno, -conf_radios, -conf_tele, -conf_tele, -conf_sindicatos, -conf_carabineros, -conf_diarios) 
 
