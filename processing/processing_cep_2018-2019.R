@@ -141,7 +141,7 @@ frq(bd2018_2019_84$conf_emppriv)
 bd2018_2019_82$conf_congreso <- car::recode(bd2018_2019_82$conf_congreso, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_82$conf_comercio <- car::recode(bd2018_2019_82$conf_comercio, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_82$conf_iglesias <- car::recode(bd2018_2019_82$conf_iglesias, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2018_2019_82$conf_sistjust <- car::recode(bd2018_2019_82$conf_sistjud, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_82$conf_sistjust <- car::recode(bd2018_2019_82$conf_sistjust, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_82$conf_sistedu <- car::recode(bd2018_2019_82$conf_sistedu, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 ## 2018-2019: CEP 84
@@ -153,6 +153,8 @@ bd2018_2019_84$conf_tribunalesjust <- car::recode(bd2018_2019_84$conf_tribunales
 bd2018_2019_84$conf_diarios <- car::recode(bd2018_2019_84$conf_diarios, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_84$conf_tele <- car::recode(bd2018_2019_84$conf_tele, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_84$conf_radios <- car::recode(bd2018_2019_84$conf_radios, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_84$conf_congreso <- car::recode(bd2018_2019_84$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_84$conf_emppriv<- car::recode(bd2018_2019_84$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 #---- 3.2.3 Otros ajustes ----
 ## 2018-2019: CEP 84
@@ -181,3 +183,7 @@ bd2018_2019_84$conf_rrss <- car::recode(bd2018_2019_84$conf_rrss, "c(1,2) = 'Alt
 bd2018_2019_84$conf_sindicatos <- car::recode(bd2018_2019_84$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_84$conf_carabineros <- car::recode(bd2018_2019_84$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_84$conf_gobierno <- car::recode(bd2018_2019_84$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+
+# Eliminar variables
+bd2018_2019_82 <- select (bd2018_2019_82, -conf_comercio, -conf_sistedu)
+bd2018_2019_84 <- select (bd2018_2019_84, -conf_iglesiacat, -conf_iglesiaev, -conf_diarios, -conf_radios, -conf_tele, -conf_rrss, -conf_sindicatos, -conf_carabineros, -conf_gobierno, -MB_P11_15, -MB_P11_16, -MB_P11_17)
