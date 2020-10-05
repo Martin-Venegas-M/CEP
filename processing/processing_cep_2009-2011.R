@@ -236,3 +236,7 @@ bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Baja o nula confianza' & bd
 
 # Ver frecuencia variable nueva
 frq(bd2009_2011_61$conf_mmc)
+
+### Sacar variables de confianza que no usaremos.
+### 2009-2011: CEP 61
+bd2009_2011_61 <- select (bd2009_2011_61, -conf_iglesiacat, -conf_iglesiaev, -conf_diarios, -conf_tele, -conf_radios)
