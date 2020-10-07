@@ -132,7 +132,6 @@ bd2000_2002_39$nse  <- car::recode(bd2000_2002_39$nse,  "1 = 'ABC1'; 2 = 'C2'; 3
 bd2000_2002_39$esc <- car::recode(bd2000_2002_39$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
 bd2000_2002_39$edad <- car::recode(bd2000_2002_39$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2000_2002_39$sexo <- car::recode(bd2000_2002_39$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
-bd2003_2005_51$edad <- car::recode(bd2003_2005_51$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 
 ### 2000-2002: CEP 40
 bd2000_2002_40$nse  <- car::recode(bd2000_2002_40$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
@@ -174,7 +173,7 @@ bd2000_2002_44$sexo <- car::recode(bd2000_2002_44$sexo, "1 = 'Hombre'; 2 = 'Muje
 ### 2000-2002: CEP 44
 frq(bd2000_2002_44$conf_iglesia)
 frq(bd2000_2002_44$conf_partidos)
-frq(bd2000_2002_44$conf_iglesiaev)
+frq(bd2000_2002_44$conf_iglesia)
 frq(bd2000_2002_44$conf_congreso)
 frq(bd2000_2002_44$conf_ffaa)
 frq(bd2000_2002_44$conf_carab)
@@ -199,11 +198,14 @@ bd2000_2002_44$conf_tribun <- car::recode(bd2000_2002_44$conf_tribun, "c(3, 4) =
 ### Construccion variable mmc
 ### 2000-2002: CEP 44
 bd2000_2002_44$conf_mmc[bd2000_2002_44$conf_tele == 'Alta o media confianza' | bd2000_2002_44$conf_prensa == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2000_2002_44$conf_mmc[bd2000_2002_44$conf_tele == 'Baja o nula confianza' | bd2000_2002_44$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2000_2002_44$conf_mmc[bd2000_2002_44$conf_tele == 'Baja o nula confianza' & bd2000_2002_44$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Sacar variables de confianza que no usaremos.
 ### 2000-2002: CEP 44
 bd2000_2002_44 <- select(bd2000_2002_44, -conf_carab, -conf_tele, -conf_prensa ) 
+
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd2000_2002_44, file = "input/data/bd2000_2002_44.RData")
 
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
 

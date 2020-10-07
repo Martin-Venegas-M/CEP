@@ -283,7 +283,7 @@ bd2008_58$conf_emppriv <- car::recode(bd2008_58$conf_emppriv, "c(1,2) = 'Alta o 
 ### Construccion variable iglesia en calidad de institucion
 
 bd2008_58$conf_iglesia[bd2008_58$conf_iglesiacat == 'Alta o media confianza' | bd2008_58$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2008_58$conf_iglesia[bd2008_58$conf_iglesiacat == 'Baja o nula confianza' | bd2008_58$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2008_58$conf_iglesia[bd2008_58$conf_iglesiacat == 'Baja o nula confianza' & bd2008_58$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Construccion variable MMC
 bd2008_58$conf_mmc[bd2008_58$conf_diarios == 'Alta o media confianza' & bd2008_58$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
@@ -301,6 +301,8 @@ bd2008_58$conf_mmc[bd2008_58$conf_tele == 'Baja o nula confianza' & bd2008_58$co
 frq(bd2008_58$conf_mmc)
 
 ### Sacar variables de confianza que no usaremos.
-### 2000-2002: CEP 44
-bd2008_58 <- select(bd2008_58,-conf_iglesiacat, -conf_iglesiaev ,-conf_gobierno, -conf_radios, -conf_tele, -conf_tele, -conf_sindicatos, -conf_carabineros, -conf_diarios) 
+### 2006-2008: CEP 58
+bd2008_58 <- select(bd2008_58,-conf_iglesiacat, -conf_iglesiaev ,-conf_gobierno, -conf_radios, -conf_tele, -conf_sindicatos, -conf_carabineros, -conf_diarios) 
 
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd2008_58, file = "input/data/bd2006_2008_58.RData")

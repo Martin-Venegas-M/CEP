@@ -36,8 +36,8 @@ bd2003_2005_45 <- rename(bd2003_2005_45,
                          sexo = DE1,   
                          id_part = P7,
                          pos_pol =  P9,
-                         conf_iglecat = P17_A,
-                         conf_igleeva = P17_B,
+                         conf_iglesiacat = P17_A,
+                         conf_iglesiaev = P17_B,
                          conf_partidos = P17_J,
                          conf_congreso = P17_K,
                          conf_ffaa = P17_C,
@@ -189,8 +189,8 @@ bd2003_2005_51$sexo <- car::recode(bd2003_2005_51$sexo, "1 = 'Hombre'; 2 = 'Muje
 #---- 3.2 Tratamiento de variables de confianza ----
 #---- 3.2.1 Frecuencias ----
 ### 2003-2005: CEP 45 
-frq(bd2003_2005_45$conf_iglecat)
-frq(bd2003_2005_45$conf_igleeva)
+frq(bd2003_2005_45$conf_iglesiacat)
+frq(bd2003_2005_45$conf_iglesiaev)
 frq(bd2003_2005_45$conf_partidos)
 frq(bd2003_2005_45$conf_congreso)
 frq(bd2003_2005_45$conf_conf_ffaa)
@@ -208,8 +208,8 @@ frq(bd2003_2005_45$conf_tribun)
 
 #---- 3.2.2 Recodificacion ----
 ### 2000-2002: CEP 44
-bd2003_2005_45$conf_iglecat <- car::recode(bd2003_2005_45$conf_iglecat,"c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_igleeva  <- car::recode(bd2003_2005_45$conf_igleeva,"c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_iglesiacat <- car::recode(bd2003_2005_45$conf_iglesiacat,"c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_iglesiaev  <- car::recode(bd2003_2005_45$conf_iglesiaev,"c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
 bd2003_2005_45$conf_partidos<- car::recode(bd2003_2005_45$conf_partidos, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
 bd2003_2005_45$conf_tele <- car::recode(bd2003_2005_45$conf_tele, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
 bd2003_2005_45$conf_congreso <- car::recode(bd2003_2005_45$conf_congreso, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
@@ -222,15 +222,18 @@ bd2003_2005_45$conf_tribun <- car::recode(bd2003_2005_45$conf_tribun, "c(3, 4) =
 ### Construccion variable mmc
 ### 2000-2002: CEP 44
 bd2003_2005_45$conf_mmc[bd2003_2005_45$conf_tele == 'Alta o media confianza' | bd2003_2005_45$conf_prensa == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2003_2005_45$conf_mmc[bd2003_2005_45$conf_tele == 'Baja o nula confianza' | bd2003_2005_45$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2003_2005_45$conf_mmc[bd2003_2005_45$conf_tele == 'Baja o nula confianza' & bd2003_2005_45$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Construccion variable iglesia
-bd2003_2005_45$conf_igle[bd2003_2005_45$conf_tele == 'Alta o media confianza' | bd2003_2005_45$conf_prensa == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2003_2005_45$conf_igle[bd2003_2005_45$conf_tele == 'Baja o nula confianza' | bd2003_2005_45$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2003_2005_45$conf_iglesia[bd2003_2005_45$conf_tele == 'Alta o media confianza' | bd2003_2005_45$conf_prensa == 'Alta o media confianza'] <- 'Alta o media confianza'
+bd2003_2005_45$conf_iglesia[bd2003_2005_45$conf_tele == 'Baja o nula confianza' & bd2003_2005_45$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Sacar variables de confianza que no usaremos.
 ### 2000-2002: CEP 44
-bd2003_2005_45 <- select(bd2003_2005_45, -conf_iglecat, -conf_igleeva ,-conf_tele, -conf_prensa ) 
+bd2003_2005_45 <- select(bd2003_2005_45, -conf_iglesiacat, -conf_iglesiaev ,-conf_tele, -conf_prensa ) 
+
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd2003_2005_45, file = "input/data/bd2003_2005_45.RData")
 
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
 

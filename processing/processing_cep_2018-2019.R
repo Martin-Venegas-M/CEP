@@ -8,7 +8,7 @@ library(pacman)
 
 pacman::p_load(tidyverse, summarytools, ggplot2, sjmisc, stargazer, openxlsx, readxl, sjlabelled, car, haven)
 # ---- Etapa 2: Cargar bases de datos ---
-bd2018_2019_82 <- read_sav("input/data/2018-2019/cep82octnov2018.sav")
+bd2018_2019_82 <- read_excel("input/data/2018-2019/cep82octnov2018.xlsx")
 bd2018_2019_83 <- read_sav("input/data/2018-2019/cep83may2019.sav")
 bd2018_2019_84 <- read_sav("input/data/2018-2019/cep84dic2019.sav")
 
@@ -18,7 +18,7 @@ bd2018_2019_84 <- read_sav("input/data/2018-2019/cep84dic2019.sav")
 
 bd2018_2019_82<- select(bd2018_2019_82, DS_P38, DS_P3, DS_P2_EXACTA, DS_P1, REL_7_A:REL_7_E, MB_P12, MB_P13)
 bd2018_2019_83<- select(bd2018_2019_83, DS_P44, DS_P3, DS_P2_EXACTA, DS_P1, MB_P13, MB_P14)
-bd2018_2019_84<- select(bd2018_2019_84, DS_P35, DS_P3, DS_P2_EXACTA, DS_P1, MB_P11_1:MB_P11_17, MB_P8, MB_P9)
+bd2018_2019_84<- select(bd2018_2019_84, DS_P35, DS_P3, DS_P2_EXACTA, DS_P1, MB_P11_1:MB_P11_14, MB_P8, MB_P9)
 
 ## Renombrarlas
 ## 2018-2019: CEP 82
@@ -141,7 +141,7 @@ frq(bd2018_2019_84$conf_emppriv)
 bd2018_2019_82$conf_congreso <- car::recode(bd2018_2019_82$conf_congreso, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_82$conf_comercio <- car::recode(bd2018_2019_82$conf_comercio, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_82$conf_iglesias <- car::recode(bd2018_2019_82$conf_iglesias, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2018_2019_82$conf_sistjust <- car::recode(bd2018_2019_82$conf_sistjud, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_82$conf_sistjust <- car::recode(bd2018_2019_82$conf_sistjust, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_82$conf_sistedu <- car::recode(bd2018_2019_82$conf_sistedu, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 ## 2018-2019: CEP 84
@@ -153,6 +153,12 @@ bd2018_2019_84$conf_tribunalesjust <- car::recode(bd2018_2019_84$conf_tribunales
 bd2018_2019_84$conf_diarios <- car::recode(bd2018_2019_84$conf_diarios, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_84$conf_tele <- car::recode(bd2018_2019_84$conf_tele, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2018_2019_84$conf_radios <- car::recode(bd2018_2019_84$conf_radios, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_84$conf_rrss <- car::recode(bd2018_2019_84$conf_rrss, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_84$conf_sindicatos <- car::recode(bd2018_2019_84$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_84$conf_carabineros <- car::recode(bd2018_2019_84$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_84$conf_gobierno <- car::recode(bd2018_2019_84$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_84$conf_congreso <- car::recode(bd2018_2019_84$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2018_2019_84$conf_emppriv <- car::recode(bd2018_2019_84$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 #---- 3.2.3 Otros ajustes ----
 ## 2018-2019: CEP 84
@@ -160,7 +166,7 @@ bd2018_2019_84$conf_radios <- car::recode(bd2018_2019_84$conf_radios, "c(1,2) = 
 ### Construccion variable iglesia en calidad de institucion
 
 bd2018_2019_84$conf_iglesia[bd2018_2019_84$conf_iglesiacat == 'Alta o media confianza' | bd2018_2019_84$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2018_2019_84$conf_iglesia[bd2018_2019_84$conf_iglesiacat == 'Baja o nula confianza' | bd2018_2019_84$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2018_2019_84$conf_iglesia[bd2018_2019_84$conf_iglesiacat == 'Baja o nula confianza' & bd2018_2019_84$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Construccion variable MMC
 bd2018_2019_84$conf_mmc[bd2018_2019_84$conf_diarios == 'Alta o media confianza' & bd2018_2019_84$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
@@ -177,7 +183,6 @@ bd2018_2019_84$conf_mmc[bd2018_2019_84$conf_tele == 'Baja o nula confianza' & bd
 # Ver frecuencia variable nueva
 frq(bd2018_2019_84$conf_mmc)
 
-bd2018_2019_84$conf_rrss <- car::recode(bd2018_2019_84$conf_rrss, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2018_2019_84$conf_sindicatos <- car::recode(bd2018_2019_84$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2018_2019_84$conf_carabineros <- car::recode(bd2018_2019_84$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2018_2019_84$conf_gobierno <- car::recode(bd2018_2019_84$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd2018_2019_82, file = "input/data/bd2018_2019_82.RData")
+save(bd2018_2019_84, file = "input/data/bd2018_2019_84.RData")

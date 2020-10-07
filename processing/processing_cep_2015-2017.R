@@ -66,13 +66,7 @@ bd2015_74 <- rename(bd2015_74,
                     conf_carabineros = CISP_10J,
                     conf_gobierno = CISP_10K,
                     conf_congreso = CISP_10L,
-                    conf_emppriv = CISP_10M,
-                    conf_muni = CISP_10N,
-                    conf_fiscales = CISP_10O,
-                    conf_movestudiantil = CISP_10P,
-                    conf_pdi = CISP_10Q,
-                    conf_emppub = CISP_10R,
-                    conf_colegioprof = CISP_10S)
+                    conf_emppriv = CISP_10M)
                     
 
 ### 2015: CEP 75
@@ -130,12 +124,7 @@ bd2016_78 <- rename(bd2016_78,
                     conf_carabineros = SAT_9J,
                     conf_gobierno = SAT_9K,
                     conf_congreso = SAT_9L,
-                    conf_emppriv = SAT_9M,
-                    conf_muni = SAT_9N,
-                    conf_fiscales = SAT_9O,
-                    conf_movestudiantil = SAT_9P,
-                    conf_pdi = SAT_9Q,
-                    conf_emppub = SAT_9R)
+                    conf_emppriv = SAT_9M)
 
 ### 2017: CEP 79
 bd2017_79 <- rename(bd2017_79,
@@ -155,12 +144,7 @@ bd2017_79 <- rename(bd2017_79,
                     conf_carabineros = ACTI_5_10,
                     conf_gobierno = ACTI_5_11,
                     conf_congreso = ACTI_5_12,
-                    conf_emppriv = ACTI_5_13,
-                    conf_muni = ACTI_5_14,
-                    conf_fiscales = ACTI_5_15,
-                    conf_movestudiantil = ACTI_5_16,
-                    conf_pdi = ACTI_5_17,
-                    conf_emppub = ACTI_5_18)
+                    conf_emppriv = ACTI_5_13)
 
 ### 2017: CEP 80
 bd2017_80 <- rename(bd2017_80,
@@ -318,12 +302,6 @@ frq(bd2015_74$conf_carabineros) # Combinar: instituciones del orden
 frq(bd2015_74$conf_gobierno)
 frq(bd2015_74$conf_congreso)
 frq(bd2015_74$conf_emppriv)
-frq(bd2015_74$conf_muni) # No usar
-frq(bd2015_74$conf_fiscales) 
-frq(bd2015_74$conf_movestudiantil) # No usar
-frq(bd2015_74$conf_pdi) # Combinar: instituciones del orden
-frq(bd2015_74$conf_emppub)
-frq(bd2015_74$conf_colegioprof) # No usar
 
 ## 2016: CEP 76
 frq(bd2016_76$conf_ffaa)
@@ -351,11 +329,6 @@ frq(bd2016_78$conf_carabineros)
 frq(bd2016_78$conf_gobierno)
 frq(bd2016_78$conf_congreso)
 frq(bd2016_78$conf_emppriv)
-frq(bd2016_78$conf_muni)
-frq(bd2016_78$conf_fiscales)
-frq(bd2016_78$conf_movestudiantil)
-frq(bd2016_78$conf_pdi)
-frq(bd2016_78$conf_emppub)
 
 ## 2017: CEP 79
 frq(bd2017_79$conf_iglesiacat)
@@ -371,11 +344,6 @@ frq(bd2017_79$conf_carabineros)
 frq(bd2017_79$conf_gobierno)
 frq(bd2017_79$conf_congreso)
 frq(bd2017_79$conf_emppriv)
-frq(bd2017_79$conf_muni)
-frq(bd2017_79$conf_fiscales)
-frq(bd2017_79$conf_movestudiantil)
-frq(bd2017_79$conf_pdi)
-frq(bd2017_79$conf_emppub)
 
 #---- 3.2.2 Recodificacion ----
 
@@ -394,12 +362,6 @@ bd2015_74$conf_carabineros <- car::recode(bd2015_74$conf_carabineros, "c(1,2) = 
 bd2015_74$conf_gobierno <- car::recode(bd2015_74$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2015_74$conf_congreso <- car::recode(bd2015_74$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2015_74$conf_emppriv <- car::recode(bd2015_74$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2015_74$conf_muni <- car::recode(bd2015_74$conf_muni, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2015_74$conf_fiscales <- car::recode(bd2015_74$conf_fiscales, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2015_74$conf_movestudiantil <- car::recode(bd2015_74$conf_movestudiantil, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2015_74$conf_pdi <- car::recode(bd2015_74$conf_pdi, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2015_74$conf_emppub <- car::recode(bd2015_74$conf_emppub, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2015_74$conf_colegioprof <- car::recode(bd2015_74$conf_colegioprof, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 ## 2016: CEP 76
 
@@ -409,7 +371,6 @@ bd2016_76$conf_tribunalesjust <- car::recode(bd2016_76$conf_tribunalesjust, "c(1
 bd2016_76$conf_carabineros <- car::recode(bd2016_76$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2016_76$conf_gobierno <- car::recode(bd2016_76$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2016_76$conf_congreso <- car::recode(bd2016_76$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2016_76$conf_emppriv <- car::recode(bd2016_76$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2016_76$conf_muni <- car::recode(bd2016_76$conf_muni, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2016_76$conf_fiscales <- car::recode(bd2016_76$conf_fiscales, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2016_76$conf_pdi <- car::recode(bd2016_76$conf_pdi, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
@@ -430,11 +391,6 @@ bd2016_78$conf_carabineros <- car::recode(bd2016_78$conf_carabineros, "c(1,2) = 
 bd2016_78$conf_gobierno <- car::recode(bd2016_78$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2016_78$conf_congreso <- car::recode(bd2016_78$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2016_78$conf_emppriv <- car::recode(bd2016_78$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2016_78$conf_muni <- car::recode(bd2016_78$conf_muni, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2016_78$conf_fiscales <- car::recode(bd2016_78$conf_fiscales, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2016_78$conf_movestudiantil <- car::recode(bd2016_78$conf_movestudiantil, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2016_78$conf_pdi <- car::recode(bd2016_78$conf_pdi, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2016_78$conf_emppub <- car::recode(bd2016_78$conf_emppub, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 ## 2017: CEP 79
 
@@ -451,17 +407,13 @@ bd2017_79$conf_carabineros <- car::recode(bd2017_79$conf_carabineros, "c(1,2) = 
 bd2017_79$conf_gobierno <- car::recode(bd2017_79$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2017_79$conf_congreso <- car::recode(bd2017_79$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2017_79$conf_emppriv <- car::recode(bd2017_79$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2017_79$conf_muni <- car::recode(bd2017_79$conf_muni, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2017_79$conf_fiscales <- car::recode(bd2017_79$conf_fiscales, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2017_79$conf_movestudiantil <- car::recode(bd2017_79$conf_movestudiantil, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2017_79$conf_pdi <- car::recode(bd2017_79$conf_pdi, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2017_79$conf_emppub <- car::recode(bd2017_79$conf_emppub, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+
 #---- 3.2.3 Otros ajustes --
 ## 2015: CEP 74
 ### Construccion variable iglesia en calidad de institucion
 
 bd2015_74$conf_iglesia[bd2015_74$conf_iglesiacat == 'Alta o media confianza' | bd2015_74$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2015_74$conf_iglesia[bd2015_74$conf_iglesiacat == 'Baja o nula confianza' | bd2015_74$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2015_74$conf_iglesia[bd2015_74$conf_iglesiacat == 'Baja o nula confianza' & bd2015_74$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Construccion variable MMC
 bd2015_74$conf_mmc[bd2015_74$conf_diarios == 'Alta o media confianza' & bd2015_74$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
@@ -479,13 +431,10 @@ bd2015_74$conf_mmc[bd2015_74$conf_tele == 'Baja o nula confianza' & bd2015_74$co
 frq(bd2015_74$conf_mmc)
 
 # Eliminar variables
-bd2015_74 <- select(bd2015_74, -conf_iglesiaev, -conf_iglesiacat, -conf_movestudiantil, -conf_fiscales, -conf_muni, -conf_sindicatos, -conf_radios, -conf_tele, -conf_diarios, -conf_colegioprof, -conf_pdi, -conf_carabineros, -conf_emppub)
+bd2015_74 <- select(bd2015_74, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
 
 ## 2016: CEP 76
-### Construccion variable iglesia en calidad de institucion
-
-bd2016_76$conf_iglesia[bd2016_76$conf_iglesiacat == 'Alta o media confianza' | bd2016_76$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2016_76$conf_iglesia[bd2016_76$conf_iglesiacat == 'Baja o nula confianza' | bd2016_76$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+# No tiene variables de iglesia
 
 ## 2016: CEP 78
 ### Construccion variable iglesia en calidad de institucion
@@ -509,13 +458,13 @@ bd2016_78$conf_mmc[bd2016_78$conf_tele == 'Baja o nula confianza' & bd2016_78$co
 frq(bd2016_78$conf_mmc)
 
 # Eliminar variables
-bd2016_78 <- select(bd2016_78, -conf_iglesiaev, -conf_iglesiacat, -conf_movestudiantil, -conf_fiscales, -conf_muni, -conf_sindicatos, -conf_radios, -conf_tele, -conf_diarios, -conf_pdi, -conf_carabineros, -conf_emppub)
+bd2016_78 <- select(bd2016_78, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
 
 ## 2017: CEP 79
 ### Construccion variable iglesia en calidad de institucion
 
 bd2017_79$conf_iglesia[bd2017_79$conf_iglesiacat == 'Alta o media confianza' | bd2017_79$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2017_79$conf_iglesia[bd2017_79$conf_iglesiacat == 'Baja o nula confianza' | bd2017_79$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2017_79$conf_iglesia[bd2017_79$conf_iglesiacat == 'Baja o nula confianza' & bd2017_79$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Construccion variable MMC
 bd2017_79$conf_mmc[bd2017_79$conf_diarios == 'Alta o media confianza' & bd2017_79$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
@@ -533,5 +482,9 @@ bd2017_79$conf_mmc[bd2017_79$conf_tele == 'Baja o nula confianza' & bd2017_79$co
 frq(bd2017_79$conf_mmc)
 
 # Eliminar variables
-bd2017_79 <- select(bd2017_79, -conf_iglesiaev, -conf_iglesiacat, -conf_movestudiantil, -conf_fiscales, -conf_muni, -conf_sindicatos, -conf_radios, -conf_tele, -conf_diarios, -conf_pdi, -conf_carabineros, -conf_emppub)
+bd2017_79 <- select(bd2017_79, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd2017_79, file = "input/data/bd2015_2017_79.RData")
+
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)

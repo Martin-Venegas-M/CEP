@@ -340,15 +340,15 @@ bd1991_1993_23$conf_dircortesup <- car::recode(bd1991_1993_23$conf_dircortesup, 
 ### Construccion variable iglesia en calidad de institucion
 ## 1991-1993: CEP 17
 bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Alta o media confianza' | bd1991_1993_17$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Baja o nula confianza' | bd1991_1993_17$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Baja o nula confianza' & bd1991_1993_17$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ## 1991-1993: CEP 18
 bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Alta o media confianza' | bd1991_1993_18$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Baja o nula confianza' | bd1991_1993_18$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Baja o nula confianza' & bd1991_1993_18$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ## 1991-1993: CEP 23
-bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Alta o media confianza' | bd1991_1993_236$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Baja o nula confianza' | bd1991_1993_23$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Alta o media confianza' | bd1991_1993_23$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
+bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Baja o nula confianza' & bd1991_1993_23$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Sacar variables de confianza que no usaremos.
 ## 1991-1993: CEP 17
@@ -359,6 +359,11 @@ bd1991_1993_18 <- select(bd1991_1993_18, -conf_iglesiaev, -conf_iglesiacat,-conf
 
 ## 1991-1993: CEP 23
 bd1991_1993_23 <- select(bd1991_1993_23, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete)
+
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd1991_1993_17, file = "input/data/bd1991_1993_17.RData")
+save(bd1991_1993_18, file = "input/data/bd1991_1993_18.RData")
+save(bd1991_1993_23, file = "input/data/bd1991_1993_23.RData")
 
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
 

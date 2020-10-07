@@ -8,9 +8,9 @@ library(pacman)
 
 pacman::p_load(tidyverse, summarytools, ggplot2, sjmisc, stargazer, openxlsx, readxl, sjlabelled, car, haven)
 # ---- Etapa 2: Cargar bases de datos ---
-bd2012_2014_66 <- read_sav("input/data/2012-2014/cep66abril2012.sav")
+bd2012_2014_66 <- read_excel("input/data/2012-2014/cep66abril2012.xlsx")
 bd2012_2014_67 <- read_sav("input/data/2012-2014/cep67julago2012.sav")
-bd2012_2014_68 <- read_sav("input/data/2012-2014/cep68novdic2012.sav")
+bd2012_2014_68 <- read_excel("input/data/2012-2014/cep68novdic2012.xlsx")
 bd2012_2014_69 <- read_sav("input/data/2012-2014/cep69julago2013.sav")
 bd2012_2014_70 <- read_sav("input/data/2012-2014/cep70sepoct2013.sav")
 bd2012_2014_71 <- read_sav("input/data/2012-2014/cep71jul2014.sav")
@@ -19,8 +19,8 @@ bd2012_2014_72 <- read_sav("input/data/2012-2014/cep72nov2014.sav")
 # ---- Etapa 3: Procesamiento de datos ----
 ## Seleccionar variables a utilizar
 
-bd2012_2014_66<- select(bd2012_2014_66, DDP39, DDP03, DDP02, DDP01, TE1P03a:TE1P03m, MBP14, MBP16)
-bd2012_2014_67<- select(bd2012_2014_67, DDP32, DDP03, DDP02, DDP01, MBP14, MBP16)
+bd2012_2014_66<- select(bd2012_2014_66, DDP39, DDP03, DDP02, DDP01, MBP14, MBP16)
+bd2012_2014_67<- select(bd2012_2014_67, DDP32, DDP03, DDP02, DDP01,TE1P03a:TE1P03m, MBP14, MBP16)
 bd2012_2014_68<- select(bd2012_2014_68, DDP31, DDP03, DDP02, DDP01, MBP14, MBP16)
 bd2012_2014_69<- select(bd2012_2014_69, DDP31, DDP03, DDP02, DDP01,TE1P03a:TE1P03m, MBP14, MBP16)
 
@@ -37,26 +37,7 @@ bd2012_2014_66 <- rename(bd2012_2014_66,
                     pos_pol = MBP16,
                     nse = DDP39,
                     sexo = DDP01,
-                    esc = DDP03,
-                    conf_iglesiacat = ,
-                    conf_ffaa = ,
-                    conf_iglesiaev = ,
-                    conf_partidos = ,
-                    conf_tribunalesjust = ,
-                    conf_diarios = ,
-                    conf_tele = ,
-                    conf_radios = ,
-                    conf_sindicatos = ,
-                    conf_carabineros = ,
-                    conf_gobierno = ,
-                    conf_congreso = ,
-                    conf_emppriv = ,
-                    conf_muni = ,
-                    conf_fiscales = ,
-                    conf_movestudiantil = ,
-                    conf_pdi = ,
-                    conf_emppub = ,
-                    conf_colegioprof = )
+                    esc = DDP03)
 
 ## 2012-2014: CEP 67
 bd2012_2014_67 <- rename(bd2012_2014_67,
@@ -65,7 +46,20 @@ bd2012_2014_67 <- rename(bd2012_2014_67,
                        pos_pol = MBP16,
                        nse = DDP32,
                        sexo = DDP01,
-                       esc = DDP03)
+                       esc = DDP03,
+                       conf_iglesiacat = TE1P03a,
+                       conf_ffaa = TE1P03b,
+                       conf_iglesiaev = TE1P03c,
+                       conf_partidos = TE1P03d,
+                       conf_tribunalesjust = TE1P03e,
+                       conf_diarios = TE1P03f,
+                       conf_tele = TE1P03g,
+                       conf_radios = TE1P03h,
+                       conf_sindicatos = TE1P03i,
+                       conf_carabineros = TE1P03j,
+                       conf_gobierno = TE1P03k,
+                       conf_congreso = TE1P03l,
+                       conf_emppriv = TE1P03m)
 
 ## 2012_2014: CEP 68
 bd2012_2014_68 <- rename(bd2012_2014_68,
@@ -233,7 +227,20 @@ bd2012_2014_72$sexo <- car::recode(bd2012_2014_72$sexo, "1 = 'Hombre'; 2 = 'Muje
 #---- 3.2 Tratamiento de variables de confianza ----
 #---- 3.2.1 Frecuencias ----
 
-## 2012-2014: CEP 66
+## 2012-2014: CEP 67
+frq(bd2012_2014_67$conf_iglesiacat) # Combinar:iglesia
+frq(bd2012_2014_67$conf_ffaa)
+frq(bd2012_2014_67$conf_iglesiaev) # Combinar:iglesia
+frq(bd2012_2014_67$conf_partidos)
+frq(bd2012_2014_67$conf_tribunalesjust)
+frq(bd2012_2014_67$conf_diarios) # Combinar: MMC
+frq(bd2012_2014_67$conf_tele) # Combinar: MMC
+frq(bd2012_2014_67$conf_radios) # Combinar: MMC
+frq(bd2012_2014_67$conf_sindicatos) # No usar
+frq(bd2012_2014_67$conf_carabineros) # Combinar: instituciones del orden
+frq(bd2012_2014_67$conf_gobierno)
+frq(bd2012_2014_67$conf_congreso)
+frq(bd2012_2014_67$conf_emppriv)
 
 ## 2012-2014: CEP 69
 frq(bd2012_2014_69$conf_iglesiacat) # Combinar:iglesia
@@ -249,6 +256,7 @@ frq(bd2012_2014_69$conf_carabineros) # Combinar: instituciones del orden
 frq(bd2012_2014_69$conf_gobierno)
 frq(bd2012_2014_69$conf_congreso)
 frq(bd2012_2014_69$conf_emppriv)
+
 ## 2012-2014: CEP 71
 frq(bd2012_2014_71$conf_iglesiacat) # Combinar:iglesia
 frq(bd2012_2014_71$conf_ffaa)
@@ -265,7 +273,18 @@ frq(bd2012_2014_71$conf_congreso)
 frq(bd2012_2014_71$conf_emppriv)
 
 #---- 3.2.2 Recodificacion ----
-## 2012-2014: CEP 66
+## 2012-2014: CEP 67
+bd2012_2014_67$conf_iglesiacat <- car::recode(bd2012_2014_67$conf_iglesiacat,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_ffaa <- car::recode(bd2012_2014_67$conf_ffaa,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_iglesiaev <- car::recode(bd2012_2014_67$conf_iglesiaev,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_partidos <- car::recode(bd2012_2014_67$conf_partidos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_tribunalesjust <- car::recode(bd2012_2014_67$conf_tribunalesjust, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_diarios <- car::recode(bd2012_2014_67$conf_diarios, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_tele <- car::recode(bd2012_2014_67$conf_tele, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_radios <- car::recode(bd2012_2014_67$conf_radios, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_sindicatos <- car::recode(bd2012_2014_67$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_carabineros <- car::recode(bd2012_2014_67$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_gobierno <- car::recode(bd2012_2014_67$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 ## 2012-2014: CEP 69
 bd2012_2014_69$conf_iglesiacat <- car::recode(bd2012_2014_69$conf_iglesiacat,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
@@ -279,6 +298,7 @@ bd2012_2014_69$conf_radios <- car::recode(bd2012_2014_69$conf_radios, "c(1,2) = 
 bd2012_2014_69$conf_sindicatos <- car::recode(bd2012_2014_69$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2012_2014_69$conf_carabineros <- car::recode(bd2012_2014_69$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2012_2014_69$conf_gobierno <- car::recode(bd2012_2014_69$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+
 ## 2012-2014: CEP 71
 
 bd2012_2014_71$conf_iglesiacat <- car::recode(bd2012_2014_71$conf_iglesiacat,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
@@ -292,16 +312,40 @@ bd2012_2014_71$conf_radios <- car::recode(bd2012_2014_71$conf_radios, "c(1,2) = 
 bd2012_2014_71$conf_sindicatos <- car::recode(bd2012_2014_71$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2012_2014_71$conf_carabineros <- car::recode(bd2012_2014_71$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2012_2014_71$conf_gobierno <- car::recode(bd2012_2014_71$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-
+bd2012_2014_71$conf_congreso <- car::recode(bd2012_2014_71$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_71$conf_emppriv <- car::recode(bd2012_2014_71$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 #---- 3.2.3 Otros ajustes ----
-## 2012-2014: CEP 66
+## 2012-2014: CEP 67
+### Construccion variable iglesia en calidad de institucion
+
+bd2012_2014_67$conf_iglesia[bd2012_2014_67$conf_iglesiacat == 'Alta o media confianza' | bd2012_2014_67$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
+bd2012_2014_67$conf_iglesia[bd2012_2014_67$conf_iglesiacat == 'Baja o nula confianza' | bd2012_2014_67$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+
+### Construccion variable MMC
+bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_diarios == 'Alta o media confianza' & bd2012_2014_67$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
+bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_diarios == 'Alta o media confianza' & bd2012_2014_67$conf_tele == 'Alta o media confianza'] <- 'Alta o media confianza'
+bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_tele == 'Alta o media confianza' & bd2012_2014_67$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
+
+bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_diarios == 'Baja o nula confianza' & bd2012_2014_67$conf_radios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_diarios == 'Baja o nula confianza' & bd2012_2014_67$conf_tele == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_tele == 'Baja o nula confianza' & bd2012_2014_67$conf_radios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+
+bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_tele == 'Alta o media confianza' & bd2012_2014_67$conf_radios == 'Alta o media confianza' & bd2012_2014_67$conf_diarios == 'Alta o media confianza'] <- 'Alta o media confianza'
+bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_tele == 'Baja o nula confianza' & bd2012_2014_67$conf_radios == 'Baja o nula confianza' & bd2012_2014_67$conf_diarios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+
+# Ver frecuencia variable nueva
+frq(bd2012_2014_67$conf_mmc)
+
+# Eliminar variables
+bd2012_2014_67 <- select(bd2012_2014_67, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+
 
 ## 2012-2014: CEP 69
 
 ### Construccion variable iglesia en calidad de institucion
 
 bd2012_2014_69$conf_iglesia[bd2012_2014_69$conf_iglesiacat == 'Alta o media confianza' | bd2012_2014_69$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2012_2014_69$conf_iglesia[bd2012_2014_69$conf_iglesiacat == 'Baja o nula confianza' | bd2012_2014_69$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2012_2014_69$conf_iglesia[bd2012_2014_69$conf_iglesiacat == 'Baja o nula confianza' & bd2012_2014_69$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Construccion variable MMC
 bd2012_2014_69$conf_mmc[bd2012_2014_69$conf_diarios == 'Alta o media confianza' & bd2012_2014_69$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
@@ -318,7 +362,8 @@ bd2012_2014_69$conf_mmc[bd2012_2014_69$conf_tele == 'Baja o nula confianza' & bd
 # Ver frecuencia variable nueva
 frq(bd2012_2014_69$conf_mmc)
 
-
+# Eliminar variables
+bd2012_2014_69 <- select(bd2012_2014_69, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
 
 
 ## 2012-2014: CEP 71
@@ -326,7 +371,7 @@ frq(bd2012_2014_69$conf_mmc)
 ### Construccion variable iglesia en calidad de institucion
 
 bd2012_2014_71$conf_iglesia[bd2012_2014_71$conf_iglesiacat == 'Alta o media confianza' | bd2012_2014_71$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2012_2014_71$conf_iglesia[bd2012_2014_71$conf_iglesiacat == 'Baja o nula confianza' | bd2012_2014_71$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2012_2014_71$conf_iglesia[bd2012_2014_71$conf_iglesiacat == 'Baja o nula confianza' & bd2012_2014_71$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
 
 ### Construccion variable MMC
 bd2012_2014_71$conf_mmc[bd2012_2014_71$conf_diarios == 'Alta o media confianza' & bd2012_2014_71$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
@@ -342,3 +387,12 @@ bd2012_2014_71$conf_mmc[bd2012_2014_71$conf_tele == 'Baja o nula confianza' & bd
 
 # Ver frecuencia variable nueva
 frq(bd2012_2014_71$conf_mmc)
+
+# Eliminar variables
+bd2012_2014_69 <- select(bd2012_2014_69, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd2012_2014_67, file = "input/data/bd2012_2014_66.RData")
+save(bd2012_2014_69, file = "input/data/bd2012_2014_69.RData")
+save(bd2012_2014_71, file = "input/data/bd2012_2014_71.RData")
+

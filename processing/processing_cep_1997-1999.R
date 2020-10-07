@@ -165,6 +165,9 @@ bd1997_1999_36$conf_dircortesup <- car::recode(bd1997_1999_36$conf_dircortesup, 
 #---- 3.2.3 Otros ajustes ----
 ### Construccion variable iglesia en calidad de institucion
 
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd1997_1999_36, file = "input/data/bd1997_1999_36.RData")
+
 ### Sacar variables de confianza que no usaremos.
 
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
