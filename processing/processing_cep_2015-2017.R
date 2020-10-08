@@ -32,7 +32,7 @@ bd2016_76 <- select(bd2016_76, SDT25, SDT4_ANOS, SDT2_EXACTA, SDT1, T10A:T10J)
 bd2016_77 <- select(bd2016_77, DS_P41, DS_P3, DS_P2_EXACTA, DS_P1, MB_P14, MB_P15)
 bd2016_78 <- select(bd2016_78, DS_P25, DS_P3, DS_P2_EXACTA, DS_P1, SAT_9A:SAT_9R, MB_P12, MB_P13)
 
-bd2017_79 <- select(bd2017_79, DS_P26, DS_P3, DS_P2_EXACTA, DS_P1, ACTI_5_1:ACTI_5_18) # MB_P8: Posicion politica en formato de escala (no se usa)
+bd2017_79 <- select(bd2017_79, DS_P26, DS_P3, DS_P2_EXACTA, DS_P1, ACTI_5_1:ACTI_5_13) # MB_P8: Posicion politica en formato de escala (no se usa)
 bd2017_80 <- select(bd2017_80, DS_P20, DS_P3, DS_P2_EXACTA, DS_P1) # MB_P9: Posicion politica en formato escala (no se usa)
 bd2017_81 <- select(bd2017_81, DS_P19, DS_P3, DS_P2_EXACTA, DS_P1, MB_P12, MB_P14)
 

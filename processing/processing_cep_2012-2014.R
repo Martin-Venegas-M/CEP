@@ -25,7 +25,7 @@ bd2012_2014_68<- select(bd2012_2014_68, DDP31, DDP03, DDP02, DDP01, MBP14, MBP16
 bd2012_2014_69<- select(bd2012_2014_69, DDP31, DDP03, DDP02, DDP01,TE1P03a:TE1P03m, MBP14, MBP16)
 
 bd2012_2014_70<- select(bd2012_2014_70, ddp31, ddp03, ddp02, ddp01, mbp14, mbp11)
-bd2012_2014_71<- select(bd2012_2014_71, ddp26, ddp03, ddp02, ddp01,te1p04a:te1p04r,mbp16, mbp18)
+bd2012_2014_71<- select(bd2012_2014_71, ddp26, ddp03, ddp02, ddp01,te1p04a:te1p04m,mbp16, mbp18)
 bd2012_2014_72<- select(bd2012_2014_72, DS_P47, DS_P3_ANOS, DS_P2_EXACTA, DS_P1, MB_P16, MB_P18)
 
 ## Renombrarlas
@@ -285,6 +285,8 @@ bd2012_2014_67$conf_radios <- car::recode(bd2012_2014_67$conf_radios, "c(1,2) = 
 bd2012_2014_67$conf_sindicatos <- car::recode(bd2012_2014_67$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2012_2014_67$conf_carabineros <- car::recode(bd2012_2014_67$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2012_2014_67$conf_gobierno <- car::recode(bd2012_2014_67$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_congreso <- car::recode(bd2012_2014_67$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_67$conf_emppriv <- car::recode(bd2012_2014_67$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 ## 2012-2014: CEP 69
 bd2012_2014_69$conf_iglesiacat <- car::recode(bd2012_2014_69$conf_iglesiacat,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
@@ -298,7 +300,8 @@ bd2012_2014_69$conf_radios <- car::recode(bd2012_2014_69$conf_radios, "c(1,2) = 
 bd2012_2014_69$conf_sindicatos <- car::recode(bd2012_2014_69$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2012_2014_69$conf_carabineros <- car::recode(bd2012_2014_69$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 bd2012_2014_69$conf_gobierno <- car::recode(bd2012_2014_69$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-
+bd2012_2014_69$conf_congreso <- car::recode(bd2012_2014_69$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2012_2014_69$conf_emppriv <- car::recode(bd2012_2014_69$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 ## 2012-2014: CEP 71
 
 bd2012_2014_71$conf_iglesiacat <- car::recode(bd2012_2014_71$conf_iglesiacat,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
@@ -389,10 +392,10 @@ bd2012_2014_71$conf_mmc[bd2012_2014_71$conf_tele == 'Baja o nula confianza' & bd
 frq(bd2012_2014_71$conf_mmc)
 
 # Eliminar variables
-bd2012_2014_69 <- select(bd2012_2014_69, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+bd2012_2014_71 <- select(bd2012_2014_71, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
 
 #---- 3.2.4 Guardar bases de confianza ----
-save(bd2012_2014_67, file = "input/data/bd2012_2014_66.RData")
+save(bd2012_2014_67, file = "input/data/bd2012_2014_67.RData")
 save(bd2012_2014_69, file = "input/data/bd2012_2014_69.RData")
 save(bd2012_2014_71, file = "input/data/bd2012_2014_71.RData")
 

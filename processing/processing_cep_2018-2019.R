@@ -183,6 +183,9 @@ bd2018_2019_84$conf_mmc[bd2018_2019_84$conf_tele == 'Baja o nula confianza' & bd
 # Ver frecuencia variable nueva
 frq(bd2018_2019_84$conf_mmc)
 
+# Eliminar variables que no se usarán
+bd2018_2019_84 <- select(bd2018_2019_84, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd2018_2019_82, file = "input/data/bd2018_2019_82.RData")
 save(bd2018_2019_84, file = "input/data/bd2018_2019_84.RData")
