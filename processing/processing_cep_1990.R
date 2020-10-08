@@ -142,7 +142,7 @@ frq(bd1990_16$conf_dircortesup)
 
 #---- 3.2.2 Recodificacion ----
 ## 1990: CEP 16
-
+bd1990_16$conf_dirpol <- car::recode(bd1990_16$conf_dirpol,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
 bd1990_16$conf_iglesiacat <- car::recode(bd1990_16$conf_iglesiacat,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
 bd1990_16$conf_iglesiaev <- car::recode(bd1990_16$conf_iglesiaev, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
 bd1990_16$conf_congreso <- car::recode(bd1990_16$conf_congreso, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)

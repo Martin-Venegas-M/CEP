@@ -264,19 +264,19 @@ bd2008_57$conf_sistjudicial <- car::recode(bd2008_57$conf_sistjudicial, "c(1,2,3
 bd2008_57$conf_sistemaedu <- car::recode(bd2008_57$conf_sistemaedu, "c(1,2,3) = 'Alta o media confianza'; c(4,5) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 ## 2008: CEP 58
-bd2008_58$conf_iglesiacat <- car::recode(bd2008_58$conf_iglesiacat,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_ffaa <- car::recode(bd2008_58$conf_ffaa,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_iglesiaev <- car::recode(bd2008_58$conf_iglesiaev,"c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_partidos <- car::recode(bd2008_58$conf_partidos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_tribunalesjust <- car::recode(bd2008_58$conf_tribunalesjust, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_diarios <- car::recode(bd2008_58$conf_diarios, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_tele <- car::recode(bd2008_58$conf_tele, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_radios <- car::recode(bd2008_58$conf_radios, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_sindicatos <- car::recode(bd2008_58$conf_sindicatos, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_carabineros <- car::recode(bd2008_58$conf_carabineros, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_gobierno <- car::recode(bd2008_58$conf_gobierno, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_congreso <- car::recode(bd2008_58$conf_congreso, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2008_58$conf_emppriv <- car::recode(bd2008_58$conf_emppriv, "c(1,2) = 'Alta o media confianza'; c(3,4) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_iglesiacat <- car::recode(bd2008_58$conf_iglesiacat,"c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_ffaa <- car::recode(bd2008_58$conf_ffaa,"c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_iglesiaev <- car::recode(bd2008_58$conf_iglesiaev,"c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_partidos <- car::recode(bd2008_58$conf_partidos, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_tribunalesjust <- car::recode(bd2008_58$conf_tribunalesjust, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_diarios <- car::recode(bd2008_58$conf_diarios, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_tele <- car::recode(bd2008_58$conf_tele, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_radios <- car::recode(bd2008_58$conf_radios, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_sindicatos <- car::recode(bd2008_58$conf_sindicatos, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_carabineros <- car::recode(bd2008_58$conf_carabineros, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_gobierno <- car::recode(bd2008_58$conf_gobierno, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_congreso <- car::recode(bd2008_58$conf_congreso, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2008_58$conf_emppriv <- car::recode(bd2008_58$conf_emppriv, "c(3,4) = 'Alta o media confianza'; c(1,2) = 'Baja o nula confianza'; c(8,9) = 'NS/NC'", as.factor = T)
 
 #---- 3.2.3 Otros ajustes --
 ## 2008: CEP 58
