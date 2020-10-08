@@ -630,3 +630,5 @@ p <- ggplot(data = df_conf_partidos_merge,
                           y = porc_conf_partidos)) + geom_point(size=3) +   ggtitle("Evolucion de alta o media confianza en los partidos")
 
 p
+
+#Probar nueva branch
