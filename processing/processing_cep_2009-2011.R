@@ -258,19 +258,21 @@ bd2009_2011_61$conf_gobierno <- car::recode(bd2009_2011_61$conf_gobierno, "c(1, 
 bd2009_2011_61$conf_congreso <- car::recode(bd2009_2011_61$conf_congreso, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
 bd2009_2011_61$conf_emppriv <- car::recode(bd2009_2011_61$conf_emppriv, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
 
-bd2009_2011_65$conf_iglesiacat <- car::recode(bd2009_2011_65$conf_iglesiacat,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_ffaa <- car::recode(bd2009_2011_65$conf_ffaa,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_iglesiaev <- car::recode(bd2009_2011_65$conf_iglesiaev,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_partidos <- car::recode(bd2009_2011_65$conf_partidos, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_tribunalesjust <- car::recode(bd2009_2011_65$conf_tribunalesjust, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_diarios <- car::recode(bd2009_2011_65$conf_diarios, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_tele <- car::recode(bd2009_2011_65$conf_tele, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_radios <- car::recode(bd2009_2011_65$conf_radios, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_sindicatos <- car::recode(bd2009_2011_65$conf_sindicatos, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_carabineros <- car::recode(bd2009_2011_65$conf_carabineros, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_gobierno <- car::recode(bd2009_2011_65$conf_gobierno, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_congreso <- car::recode(bd2009_2011_65$conf_congreso, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
-bd2009_2011_65$conf_emppriv <- car::recode(bd2009_2011_65$conf_emppriv, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+# Ojo, las cofificaicones entre ambas baterias están invertidas
+
+bd2009_2011_65$conf_iglesiacat <- car::recode(bd2009_2011_65$conf_iglesiacat,"c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_ffaa <- car::recode(bd2009_2011_65$conf_ffaa,"c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_iglesiaev <- car::recode(bd2009_2011_65$conf_iglesiaev,"c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_partidos <- car::recode(bd2009_2011_65$conf_partidos, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_tribunalesjust <- car::recode(bd2009_2011_65$conf_tribunalesjust, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_diarios <- car::recode(bd2009_2011_65$conf_diarios, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_tele <- car::recode(bd2009_2011_65$conf_tele, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_radios <- car::recode(bd2009_2011_65$conf_radios, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_sindicatos <- car::recode(bd2009_2011_65$conf_sindicatos, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_carabineros <- car::recode(bd2009_2011_65$conf_carabineros, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_gobierno <- car::recode(bd2009_2011_65$conf_gobierno, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_congreso <- car::recode(bd2009_2011_65$conf_congreso, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_emppriv <- car::recode(bd2009_2011_65$conf_emppriv, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
 
 # No olvidar
 # Codificaicón original
