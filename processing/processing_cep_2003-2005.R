@@ -208,25 +208,34 @@ frq(bd2003_2005_45$conf_tribun)
 
 #---- 3.2.2 Recodificacion ----
 ### 2000-2002: CEP 44
-bd2003_2005_45$conf_iglesiacat <- car::recode(bd2003_2005_45$conf_iglesiacat,"c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_iglesiaev  <- car::recode(bd2003_2005_45$conf_iglesiaev,"c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_partidos<- car::recode(bd2003_2005_45$conf_partidos, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_tele <- car::recode(bd2003_2005_45$conf_tele, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_congreso <- car::recode(bd2003_2005_45$conf_congreso, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_ffaa <- car::recode(bd2003_2005_45$conf_ffaa, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_prensa <- car::recode(bd2003_2005_45$conf_prensa, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_empr <- car::recode(bd2003_2005_45$conf_empr, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2003_2005_45$conf_tribun <- car::recode(bd2003_2005_45$conf_tribun, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_iglesiacat <- car::recode(bd2003_2005_45$conf_iglesiacat,"c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_iglesiaev  <- car::recode(bd2003_2005_45$conf_iglesiaev,"c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_partidos<- car::recode(bd2003_2005_45$conf_partidos, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_tele <- car::recode(bd2003_2005_45$conf_tele, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_congreso <- car::recode(bd2003_2005_45$conf_congreso, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_ffaa <- car::recode(bd2003_2005_45$conf_ffaa, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_prensa <- car::recode(bd2003_2005_45$conf_prensa, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_empr <- car::recode(bd2003_2005_45$conf_empr, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2003_2005_45$conf_tribun <- car::recode(bd2003_2005_45$conf_tribun, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+
+# No olvidar
+# Codificación original
+#1. Mucha confianza
+#2. Bastante confianza
+#3. No mucha confianza
+#4. Ninguna confianza
+#8. No sabe
+#9. No contesta
 
 #---- 3.2.3 Otros ajustes ----
 ### Construccion variable mmc
 ### 2000-2002: CEP 44
-bd2003_2005_45$conf_mmc[bd2003_2005_45$conf_tele == 'Alta o media confianza' | bd2003_2005_45$conf_prensa == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2003_2005_45$conf_mmc[bd2003_2005_45$conf_tele == 'Baja o nula confianza' & bd2003_2005_45$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2003_2005_45$conf_mmc[bd2003_2005_45$conf_tele == 'Mucha confianza' | bd2003_2005_45$conf_prensa == 'Mucha confianza'] <- 'Mucha confianza'
+bd2003_2005_45$conf_mmc[bd2003_2005_45$conf_tele == 'Otra' & bd2003_2005_45$conf_prensa == 'Otra'] <- 'Otra'
 
 ### Construccion variable iglesia
-bd2003_2005_45$conf_iglesia[bd2003_2005_45$conf_tele == 'Alta o media confianza' | bd2003_2005_45$conf_prensa == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2003_2005_45$conf_iglesia[bd2003_2005_45$conf_tele == 'Baja o nula confianza' & bd2003_2005_45$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2003_2005_45$conf_iglesia[bd2003_2005_45$conf_tele == 'Mucha confianza' | bd2003_2005_45$conf_prensa == 'Mucha confianza'] <- 'Mucha confianza'
+bd2003_2005_45$conf_iglesia[bd2003_2005_45$conf_tele == 'Otra' & bd2003_2005_45$conf_prensa == 'Otra'] <- 'Otra'
 
 ### Sacar variables de confianza que no usaremos.
 ### 2000-2002: CEP 44

@@ -154,10 +154,18 @@ frq(bd1997_1999_36$conf_dircortesup)
 ### 1997-1999: CEP 34 #no tiene confianza
 ### 1997-1999: CEP 35 #no tiene confianza
 ### 1997-1999: CEP 36
-bd1997_1999_36$conf_iglesia <- car::recode(bd1997_1999_36$conf_iglesia,"c(4,5) = 'Baja o nula confianza'; c(1, 2, 3) = 'Alta o media confianza'; 8 = NA", as.factor = T)
-bd1997_1999_36$conf_congreso <- car::recode(bd1997_1999_36$conf_congreso, "c(4,5) = 'Baja o nula confianza'; c(1, 2, 3) = 'Alta o media confianza'; 8 = NA", as.factor = T)
-bd1997_1999_36$conf_diremp <- car::recode(bd1997_1999_36$conf_diremp, "c(4,5) = 'Baja o nula confianza'; c(1, 2, 3) = 'Alta o media confianza'; 8 = NA", as.factor = T)
-bd1997_1999_36$conf_dircortesup <- car::recode(bd1997_1999_36$conf_dircortesup, "c(4,5) = 'Baja o nula confianza'; c(1, 2, 3) = 'Alta o media confianza'; 8 = NA", as.factor = T)
+bd1997_1999_36$conf_iglesia <- car::recode(bd1997_1999_36$conf_iglesia,"1 = 'Mucha confianza'; c(2, 3, 4, 5) = 'Otra'; 8 = NA", as.factor = T)
+bd1997_1999_36$conf_congreso <- car::recode(bd1997_1999_36$conf_congreso, "1 = 'Mucha confianza'; c(2, 3, 4, 5) = 'Otra'; 8 = NA", as.factor = T)
+bd1997_1999_36$conf_diremp <- car::recode(bd1997_1999_36$conf_diremp, "1 = 'Mucha confianza'; c(2, 3, 4, 5) = 'Otra'; 8 = NA", as.factor = T)
+bd1997_1999_36$conf_dircortesup <- car::recode(bd1997_1999_36$conf_dircortesup, "1 = 'Mucha confianza'; c(2, 3, 4, 5) = 'Otra'; 8 = NA", as.factor = T)
+
+# No olvidar
+# Codificación original es la siguinte:
+#1. Plena confianza
+#2. Una gran cantidad de confianza
+#3. Algo de confianza
+#4. Muy poco de confianza
+#5. Nada de confianza
 
 ### 1997-1999: CEP 37 #no tiene confianza
 ### 1997-1999: CEP 38 #no tiene confianza

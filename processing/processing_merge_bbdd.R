@@ -78,101 +78,101 @@
     
   #---- 3.2 Group and summarise bases de datos ----
   # ---- 1990 ----
-  df_conf_partidos_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Alta o media confianza'))
-                                                                    /(length(which(conf_dirpol== 'Alta o media confianza'))+
-                                                                        length(which(conf_dirpol== 'Baja o nula confianza'))))
+  df_conf_partidos_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Mucha confianza'))
+                                                                    /(length(which(conf_dirpol== 'Mucha confianza'))+
+                                                                        length(which(conf_dirpol== 'Otra'))))
   
   
   
-  df_conf_iglesia_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                   /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                       length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                   /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                       length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                    /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                        length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                    /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                        length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Alta o media confianza'))
-                                                                /(length(which(conf_altosffaa== 'Alta o media confianza'))+
-                                                                    length(which(conf_altosffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Mucha confianza'))
+                                                                /(length(which(conf_altosffaa== 'Mucha confianza'))+
+                                                                    length(which(conf_altosffaa== 'Otra'))))
   
   
-  df_conf_empresas_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Alta o media confianza'))
-                                                                    /(length(which(conf_diremp== 'Alta o media confianza'))+
-                                                                        length(which(conf_diremp== 'Baja o nula confianza'))))
+  df_conf_empresas_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Mucha confianza'))
+                                                                    /(length(which(conf_diremp== 'Mucha confianza'))+
+                                                                        length(which(conf_diremp== 'Otra'))))
   
   
-  df_conf_tribunales_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Alta o media confianza'))
-                                                                      /(length(which(conf_dircortesup== 'Alta o media confianza'))+
-                                                                          length(which(conf_dircortesup== 'Baja o nula confianza'))))
+  df_conf_tribunales_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Mucha confianza'))
+                                                                      /(length(which(conf_dircortesup== 'Mucha confianza'))+
+                                                                          length(which(conf_dircortesup== 'Otra'))))
   
   
   # ---- 1991a ----
-  df_conf_partidos_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Alta o media confianza'))
-                                                          /(length(which(conf_dirpol== 'Alta o media confianza'))+
-                                                              length(which(conf_dirpol== 'Baja o nula confianza'))))
+  df_conf_partidos_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Mucha confianza'))
+                                                          /(length(which(conf_dirpol== 'Mucha confianza'))+
+                                                              length(which(conf_dirpol== 'Otra'))))
   
   
   
-  df_conf_iglesia_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                      /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                          length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                      /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                          length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                      /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                          length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                      /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                          length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Alta o media confianza'))
-                                                /(length(which(conf_altosffaa== 'Alta o media confianza'))+
-                                                    length(which(conf_altosffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Mucha confianza'))
+                                                /(length(which(conf_altosffaa== 'Mucha confianza'))+
+                                                    length(which(conf_altosffaa== 'Otra'))))
   
   
-  df_conf_empresas_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Alta o media confianza'))
-                                                          /(length(which(conf_diremp== 'Alta o media confianza'))+
-                                                              length(which(conf_diremp== 'Baja o nula confianza'))))
+  df_conf_empresas_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Mucha confianza'))
+                                                          /(length(which(conf_diremp== 'Mucha confianza'))+
+                                                              length(which(conf_diremp== 'Otra'))))
   
   
-  df_conf_tribunales_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Alta o media confianza'))
-                                                      /(length(which(conf_dircortesup== 'Alta o media confianza'))+
-                                                          length(which(conf_dircortesup== 'Baja o nula confianza'))))
+  df_conf_tribunales_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Mucha confianza'))
+                                                      /(length(which(conf_dircortesup== 'Mucha confianza'))+
+                                                          length(which(conf_dircortesup== 'Otra'))))
   
   # ---- 1991b ----
-  df_conf_partidos_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Alta o media confianza'))
-                                                                    /(length(which(conf_dirpol== 'Alta o media confianza'))+
-                                                                        length(which(conf_dirpol== 'Baja o nula confianza'))))
+  df_conf_partidos_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Mucha confianza'))
+                                                                    /(length(which(conf_dirpol== 'Mucha confianza'))+
+                                                                        length(which(conf_dirpol== 'Otra'))))
   
   
   
-  df_conf_iglesia_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                   /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                       length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                   /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                       length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                    /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                        length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                    /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                        length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Alta o media confianza'))
-                                                                /(length(which(conf_altosffaa== 'Alta o media confianza'))+
-                                                                    length(which(conf_altosffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Mucha confianza'))
+                                                                /(length(which(conf_altosffaa== 'Mucha confianza'))+
+                                                                    length(which(conf_altosffaa== 'Otra'))))
   
   
-  df_conf_empresas_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Alta o media confianza'))
-                                                                    /(length(which(conf_diremp== 'Alta o media confianza'))+
-                                                                        length(which(conf_diremp== 'Baja o nula confianza'))))
+  df_conf_empresas_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Mucha confianza'))
+                                                                    /(length(which(conf_diremp== 'Mucha confianza'))+
+                                                                        length(which(conf_diremp== 'Otra'))))
   
   
-  df_conf_tribunales_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Alta o media confianza'))
-                                                                      /(length(which(conf_dircortesup== 'Alta o media confianza'))+
-                                                                          length(which(conf_dircortesup== 'Baja o nula confianza'))))
+  df_conf_tribunales_1991b <- df1991_18 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Mucha confianza'))
+                                                                      /(length(which(conf_dircortesup== 'Mucha confianza'))+
+                                                                          length(which(conf_dircortesup== 'Otra'))))
   
   # Promedio años
   
@@ -195,396 +195,396 @@
   
   # ---- 1992 ----
   
-  df_conf_partidos_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Alta o media confianza'))
-                                                                    /(length(which(conf_dirpol== 'Alta o media confianza'))+
-                                                                        length(which(conf_dirpol== 'Baja o nula confianza'))))
+  df_conf_partidos_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Mucha confianza'))
+                                                                    /(length(which(conf_dirpol== 'Mucha confianza'))+
+                                                                        length(which(conf_dirpol== 'Otra'))))
   
   
   
-  df_conf_iglesia_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                   /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                       length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                   /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                       length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                    /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                        length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                    /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                        length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Alta o media confianza'))
-                                                                /(length(which(conf_altosffaa== 'Alta o media confianza'))+
-                                                                    length(which(conf_altosffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Mucha confianza'))
+                                                                /(length(which(conf_altosffaa== 'Mucha confianza'))+
+                                                                    length(which(conf_altosffaa== 'Otra'))))
   
   
-  df_conf_empresas_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Alta o media confianza'))
-                                                                    /(length(which(conf_diremp== 'Alta o media confianza'))+
-                                                                        length(which(conf_diremp== 'Baja o nula confianza'))))
+  df_conf_empresas_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Mucha confianza'))
+                                                                    /(length(which(conf_diremp== 'Mucha confianza'))+
+                                                                        length(which(conf_diremp== 'Otra'))))
   
   
-  df_conf_tribunales_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Alta o media confianza'))
-                                                                      /(length(which(conf_dircortesup== 'Alta o media confianza'))+
-                                                                          length(which(conf_dircortesup== 'Baja o nula confianza'))))
+  df_conf_tribunales_1992 <- df1992_23 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Mucha confianza'))
+                                                                      /(length(which(conf_dircortesup== 'Mucha confianza'))+
+                                                                          length(which(conf_dircortesup== 'Otra'))))
   
   
   # ---- 1998 -----
   
   
-  df_conf_iglesia_1998<- df1998_36 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                   /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                       length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_1998<- df1998_36 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                   /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                       length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_1998<- df1998_36 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                    /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                        length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_1998<- df1998_36 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                    /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                        length(which(conf_congreso== 'Otra'))))
 
   
   
-  df_conf_empresas_1998<- df1998_36 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Alta o media confianza'))
-                                                                    /(length(which(conf_diremp== 'Alta o media confianza'))+
-                                                                        length(which(conf_diremp== 'Baja o nula confianza'))))
+  df_conf_empresas_1998<- df1998_36 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Mucha confianza'))
+                                                                    /(length(which(conf_diremp== 'Mucha confianza'))+
+                                                                        length(which(conf_diremp== 'Otra'))))
   
   
-  df_conf_tribunales_1998<- df1998_36 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Alta o media confianza'))
-                                                                      /(length(which(conf_dircortesup== 'Alta o media confianza'))+
-                                                                          length(which(conf_dircortesup== 'Baja o nula confianza'))))
+  df_conf_tribunales_1998<- df1998_36 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Mucha confianza'))
+                                                                      /(length(which(conf_dircortesup== 'Mucha confianza'))+
+                                                                          length(which(conf_dircortesup== 'Otra'))))
   
   # ---- 2002 ----
   
-  df_conf_partidos_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-                                                                    /(length(which(conf_partidos== 'Alta o media confianza'))+
-                                                                        length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+                                                                    /(length(which(conf_partidos== 'Mucha confianza'))+
+                                                                        length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                   /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                       length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                   /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                       length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                    /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                        length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                    /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                        length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                                /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                    length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                                /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                    length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_empr== 'Alta o media confianza'))
-                                                                    /(length(which(conf_empr== 'Alta o media confianza'))+
-                                                                        length(which(conf_empr== 'Baja o nula confianza'))))
+  df_conf_empresas_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_empr== 'Mucha confianza'))
+                                                                    /(length(which(conf_empr== 'Mucha confianza'))+
+                                                                        length(which(conf_empr== 'Otra'))))
   
   
-  df_conf_tribunales_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribun== 'Alta o media confianza'))
-                                                                      /(length(which(conf_tribun== 'Alta o media confianza'))+
-                                                                          length(which(conf_tribun== 'Baja o nula confianza'))))
+  df_conf_tribunales_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribun== 'Mucha confianza'))
+                                                                      /(length(which(conf_tribun== 'Mucha confianza'))+
+                                                                          length(which(conf_tribun== 'Otra'))))
   
-  df_conf_mmc_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                                     /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                         length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                                     /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                         length(which(conf_mmc== 'Otra'))))
   
   # ---- 2003 ----
   
-  df_conf_partidos_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-  /(length(which(conf_partidos== 'Alta o media confianza'))+
-      length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+  /(length(which(conf_partidos== 'Mucha confianza'))+
+      length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                  /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                      length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                   /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                       length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                               /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                   length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                               /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                   length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_empr== 'Alta o media confianza'))
-                                                                   /(length(which(conf_empr== 'Alta o media confianza'))+
-                                                                       length(which(conf_empr== 'Baja o nula confianza'))))
+  df_conf_empresas_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_empr== 'Mucha confianza'))
+                                                                   /(length(which(conf_empr== 'Mucha confianza'))+
+                                                                       length(which(conf_empr== 'Otra'))))
   
   
-  df_conf_tribunales_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribun== 'Alta o media confianza'))
-                                                                     /(length(which(conf_tribun== 'Alta o media confianza'))+
-                                                                         length(which(conf_tribun== 'Baja o nula confianza'))))
+  df_conf_tribunales_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribun== 'Mucha confianza'))
+                                                                     /(length(which(conf_tribun== 'Mucha confianza'))+
+                                                                         length(which(conf_tribun== 'Otra'))))
   
-  df_conf_mmc_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                              /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                  length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                              /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                  length(which(conf_mmc== 'Otra'))))
   
   
   # ---- 2008 ----
   
-  df_conf_partidos_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-                                                                   /(length(which(conf_partidos== 'Alta o media confianza'))+
-                                                                       length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+                                                                   /(length(which(conf_partidos== 'Mucha confianza'))+
+                                                                       length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                  /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                      length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                   /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                       length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                               /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                   length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                               /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                   length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Alta o media confianza'))
-                                                                   /(length(which(conf_emppriv== 'Alta o media confianza'))+
-                                                                       length(which(conf_emppriv== 'Baja o nula confianza'))))
+  df_conf_empresas_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Mucha confianza'))
+                                                                   /(length(which(conf_emppriv== 'Mucha confianza'))+
+                                                                       length(which(conf_emppriv== 'Otra'))))
   
   
-  df_conf_tribunales_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Alta o media confianza'))
-                                                                     /(length(which(conf_tribunalesjust== 'Alta o media confianza'))+
-                                                                         length(which(conf_tribunalesjust== 'Baja o nula confianza'))))
+  df_conf_tribunales_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Mucha confianza'))
+                                                                     /(length(which(conf_tribunalesjust== 'Mucha confianza'))+
+                                                                         length(which(conf_tribunalesjust== 'Otra'))))
   
-  df_conf_mmc_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                              /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                  length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2008 <- df2008_58 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                              /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                  length(which(conf_mmc== 'Otra'))))
   
   
   # ---- 2009 ----
   
-  df_conf_partidos_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-                                                                   /(length(which(conf_partidos== 'Alta o media confianza'))+
-                                                                       length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+                                                                   /(length(which(conf_partidos== 'Mucha confianza'))+
+                                                                       length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                  /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                      length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                   /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                       length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                               /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                   length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                               /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                   length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Alta o media confianza'))
-                                                                   /(length(which(conf_emppriv== 'Alta o media confianza'))+
-                                                                       length(which(conf_emppriv== 'Baja o nula confianza'))))
+  df_conf_empresas_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Mucha confianza'))
+                                                                   /(length(which(conf_emppriv== 'Mucha confianza'))+
+                                                                       length(which(conf_emppriv== 'Otra'))))
   
   
-  df_conf_tribunales_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Alta o media confianza'))
-                                                                     /(length(which(conf_tribunalesjust== 'Alta o media confianza'))+
-                                                                         length(which(conf_tribunalesjust== 'Baja o nula confianza'))))
+  df_conf_tribunales_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Mucha confianza'))
+                                                                     /(length(which(conf_tribunalesjust== 'Mucha confianza'))+
+                                                                         length(which(conf_tribunalesjust== 'Otra'))))
   
-  df_conf_mmc_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                              /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                  length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2009 <- df2009_61 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                              /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                  length(which(conf_mmc== 'Otra'))))
   
   # ---- 2012 ----
   
-  df_conf_partidos_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-                                                                   /(length(which(conf_partidos== 'Alta o media confianza'))+
-                                                                       length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+                                                                   /(length(which(conf_partidos== 'Mucha confianza'))+
+                                                                       length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                  /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                      length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                   /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                       length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                               /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                   length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                               /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                   length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Alta o media confianza'))
-                                                                   /(length(which(conf_emppriv== 'Alta o media confianza'))+
-                                                                       length(which(conf_emppriv== 'Baja o nula confianza'))))
+  df_conf_empresas_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Mucha confianza'))
+                                                                   /(length(which(conf_emppriv== 'Mucha confianza'))+
+                                                                       length(which(conf_emppriv== 'Otra'))))
   
   
-  df_conf_tribunales_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Alta o media confianza'))
-                                                                     /(length(which(conf_tribunalesjust== 'Alta o media confianza'))+
-                                                                         length(which(conf_tribunalesjust== 'Baja o nula confianza'))))
+  df_conf_tribunales_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Mucha confianza'))
+                                                                     /(length(which(conf_tribunalesjust== 'Mucha confianza'))+
+                                                                         length(which(conf_tribunalesjust== 'Otra'))))
   
-  df_conf_mmc_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                              /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                  length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2012 <- df2012_67 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                              /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                  length(which(conf_mmc== 'Otra'))))
   # ---- 2013 ----
   
-  df_conf_partidos_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-                                                                   /(length(which(conf_partidos== 'Alta o media confianza'))+
-                                                                       length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+                                                                   /(length(which(conf_partidos== 'Mucha confianza'))+
+                                                                       length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                  /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                      length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                   /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                       length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                               /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                   length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                               /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                   length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Alta o media confianza'))
-                                                                   /(length(which(conf_emppriv== 'Alta o media confianza'))+
-                                                                       length(which(conf_emppriv== 'Baja o nula confianza'))))
+  df_conf_empresas_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Mucha confianza'))
+                                                                   /(length(which(conf_emppriv== 'Mucha confianza'))+
+                                                                       length(which(conf_emppriv== 'Otra'))))
   
   
-  df_conf_tribunales_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Alta o media confianza'))
-                                                                     /(length(which(conf_tribunalesjust== 'Alta o media confianza'))+
-                                                                         length(which(conf_tribunalesjust== 'Baja o nula confianza'))))
+  df_conf_tribunales_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Mucha confianza'))
+                                                                     /(length(which(conf_tribunalesjust== 'Mucha confianza'))+
+                                                                         length(which(conf_tribunalesjust== 'Otra'))))
   
-  df_conf_mmc_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                              /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                  length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2013<- df2013_69 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                              /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                  length(which(conf_mmc== 'Otra'))))
   # ---- 2014 ----
   
   
-  df_conf_partidos_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-                                                                   /(length(which(conf_partidos== 'Alta o media confianza'))+
-                                                                       length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+                                                                   /(length(which(conf_partidos== 'Mucha confianza'))+
+                                                                       length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                  /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                      length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                   /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                       length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                               /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                   length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                               /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                   length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Alta o media confianza'))
-                                                                   /(length(which(conf_emppriv== 'Alta o media confianza'))+
-                                                                       length(which(conf_emppriv== 'Baja o nula confianza'))))
+  df_conf_empresas_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Mucha confianza'))
+                                                                   /(length(which(conf_emppriv== 'Mucha confianza'))+
+                                                                       length(which(conf_emppriv== 'Otra'))))
   
   
-  df_conf_tribunales_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Alta o media confianza'))
-                                                                     /(length(which(conf_tribunalesjust== 'Alta o media confianza'))+
-                                                                         length(which(conf_tribunalesjust== 'Baja o nula confianza'))))
+  df_conf_tribunales_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Mucha confianza'))
+                                                                     /(length(which(conf_tribunalesjust== 'Mucha confianza'))+
+                                                                         length(which(conf_tribunalesjust== 'Otra'))))
   
-  df_conf_mmc_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                              /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                  length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2014 <- df2014_71 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                              /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                  length(which(conf_mmc== 'Otra'))))
   # ---- 2017 ----
   
   
-  df_conf_partidos_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-                                                                   /(length(which(conf_partidos== 'Alta o media confianza'))+
-                                                                       length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+                                                                   /(length(which(conf_partidos== 'Mucha confianza'))+
+                                                                       length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                  /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                      length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                   /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                       length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                               /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                   length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                               /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                   length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Alta o media confianza'))
-                                                                   /(length(which(conf_emppriv== 'Alta o media confianza'))+
-                                                                       length(which(conf_emppriv== 'Baja o nula confianza'))))
+  df_conf_empresas_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Mucha confianza'))
+                                                                   /(length(which(conf_emppriv== 'Mucha confianza'))+
+                                                                       length(which(conf_emppriv== 'Otra'))))
   
   
-  df_conf_tribunales_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Alta o media confianza'))
-                                                                     /(length(which(conf_tribunalesjust== 'Alta o media confianza'))+
-                                                                         length(which(conf_tribunalesjust== 'Baja o nula confianza'))))
+  df_conf_tribunales_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Mucha confianza'))
+                                                                     /(length(which(conf_tribunalesjust== 'Mucha confianza'))+
+                                                                         length(which(conf_tribunalesjust== 'Otra'))))
   
-  df_conf_mmc_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                              /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                  length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2017 <- df2017_79 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                              /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                  length(which(conf_mmc== 'Otra'))))
   
   # ---- 2019 ----
   
   
-  df_conf_partidos_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Alta o media confianza'))
-                                                                   /(length(which(conf_partidos== 'Alta o media confianza'))+
-                                                                       length(which(conf_partidos== 'Baja o nula confianza'))))
+  df_conf_partidos_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
+                                                                   /(length(which(conf_partidos== 'Mucha confianza'))+
+                                                                       length(which(conf_partidos== 'Otra'))))
   
   
   
-  df_conf_iglesia_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Alta o media confianza'))
-                                                                  /(length(which(conf_iglesia== 'Alta o media confianza'))+
-                                                                      length(which(conf_iglesia== 'Baja o nula confianza'))))
+  df_conf_iglesia_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia== 'Otra'))))
   
   
   
-  df_conf_congreso_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Alta o media confianza'))
-                                                                   /(length(which(conf_congreso== 'Alta o media confianza'))+
-                                                                       length(which(conf_congreso== 'Baja o nula confianza'))))
+  df_conf_congreso_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Alta o media confianza'))
-                                                               /(length(which(conf_ffaa== 'Alta o media confianza'))+
-                                                                   length(which(conf_ffaa== 'Baja o nula confianza'))))
+  df_conf_ffaa_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_ffaa== 'Mucha confianza'))
+                                                               /(length(which(conf_ffaa== 'Mucha confianza'))+
+                                                                   length(which(conf_ffaa== 'Otra'))))
   
   
-  df_conf_empresas_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Alta o media confianza'))
-                                                                   /(length(which(conf_emppriv== 'Alta o media confianza'))+
-                                                                       length(which(conf_emppriv== 'Baja o nula confianza'))))
+  df_conf_empresas_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_emppriv== 'Mucha confianza'))
+                                                                   /(length(which(conf_emppriv== 'Mucha confianza'))+
+                                                                       length(which(conf_emppriv== 'Otra'))))
   
   
-  df_conf_tribunales_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Alta o media confianza'))
-                                                                     /(length(which(conf_tribunalesjust== 'Alta o media confianza'))+
-                                                                         length(which(conf_tribunalesjust== 'Baja o nula confianza'))))
+  df_conf_tribunales_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_tribunalesjust== 'Mucha confianza'))
+                                                                     /(length(which(conf_tribunalesjust== 'Mucha confianza'))+
+                                                                         length(which(conf_tribunalesjust== 'Otra'))))
   
-  df_conf_mmc_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Alta o media confianza'))
-                                                              /(length(which(conf_mmc== 'Alta o media confianza'))+
-                                                                  length(which(conf_mmc== 'Baja o nula confianza'))))
+  df_conf_mmc_2019<- df2019_84 %>%group_by(year)%>%summarise(porc_conf_mmc= length(which(conf_mmc== 'Mucha confianza'))
+                                                              /(length(which(conf_mmc== 'Mucha confianza'))+
+                                                                  length(which(conf_mmc== 'Otra'))))
 
 
 # ---- 3.3 Merge bases de datos ----
@@ -622,13 +622,11 @@ df_conf_partidos_merge %>%
   geom_line( color="grey") +
   geom_point(shape=21, color="black", fill="#69b3a2", size=6) +
   theme_ipsum() +
-  ggtitle("Evolucion de alta o media confianza en el congreso")
+  ggtitle("Evolucion de Mucha confianza en el congreso")
 
 
 p <- ggplot(data = df_conf_partidos_merge,
             mapping = aes(x = year,
-                          y = porc_conf_partidos)) + geom_point(size=3) +   ggtitle("Evolucion de alta o media confianza en los partidos")
+                          y = porc_conf_partidos)) + geom_point(size=3) +   ggtitle("Evolucion de Mucha confianza en los partidos")
 
 p
-
-#try

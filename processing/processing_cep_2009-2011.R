@@ -244,53 +244,61 @@ frq(bd2009_2011_65$conf_emppriv)
 
 
 #---- 3.2.2 Recodificacion ----
-bd2009_2011_61$conf_iglesiacat <- car::recode(bd2009_2011_61$conf_iglesiacat,"c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_ffaa <- car::recode(bd2009_2011_61$conf_ffaa,"c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_iglesiaev <- car::recode(bd2009_2011_61$conf_iglesiaev,"c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_partidos <- car::recode(bd2009_2011_61$conf_partidos, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_tribunalesjust <- car::recode(bd2009_2011_61$conf_tribunalesjust, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_diarios <- car::recode(bd2009_2011_61$conf_diarios, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_tele <- car::recode(bd2009_2011_61$conf_tele, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_radios <- car::recode(bd2009_2011_61$conf_radios, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_sindicatos <- car::recode(bd2009_2011_61$conf_sindicatos, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_carabineros <- car::recode(bd2009_2011_61$conf_carabineros, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_gobierno <- car::recode(bd2009_2011_61$conf_gobierno, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_congreso <- car::recode(bd2009_2011_61$conf_congreso, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_61$conf_emppriv <- car::recode(bd2009_2011_61$conf_emppriv, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2009_2011_61$conf_iglesiacat <- car::recode(bd2009_2011_61$conf_iglesiacat,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_ffaa <- car::recode(bd2009_2011_61$conf_ffaa,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_iglesiaev <- car::recode(bd2009_2011_61$conf_iglesiaev,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_partidos <- car::recode(bd2009_2011_61$conf_partidos, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_tribunalesjust <- car::recode(bd2009_2011_61$conf_tribunalesjust, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_diarios <- car::recode(bd2009_2011_61$conf_diarios, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_tele <- car::recode(bd2009_2011_61$conf_tele, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_radios <- car::recode(bd2009_2011_61$conf_radios, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_sindicatos <- car::recode(bd2009_2011_61$conf_sindicatos, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_carabineros <- car::recode(bd2009_2011_61$conf_carabineros, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_gobierno <- car::recode(bd2009_2011_61$conf_gobierno, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_congreso <- car::recode(bd2009_2011_61$conf_congreso, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_61$conf_emppriv <- car::recode(bd2009_2011_61$conf_emppriv, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
 
-bd2009_2011_65$conf_iglesiacat <- car::recode(bd2009_2011_65$conf_iglesiacat,"c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_ffaa <- car::recode(bd2009_2011_65$conf_ffaa,"c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_iglesiaev <- car::recode(bd2009_2011_65$conf_iglesiaev,"c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_partidos <- car::recode(bd2009_2011_65$conf_partidos, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_tribunalesjust <- car::recode(bd2009_2011_65$conf_tribunalesjust, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_diarios <- car::recode(bd2009_2011_65$conf_diarios, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_tele <- car::recode(bd2009_2011_65$conf_tele, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_radios <- car::recode(bd2009_2011_65$conf_radios, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_sindicatos <- car::recode(bd2009_2011_65$conf_sindicatos, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_carabineros <- car::recode(bd2009_2011_65$conf_carabineros, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_gobierno <- car::recode(bd2009_2011_65$conf_gobierno, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_congreso <- car::recode(bd2009_2011_65$conf_congreso, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
-bd2009_2011_65$conf_emppriv <- car::recode(bd2009_2011_65$conf_emppriv, "c(1,2) = 'Baja o nula confianza';  c(3,4) = 'Alta o media confianza'; c(8,9) = 'NS/NC'", as.factor = T)
+bd2009_2011_65$conf_iglesiacat <- car::recode(bd2009_2011_65$conf_iglesiacat,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_ffaa <- car::recode(bd2009_2011_65$conf_ffaa,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_iglesiaev <- car::recode(bd2009_2011_65$conf_iglesiaev,"c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_partidos <- car::recode(bd2009_2011_65$conf_partidos, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_tribunalesjust <- car::recode(bd2009_2011_65$conf_tribunalesjust, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_diarios <- car::recode(bd2009_2011_65$conf_diarios, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_tele <- car::recode(bd2009_2011_65$conf_tele, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_radios <- car::recode(bd2009_2011_65$conf_radios, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_sindicatos <- car::recode(bd2009_2011_65$conf_sindicatos, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_carabineros <- car::recode(bd2009_2011_65$conf_carabineros, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_gobierno <- car::recode(bd2009_2011_65$conf_gobierno, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_congreso <- car::recode(bd2009_2011_65$conf_congreso, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2009_2011_65$conf_emppriv <- car::recode(bd2009_2011_65$conf_emppriv, "c(1, 2, 3) = 'Otra'; 4 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+
+# No olvidar
+# Codificaicón original
+
+# 1. Nada de confianza
+# 2. Algo de confianza
+# 3. Bastante confianza
+# 4. Mucha confianza
 
 #---- 3.2.3 Otros ajustes ----
 ### Construccion variable iglesia en calidad de institucion
 
 #2009-2011: CEP61
 
-bd2009_2011_61$conf_iglesia[bd2009_2011_61$conf_iglesiacat == 'Alta o media confianza' | bd2009_2011_61$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2009_2011_61$conf_iglesia[bd2009_2011_61$conf_iglesiacat == 'Baja o nula confianza' & bd2009_2011_61$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2009_2011_61$conf_iglesia[bd2009_2011_61$conf_iglesiacat == 'Mucha confianza' | bd2009_2011_61$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd2009_2011_61$conf_iglesia[bd2009_2011_61$conf_iglesiacat == 'Otra' & bd2009_2011_61$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Construccion variable MMC
-bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_diarios == 'Alta o media confianza' & bd2009_2011_61$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_diarios == 'Alta o media confianza' & bd2009_2011_61$conf_tele == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Alta o media confianza' & bd2009_2011_61$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
+bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_diarios == 'Mucha confianza' & bd2009_2011_61$conf_radios == 'Mucha confianza'] <- 'Mucha confianza'
+bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_diarios == 'Mucha confianza' & bd2009_2011_61$conf_tele == 'Mucha confianza'] <- 'Mucha confianza'
+bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Mucha confianza' & bd2009_2011_61$conf_radios == 'Mucha confianza'] <- 'Mucha confianza'
 
-bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_diarios == 'Baja o nula confianza' & bd2009_2011_61$conf_radios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
-bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_diarios == 'Baja o nula confianza' & bd2009_2011_61$conf_tele == 'Baja o nula confianza'] <- 'Baja o nula confianza'
-bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Baja o nula confianza' & bd2009_2011_61$conf_radios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_diarios == 'Otra' & bd2009_2011_61$conf_radios == 'Otra'] <- 'Otra'
+bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_diarios == 'Otra' & bd2009_2011_61$conf_tele == 'Otra'] <- 'Otra'
+bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Otra' & bd2009_2011_61$conf_radios == 'Otra'] <- 'Otra'
 
-bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Alta o media confianza' & bd2009_2011_61$conf_radios == 'Alta o media confianza' & bd2009_2011_61$conf_diarios == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Baja o nula confianza' & bd2009_2011_61$conf_radios == 'Baja o nula confianza' & bd2009_2011_61$conf_diarios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Mucha confianza' & bd2009_2011_61$conf_radios == 'Mucha confianza' & bd2009_2011_61$conf_diarios == 'Mucha confianza'] <- 'Mucha confianza'
+bd2009_2011_61$conf_mmc[bd2009_2011_61$conf_tele == 'Otra' & bd2009_2011_61$conf_radios == 'Otra' & bd2009_2011_61$conf_diarios == 'Otra'] <- 'Otra'
 
 # Ver frecuencia variable nueva
 frq(bd2009_2011_61$conf_mmc)
@@ -299,20 +307,20 @@ frq(bd2009_2011_61$conf_mmc)
 bd2009_2011_61 <- select(bd2009_2011_61,-conf_iglesiacat, -conf_iglesiaev ,-conf_gobierno, -conf_radios, -conf_tele, -conf_sindicatos, -conf_carabineros, -conf_diarios) 
 
 #2009-2011: CEP 65
-bd2009_2011_65$conf_iglesia[bd2009_2011_65$conf_iglesiacat == 'Alta o media confianza' | bd2009_2011_65$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2009_2011_65$conf_iglesia[bd2009_2011_65$conf_iglesiacat == 'Baja o nula confianza' & bd2009_2011_65$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2009_2011_65$conf_iglesia[bd2009_2011_65$conf_iglesiacat == 'Mucha confianza' | bd2009_2011_65$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd2009_2011_65$conf_iglesia[bd2009_2011_65$conf_iglesiacat == 'Otra' & bd2009_2011_65$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Construccion variable MMC
-bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_diarios == 'Alta o media confianza' & bd2009_2011_65$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_diarios == 'Alta o media confianza' & bd2009_2011_65$conf_tele == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_tele == 'Alta o media confianza' & bd2009_2011_65$conf_radios == 'Alta o media confianza'] <- 'Alta o media confianza'
+bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_diarios == 'Mucha confianza' & bd2009_2011_65$conf_radios == 'Mucha confianza'] <- 'Mucha confianza'
+bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_diarios == 'Mucha confianza' & bd2009_2011_65$conf_tele == 'Mucha confianza'] <- 'Mucha confianza'
+bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_tele == 'Mucha confianza' & bd2009_2011_65$conf_radios == 'Mucha confianza'] <- 'Mucha confianza'
 
-bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_diarios == 'Baja o nula confianza' & bd2009_2011_65$conf_radios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
-bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_diarios == 'Baja o nula confianza' & bd2009_2011_65$conf_tele == 'Baja o nula confianza'] <- 'Baja o nula confianza'
-bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_tele == 'Baja o nula confianza' & bd2009_2011_65$conf_radios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_diarios == 'Otra' & bd2009_2011_65$conf_radios == 'Otra'] <- 'Otra'
+bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_diarios == 'Otra' & bd2009_2011_65$conf_tele == 'Otra'] <- 'Otra'
+bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_tele == 'Otra' & bd2009_2011_65$conf_radios == 'Otra'] <- 'Otra'
 
-bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_tele == 'Alta o media confianza' & bd2009_2011_65$conf_radios == 'Alta o media confianza' & bd2009_2011_65$conf_diarios == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_tele == 'Baja o nula confianza' & bd2009_2011_65$conf_radios == 'Baja o nula confianza' & bd2009_2011_65$conf_diarios == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_tele == 'Mucha confianza' & bd2009_2011_65$conf_radios == 'Mucha confianza' & bd2009_2011_65$conf_diarios == 'Mucha confianza'] <- 'Mucha confianza'
+bd2009_2011_65$conf_mmc[bd2009_2011_65$conf_tele == 'Otra' & bd2009_2011_65$conf_radios == 'Otra' & bd2009_2011_65$conf_diarios == 'Otra'] <- 'Otra'
 
 # Ver frecuencia variable nueva
 frq(bd2009_2011_65$conf_mmc)
