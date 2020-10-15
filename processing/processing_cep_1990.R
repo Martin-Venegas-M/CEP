@@ -142,20 +142,27 @@ frq(bd1990_16$conf_dircortesup)
 
 #---- 3.2.2 Recodificacion ----
 ## 1990: CEP 16
-bd1990_16$conf_dirpol <- car::recode(bd1990_16$conf_dirpol,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_iglesiacat <- car::recode(bd1990_16$conf_iglesiacat,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_iglesiaev <- car::recode(bd1990_16$conf_iglesiaev, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_congreso <- car::recode(bd1990_16$conf_congreso, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_altosffaa <- car::recode(bd1990_16$conf_altosffaa, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_diremp <- car::recode(bd1990_16$conf_diremp, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_dircortesup <- car::recode(bd1990_16$conf_dircortesup, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
+bd1990_16$conf_dirpol <- car::recode(bd1990_16$conf_dirpol,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_iglesiacat <- car::recode(bd1990_16$conf_iglesiacat,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_iglesiaev <- car::recode(bd1990_16$conf_iglesiaev, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_congreso <- car::recode(bd1990_16$conf_congreso, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_altosffaa <- car::recode(bd1990_16$conf_altosffaa, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_diremp <- car::recode(bd1990_16$conf_diremp, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_dircortesup <- car::recode(bd1990_16$conf_dircortesup, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+
+# No olvidar
+# Codificación original
+
+# 1. Poca confianza
+# 2. Algo de confianza
+# 3. Mucha confianza
 
 #---- 3.2.3 Otros  ajustes ----
 ## 1990: CEP 16
 ### Construccion variable iglesia en calidad de institucion
 
-bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Alta o media confianza' | bd1990_16$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Baja o nula confianza' & bd1990_16$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Mucha confianza' | bd1990_16$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Otra' & bd1990_16$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Eliminación de variables no utilzadas
 bd1990_16 <- select(bd1990_16, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete) # Sacar variables de confianza que no usaremos.

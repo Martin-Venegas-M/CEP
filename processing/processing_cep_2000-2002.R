@@ -22,7 +22,7 @@ bd2000_2002_40 <- select(bd2000_2002_40, de27, de5, de2, de1, p9t, p8t) #no hay 
 bd2000_2002_41 <- select(bd2000_2002_41, de16, de4, de2, de15, p10, p12) #no hay confianza
 bd2000_2002_42 <- select(bd2000_2002_42, de14, de4, de2, de13, p7, p9) #no hay confianza
 bd2000_2002_43 <- select(bd2000_2002_43, de25, de5, de2, de1, p7, p9) #no hay confianza
-bd2000_2002_44 <- select(bd2000_2002_44, de28, de5, de2, de1, p7, p9, p20_a:p20_e, p20_g, p20_i, p20_j, p20_k)
+bd2000_2002_44 <- select(bd2000_2002_44, de28, de5, de2, de1, p7, p9, p20_a:p20_e, p20_g, p20_i, p20_j, p20_k, p19_a:p19_e, p19_h, p19_i)
 
 ## Renombrarlas
 ### 2000-2002: CEP 39
@@ -86,7 +86,14 @@ bd2000_2002_44 <- rename(bd2000_2002_44,
                          conf_prensa = p20_d,
                          conf_tele = p20_e,
                          conf_empr = p20_k,
-                         conf_tribun = p20_c)
+                         conf_tribun = p20_c,
+                         conf_dirpol = p19_a,
+                         conf_iglesiacat_per = p19_b,
+                         conf_iglesiaev_per = p19_c,
+                         conf_congreso_per = p19_d,
+                         conf_altosffaa = p19_e,
+                         conf_diremp = p19_h,
+                         conf_dircortesup = p19_i)
 
 #---- 3.1 Tratamiento de  sociodemográficas ----
 #---- 3.1.1 Frecuencias ----
@@ -171,6 +178,7 @@ bd2000_2002_44$sexo <- car::recode(bd2000_2002_44$sexo, "1 = 'Hombre'; 2 = 'Muje
 ### 2000-2002: CEP 42 #no tiene confianza
 ### 2000-2002: CEP 43 #no tiene confianza
 ### 2000-2002: CEP 44
+
 frq(bd2000_2002_44$conf_iglesia)
 frq(bd2000_2002_44$conf_partidos)
 frq(bd2000_2002_44$conf_iglesia)
@@ -183,26 +191,49 @@ frq(bd2000_2002_44$conf_empr)
 frq(bd2000_2002_44$conf_tribun)
 
 #---- 3.2.2 Recodificacion ----
-### 2000-2002: CEP 44
-bd2000_2002_44$conf_partidos <- car::recode(bd2000_2002_44$conf_partidos,"c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2000_2002_44$conf_iglesia  <- car::recode(bd2000_2002_44$conf_iglesia,"c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2000_2002_44$conf_prensa <- car::recode(bd2000_2002_44$conf_prensa, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2000_2002_44$conf_tele <- car::recode(bd2000_2002_44$conf_tele, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2000_2002_44$conf_congreso <- car::recode(bd2000_2002_44$conf_congreso, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2000_2002_44$conf_ffaa <- car::recode(bd2000_2002_44$conf_ffaa, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2000_2002_44$conf_carab <- car::recode(bd2000_2002_44$conf_carab, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2000_2002_44$conf_empr <- car::recode(bd2000_2002_44$conf_empr, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
-bd2000_2002_44$conf_tribun <- car::recode(bd2000_2002_44$conf_tribun, "c(3, 4) = 'Baja o nula confianza'; c(1, 2) = 'Alta o media confianza'; c(8, 9) = NA", as.factor = T)
+### 2000-2002: CEP 44 inst
+bd2000_2002_44$conf_partidos <- car::recode(bd2000_2002_44$conf_partidos,"c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2000_2002_44$conf_iglesia  <- car::recode(bd2000_2002_44$conf_iglesia,"c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2000_2002_44$conf_prensa <- car::recode(bd2000_2002_44$conf_prensa, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2000_2002_44$conf_tele <- car::recode(bd2000_2002_44$conf_tele, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2000_2002_44$conf_congreso <- car::recode(bd2000_2002_44$conf_congreso, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2000_2002_44$conf_ffaa <- car::recode(bd2000_2002_44$conf_ffaa, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2000_2002_44$conf_carab <- car::recode(bd2000_2002_44$conf_carab, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2000_2002_44$conf_empr <- car::recode(bd2000_2002_44$conf_empr, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
+bd2000_2002_44$conf_tribun <- car::recode(bd2000_2002_44$conf_tribun, "c(2, 3, 4) = 'Otra'; 1 = 'Mucha confianza'; c(8, 9) = NA", as.factor = T)
 
+# per
+bd2000_2002_44$conf_dirpol <- car::recode(bd2000_2002_44$conf_dirpol,"1 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd2000_2002_44$conf_iglesiacat_per <- car::recode(bd2000_2002_44$conf_iglesiacat_per,"1 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd2000_2002_44$conf_iglesiaev_per <- car::recode(bd2000_2002_44$conf_iglesiaev_per, "1 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd2000_2002_44$conf_congreso_per <- car::recode(bd2000_2002_44$conf_congreso_per, "1 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd2000_2002_44$conf_altosffaa <- car::recode(bd2000_2002_44$conf_altosffaa, "1 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd2000_2002_44$conf_diremp <- car::recode(bd2000_2002_44$conf_diremp, "1 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd2000_2002_44$conf_dircortesup <- car::recode(bd2000_2002_44$conf_dircortesup, "1 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+
+# No olvidar
+# Codificación original
+#1. Mucha confianza
+#2. Bastante confianza
+#3. No mucha confianza
+#4. Ninguna confianza
+#8. No sabe
+#9. No contesta
 #---- 3.2.3 Otros ajustes ----
 ### Construccion variable mmc
 ### 2000-2002: CEP 44
-bd2000_2002_44$conf_mmc[bd2000_2002_44$conf_tele == 'Alta o media confianza' | bd2000_2002_44$conf_prensa == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd2000_2002_44$conf_mmc[bd2000_2002_44$conf_tele == 'Baja o nula confianza' & bd2000_2002_44$conf_prensa == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd2000_2002_44$conf_mmc[bd2000_2002_44$conf_tele == 'Mucha confianza' | bd2000_2002_44$conf_prensa == 'Mucha confianza'] <- 'Mucha confianza'
+bd2000_2002_44$conf_mmc[bd2000_2002_44$conf_tele == 'Otra' & bd2000_2002_44$conf_prensa == 'Otra'] <- 'Otra'
 
 ### Sacar variables de confianza que no usaremos.
 ### 2000-2002: CEP 44
-bd2000_2002_44 <- select(bd2000_2002_44, -conf_carab, -conf_tele, -conf_prensa ) 
+bd2000_2002_44 <- select(bd2000_2002_44, -conf_carab, -conf_tele, -conf_prensa )
+
+bd2000_2002_44$conf_iglesia_per[bd2000_2002_44$conf_iglesiacat_per == 'Mucha confianza' | bd2000_2002_44$conf_iglesiaev_per == 'Mucha confianza'] <- 'Mucha confianza'
+bd2000_2002_44$conf_iglesia_per[bd2000_2002_44$conf_iglesiacat_per == 'Otra' & bd2000_2002_44$conf_iglesiaev_per == 'Otra'] <- 'Otra'
+
+### Eliminación de variables no utilzadas
+bd2000_2002_44 <- select(bd2000_2002_44, -conf_iglesiaev_per, -conf_iglesiacat_per) # Sacar variables de confianza que no usaremos
 
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd2000_2002_44, file = "input/data/bd2000_2002_44.RData")
