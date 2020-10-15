@@ -78,7 +78,7 @@
     
   #---- 3.2 Group and summarise bases de datos ----
   # ---- 1990 ----
-  df_conf_partidos_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Mucha confianza'))
+  df_conf_dirpol_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_dirpol= length(which(conf_dirpol== 'Mucha confianza'))
                                                                     /(length(which(conf_dirpol== 'Mucha confianza'))+
                                                                         length(which(conf_dirpol== 'Otra'))))
   
@@ -95,23 +95,23 @@
                                                                         length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Mucha confianza'))
+  df_conf_altosffaa_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_altosffaa= length(which(conf_altosffaa== 'Mucha confianza'))
                                                                 /(length(which(conf_altosffaa== 'Mucha confianza'))+
                                                                     length(which(conf_altosffaa== 'Otra'))))
   
   
-  df_conf_empresas_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Mucha confianza'))
+  df_conf_diremp_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_diremp= length(which(conf_diremp== 'Mucha confianza'))
                                                                     /(length(which(conf_diremp== 'Mucha confianza'))+
                                                                         length(which(conf_diremp== 'Otra'))))
   
   
-  df_conf_tribunales_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Mucha confianza'))
+  df_conf_dircortesup_1990 <- df1990_16 %>%group_by(year)%>%summarise(porc_conf_dircortesup= length(which(conf_dircortesup== 'Mucha confianza'))
                                                                       /(length(which(conf_dircortesup== 'Mucha confianza'))+
                                                                           length(which(conf_dircortesup== 'Otra'))))
   
   
   # ---- 1991a ----
-  df_conf_partidos_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_dirpol== 'Mucha confianza'))
+  df_conf_dirpol_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_dirpol= length(which(conf_dirpol== 'Mucha confianza'))
                                                           /(length(which(conf_dirpol== 'Mucha confianza'))+
                                                               length(which(conf_dirpol== 'Otra'))))
   
@@ -128,17 +128,17 @@
                                                           length(which(conf_congreso== 'Otra'))))
   
   
-  df_conf_ffaa_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_ffaa= length(which(conf_altosffaa== 'Mucha confianza'))
+  df_conf_altosffaa_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_altosffaa= length(which(conf_altosffaa== 'Mucha confianza'))
                                                 /(length(which(conf_altosffaa== 'Mucha confianza'))+
                                                     length(which(conf_altosffaa== 'Otra'))))
   
   
-  df_conf_empresas_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_empresas= length(which(conf_diremp== 'Mucha confianza'))
+  df_conf_diremp_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_diremp= length(which(conf_diremp== 'Mucha confianza'))
                                                           /(length(which(conf_diremp== 'Mucha confianza'))+
                                                               length(which(conf_diremp== 'Otra'))))
   
   
-  df_conf_tribunales_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_tribunales= length(which(conf_dircortesup== 'Mucha confianza'))
+  df_conf_dircortesup_1991a <- df1991_17 %>%group_by(year)%>%summarise(porc_conf_dircortesup= length(which(conf_dircortesup== 'Mucha confianza'))
                                                       /(length(which(conf_dircortesup== 'Mucha confianza'))+
                                                           length(which(conf_dircortesup== 'Otra'))))
   
@@ -251,7 +251,7 @@
                                                                       #/(length(which(conf_dircortesup== 'Mucha confianza'))+
                                                                           #length(which(conf_dircortesup== 'Otra'))))
   
-  # ---- 2002 ----
+  # ---- 2002 Instituciones ----
   
   df_conf_partidos_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
                                                                     /(length(which(conf_partidos== 'Mucha confianza'))+
@@ -288,6 +288,37 @@
                                                                      /(length(which(conf_mmc== 'Mucha confianza'))+
                                                                          length(which(conf_mmc== 'Otra'))))
   
+  # ---- 2002 Personas ----
+  df_conf_dirpol_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_dirpol= length(which(conf_dirpol== 'Mucha confianza'))
+                                                                 /(length(which(conf_dirpol== 'Mucha confianza'))+
+                                                                     length(which(conf_dirpol== 'Otra'))))
+  
+  
+  
+  df_conf_iglesia_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_iglesia= length(which(conf_iglesia_per== 'Mucha confianza'))
+                                                                  /(length(which(conf_iglesia_per== 'Mucha confianza'))+
+                                                                      length(which(conf_iglesia_per== 'Otra'))))
+  
+  
+  
+  df_conf_congreso_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_congreso= length(which(conf_congreso_per== 'Mucha confianza'))
+                                                                   /(length(which(conf_congreso_per== 'Mucha confianza'))+
+                                                                       length(which(conf_congreso_per== 'Otra'))))
+  
+  
+  df_conf_altosffaa_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_altosffaa= length(which(conf_altosffaa== 'Mucha confianza'))
+                                                                    /(length(which(conf_altosffaa== 'Mucha confianza'))+
+                                                                        length(which(conf_altosffaa== 'Otra'))))
+  
+  
+  df_conf_diremp_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_diremp= length(which(conf_diremp== 'Mucha confianza'))
+                                                                 /(length(which(conf_diremp== 'Mucha confianza'))+
+                                                                     length(which(conf_diremp== 'Otra'))))
+  
+  
+  df_conf_dircortesup_2002 <- df2002_44 %>%group_by(year)%>%summarise(porc_conf_dircortesup= length(which(conf_dircortesup== 'Mucha confianza'))
+                                                                      /(length(which(conf_dircortesup== 'Mucha confianza'))+
+                                                                          length(which(conf_dircortesup== 'Otra'))))
   # ---- 2003 ----
   
   df_conf_partidos_2003 <- df2003_45 %>%group_by(year)%>%summarise(porc_conf_partidos= length(which(conf_partidos== 'Mucha confianza'))
@@ -589,13 +620,13 @@
 
 # ---- 3.3 Merge bases de datos ----
 # Bateria personas
-df_conf_congreso_personas <- do.call("rbind", list(df_conf_congreso_1990, df_conf_congreso_1991, df_conf_congreso_1992))
-df_conf_diremp_personas <- do.call("rbind", list(df_conf_diremp_1990, df_conf_diremp_1991, df_conf_diremp_1992))
-df_conf_altosffaa_personas <- do.call("rbind", list(df_conf_altosffaa_1990, df_conf_altosffaa_1991, df_conf_altosffaa_1992))
-df_conf_iglesia_personas <- do.call("rbind", list(df_conf_iglesia_1990, df_conf_iglesia_1991, df_conf_iglesia_1992))
+df_conf_congreso_personas <- do.call("rbind", list(df_conf_congreso_1990, df_conf_congreso_1991, df_conf_congreso_1992, df_conf_congreso_2002))
+df_conf_diremp_personas <- do.call("rbind", list(df_conf_diremp_1990, df_conf_diremp_1991, df_conf_diremp_1992, df_conf_diremp_2002))
+df_conf_altosffaa_personas <- do.call("rbind", list(df_conf_altosffaa_1990, df_conf_altosffaa_1991, df_conf_altosffaa_1992, df_conf_altosffaa_2002))
+df_conf_iglesia_personas <- do.call("rbind", list(df_conf_iglesia_1990, df_conf_iglesia_1991, df_conf_iglesia_1992, df_conf_iglesia_2002))
 
-df_conf_dirpol_personas <- do.call("rbind", list(df_conf_dirpol_1990, df_conf_dirpol_1991, df_conf_dirpol_1992))
-df_conf_dircortesup_personas <- do.call("rbind", list(df_conf_dircortesup_1990, df_conf_dircortesup_1991, df_conf_dircortesup_1992))
+df_conf_dirpol_personas <- do.call("rbind", list(df_conf_dirpol_1990, df_conf_dirpol_1991, df_conf_dirpol_1992, df_conf_dirpol_2002))
+df_conf_dircortesup_personas <- do.call("rbind", list(df_conf_dircortesup_1990, df_conf_dircortesup_1991, df_conf_dircortesup_1992, df_conf_dircortesup_2002))
   
   
 # Bateria instituciones  
@@ -615,9 +646,9 @@ df_conf_partidos_inst <- do.call("rbind", list(df_conf_partidos_2002, df_conf_pa
 df_conf_tribunales_inst <- do.call("rbind", list(df_conf_tribunales_2002, df_conf_tribunales_2003, df_conf_tribunales_2008, df_conf_tribunales_2009, df_conf_tribunales_2009, df_conf_tribunales_2012, df_conf_tribunales_2013, df_conf_tribunales_2014, df_conf_tribunales_2017, df_conf_tribunales_2019))
   
 
-# Merge all
+# Merge all inst
 
-df_conf_cep  <- merge(merge(merge(merge(merge(merge(
+df_conf_cep_inst  <- merge(merge(merge(merge(merge(merge(
  df_conf_tribunales_inst, df_conf_mmc_inst, by = "year", all = TRUE),
  df_conf_ffaa_inst, by = "year", all = TRUE),
  df_conf_iglesia_inst, by = "year", all = TRUE),
@@ -625,8 +656,16 @@ df_conf_cep  <- merge(merge(merge(merge(merge(merge(
  df_conf_partidos_inst, by = "year", all = TRUE),
  df_conf_congreso_inst, by = "year", all = TRUE)
 
-# No me funciono el comando anterior, por el n de cada base. Revisar ver que sepuede hacer.
-                      
+# Merge all per
+
+df_conf_cep_per  <- merge(merge(merge(merge(merge(
+  df_conf_dirpol_personas, df_conf_altosffaa_personas, by = "year", all = TRUE),
+  df_conf_diremp_personas, by = "year", all = TRUE),
+  df_conf_iglesia_personas, by = "year", all = TRUE),
+  df_conf_congreso_personas, by = "year", all = TRUE),
+  df_conf_dircortesup_personas, by = "year", all = TRUE)
+
+# Test grafic                
 df_conf_partidos_inst %>%
   tail(10) %>%
   ggplot( aes(x=year, y=porc_conf_partidos)) +
@@ -642,31 +681,13 @@ partidos <- ggplot(data = df_conf_partidos_inst,
 
 partidos
 
-df_conf_partidos_inst %>%
-  tail(10) %>%
-  ggplot( aes(x=year, y=porc_conf_partidos)) +
-  geom_line( color="grey") +
-  geom_point(shape=21, color="black", fill="#69b3a2", size=6) +
-  theme_ipsum() +
-  ggtitle("Evolucion de Mucha confianza en el congreso")
-
-
-p <- ggplot(data = df_conf_partidos_inst,
-            mapping = aes(x = year,
-                          y = porc_conf_partidos)) + geom_point(size=3) +   ggtitle("Evolucion de Mucha confianza en los partidos")
-
-p
 
 # Save database
-save(df_conf_cep, file = "output/conf_cep_inst_mucha.RData")
-write.csv(df_conf_cep, "output/conf_cep_inst_mucha.csv")
-write.xlsx(df_conf_cep, "output/conf_cep_inst_mucha.xlsx")
+save(df_conf_cep_inst, file = "output/conf_cep_inst_mucha.RData")
+write.csv(df_conf_cep_inst, "output/conf_cep_inst_mucha.csv")
+write.xlsx(df_conf_cep_inst, "output/conf_cep_inst_mucha.xlsx")
 
+save(df_conf_cep_per, file = "output/conf_cep_per_mucha.RData")
+write.csv(df_conf_cep_per, "output/conf_cep_per_mucha.csv")
+write.xlsx(df_conf_cep_per, "output/conf_cep_per_mucha.xlsx")
 
-ola<- ggplot(data = df_conf_cep, aes( x = year, y = porc_conf_partidos)) + geom_point() + guides(fill = FALSE, size = FALSE) +
-  scale_size_continuous(range=c(1, 10)) + geom_abline(slope = 1) + geom_text( aes(label = ?..Entity),
-                                                                              hjust = 0,    vjust = 0,    colour = "black",size = 3,
-                                                                              check_overlap = TRUE )+ theme_minimal()
-ola
-
-df_conf_cep[, ] *100
