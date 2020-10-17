@@ -239,5 +239,104 @@ bd2000_2002_44 <- select(bd2000_2002_44, -conf_iglesiaev_per, -conf_iglesiacat_p
 save(bd2000_2002_44, file = "input/data/bd2000_2002_44.RData")
 
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
+#---- 3.3.1 Frecuencias ----
 
+frq(bd2000_2002_39$id_part)
+frq(bd2000_2002_39$pos_pol)
 
+frq(bd2000_2002_40$id_part)
+frq(bd2000_2002_40$pos_pol)
+
+frq(bd2000_2002_41$id_part)
+frq(bd2000_2002_41$pos_pol)
+
+frq(bd2000_2002_42$id_part)
+frq(bd2000_2002_42$pos_pol)
+
+frq(bd2000_2002_43$id_part)
+frq(bd2000_2002_43$pos_pol)
+
+frq(bd2000_2002_44$id_part)
+frq(bd2000_2002_44$pos_pol)
+
+#---- 3.3.2 Recodificacion ----
+
+# 2000 - 2002: CEP 39
+bd2000_2002_39$id_part <- car::recode(bd2000_2002_39$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2000_2002_39$pos_pol <- car::recode(bd2000_2002_39$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2000 - 2002: CEP 40
+bd2000_2002_40$id_part <- car::recode(bd2000_2002_40$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2000_2002_40$pos_pol <- car::recode(bd2000_2002_40$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2000 - 2002: CEP 41
+bd2000_2002_41$id_part <- car::recode(bd2000_2002_41$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2000_2002_41$pos_pol <- car::recode(bd2000_2002_41$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2000 - 2002: CEP 42
+bd2000_2002_42$id_part <- car::recode(bd2000_2002_42$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2000_2002_42$pos_pol <- car::recode(bd2000_2002_42$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2000 - 2002: CEP 43
+bd2000_2002_43$id_part <- car::recode(bd2000_2002_43$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2000_2002_43$pos_pol <- car::recode(bd2000_2002_43$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2000 - 2002: CEP 44
+bd2000_2002_44$id_part <- car::recode(bd2000_2002_44$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2000_2002_44$pos_pol <- car::recode(bd2000_2002_44$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# ---- 3.4 Guardar base de datos final ---- 
+save(bd2000_2002_39, file = "input/data/bd2000_2002_39.RData")
+save(bd2000_2002_40, file = "input/data/bd2000_2002_40.RData")
+save(bd2000_2002_41, file = "input/data/bd2000_2002_41.RData")
+save(bd2000_2002_42, file = "input/data/bd2000_2002_42.RData")
+save(bd2000_2002_43, file = "input/data/bd2000_2002_43.RData")
+save(bd2000_2002_44, file = "input/data/bd2000_2002_44.RData")

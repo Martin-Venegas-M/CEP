@@ -335,3 +335,125 @@ save(bd2009_2011_61, file = "input/data/bd2009_2011_61.RData")
 save(bd2009_2011_65, file = "input/data/bd2009_2011_65.RData")
 
 #---- 3.3 Tratamiento de variables posición política e identificación ideológica
+#---- 3.3.1 Frecuencia ----
+
+frq(bd2009_2011_59$id_part)
+frq(bd2009_2011_59$pos_pol)
+
+frq(bd2009_2011_60$id_part)
+frq(bd2009_2011_60$pos_pol)
+
+frq(bd2009_2011_61$id_part)
+frq(bd2009_2011_61$pos_pol)
+
+frq(bd2009_2011_62$id_part)
+frq(bd2009_2011_62$pos_pol)
+
+frq(bd2009_2011_63$id_part)
+frq(bd2009_2011_63$pos_pol)
+
+frq(bd2009_2011_64$id_part)
+frq(bd2009_2011_64$pos_pol)
+
+frq(bd2009_2011_65$id_part)
+frq(bd2009_2011_65$pos_pol)
+
+#---- 3.3.2 Recodificacion ----
+
+# 2009 - 201: CEP 59 
+bd2009_2011_59$id_part <- car::recode(bd2009_2011_59$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2009_2011_59$pos_pol <- car::recode(bd2009_2011_59$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2009 - 201: CEP 60 
+bd2009_2011_60$id_part <- car::recode(bd2009_2011_60$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2009_2011_60$pos_pol <- car::recode(bd2009_2011_60$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2009 - 201: CEP 61 
+bd2009_2011_61$id_part <- car::recode(bd2009_2011_61$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2009_2011_61$pos_pol <- car::recode(bd2009_2011_61$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+
+# 2009 - 201: CEP 62 
+bd2009_2011_62$id_part <- car::recode(bd2009_2011_62$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2009_2011_62$pos_pol <- car::recode(bd2009_2011_62$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+
+# 2009 - 201: CEP 63 
+bd2009_2011_63$id_part <- car::recode(bd2009_2011_63$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2009_2011_63$pos_pol <- car::recode(bd2009_2011_63$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+
+# 2009 - 201: CEP 64 
+bd2009_2011_64$id_part <- car::recode(bd2009_2011_64$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2009_2011_64$pos_pol <- car::recode(bd2009_2011_64$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+
+# 2009 - 201: CEP 65 
+bd2009_2011_65$id_part <- car::recode(bd2009_2011_65$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2009_2011_65$pos_pol <- car::recode(bd2009_2011_65$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# ---- 3.4 Guardar base de datos final ---- 
+save(bd2009_2011_59, file = "input/data/bd2009_2011_59.RData")
+save(bd2009_2011_60, file = "input/data/bd2009_2011_60.RData")
+save(bd2009_2011_61, file = "input/data/bd2009_2011_61.RData")
+save(bd2009_2011_62, file = "input/data/bd2009_2011_62.RData")
+save(bd2009_2011_63, file = "input/data/bd2009_2011_63.RData")
+save(bd2009_2011_64, file = "input/data/bd2009_2011_64.RData")
+save(bd2009_2011_65, file = "input/data/bd2009_2011_65.RData")
+

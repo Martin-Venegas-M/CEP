@@ -245,5 +245,100 @@ bd2003_2005_45 <- select(bd2003_2005_45, -conf_iglesiacat, -conf_iglesiaev ,-con
 save(bd2003_2005_45, file = "input/data/bd2003_2005_45.RData")
 
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
+#---- 3.3.1 Frecuencias ----
+
+frq(bd2003_2005_45$id_part)
+frq(bd2003_2005_45$pos_pol)
+
+frq(bd2003_2005_46$id_part)
+frq(bd2003_2005_46$pos_pol)
+
+frq(bd2003_2005_47$id_part)
+frq(bd2003_2005_47$pos_pol)
+
+frq(bd2003_2005_48$id_part) # Ya esta recodificado
+frq(bd2003_2005_48$pos_pol) # Ya esta recodificado
+
+frq(bd2003_2005_49$id_part) # Ya esta recodificado
+frq(bd2003_2005_49$pos_pol) # Ya esta recodificado
+
+frq(bd2003_2005_50$id_part)
+frq(bd2003_2005_50$pos_pol)
+
+frq(bd2003_2005_51$id_part)
+frq(bd2003_2005_51$pos_pol)
+
+#---- 3.3.2 Recodificacion ----
+
+# 2003 - 2005: CEP 45 
+bd2003_2005_45$id_part <- car::recode(bd2003_2005_45$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2003_2005_45$pos_pol <- car::recode(bd2003_2005_45$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2003 - 2005: CEP 46 
+bd2003_2005_46$id_part <- car::recode(bd2003_2005_46$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2003_2005_46$pos_pol <- car::recode(bd2003_2005_46$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2003 - 2005: CEP 47 
+bd2003_2005_47$id_part <- car::recode(bd2003_2005_47$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2003_2005_47$pos_pol <- car::recode(bd2003_2005_47$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# No se recodifican CEP 48 y 49
+
+# 2003 - 2005: CEP 50 
+bd2003_2005_50$id_part <- car::recode(bd2003_2005_50$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2003_2005_50$pos_pol <- car::recode(bd2003_2005_50$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2003 - 2005: CEP 51 
+bd2003_2005_51$id_part <- car::recode(bd2003_2005_51$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2003_2005_51$pos_pol <- car::recode(bd2003_2005_51$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# ---- 3.4 Guardar base de datos final ---- 
+save(bd2003_2005_45, file = "input/data/bd2003_2005_45.RData")
+save(bd2003_2005_46, file = "input/data/bd2003_2005_46.RData")
+save(bd2003_2005_47, file = "input/data/bd2003_2005_47.RData")
+save(bd2003_2005_48, file = "input/data/bd2003_2005_48.RData")
+save(bd2003_2005_49, file = "input/data/bd2003_2005_49.RData")
+save(bd2003_2005_50, file = "input/data/bd2003_2005_50.RData")
+save(bd2003_2005_51, file = "input/data/bd2003_2005_51.RData")
 
 

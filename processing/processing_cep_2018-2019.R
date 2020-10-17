@@ -198,3 +198,57 @@ bd2018_2019_84 <- select(bd2018_2019_84, -conf_iglesiaev, -conf_iglesiacat, -con
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd2018_2019_82, file = "input/data/bd2018_2019_82.RData")
 save(bd2018_2019_84, file = "input/data/bd2018_2019_84.RData")
+
+#---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
+#---- 3.3.1 Frecuencias ----
+frq(bd2018_2019_82$id_part)
+frq(bd2018_2019_82$pos_pol)
+
+frq(bd2018_2019_83$id_part)
+frq(bd2018_2019_83$pos_pol)
+
+frq(bd2018_2019_84$id_part)
+frq(bd2018_2019_84$pos_pol)
+
+#---- 3.3.2 Recodificacion ----
+
+# 2018 - 2019: CEP 82 
+bd2018_2019_82$id_part <- car::recode(bd2018_2019_82$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2018_2019_82$pos_pol <- car::recode(bd2018_2019_82$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2018 - 2019: CEP 83 
+bd2018_2019_83$id_part <- car::recode(bd2018_2019_83$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2018_2019_83$pos_pol <- car::recode(bd2018_2019_83$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 2018 - 2019: CEP 84 
+bd2018_2019_84$id_part <- car::recode(bd2018_2019_84$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2018_2019_84$pos_pol <- car::recode(bd2018_2019_84$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# ---- 3.4 Guardar base de datos final ---- 
+save(bd2018_2019_82, file = "input/data/bd2018_2019_82.RData")
+save(bd2018_2019_83, file = "input/data/bd2018_2019_83.RData")
+save(bd2018_2019_84, file = "input/data/bd2018_2019_84.RData")

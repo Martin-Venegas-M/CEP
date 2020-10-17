@@ -171,3 +171,82 @@ bd1990_16 <- select(bd1990_16, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -
 save(bd1990_16, file = "input/data/bd1990_16.RData")
 
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
+#---- 3.3.1 Frecuencias ----
+# 1990: CEP 14
+frq(bd1990_14$id_part)
+frq(bd1990_14$pos_pol)
+
+#1990: CEP 15
+frq(bd1990_15$id_part)
+frq(bd1990_15$pos_pol)
+
+# 1990: CEP 16
+frq(bd1990_16$id_part)
+frq(bd1990_16$pos_pol)
+
+#---- 3.3.2 Recodificación ----
+
+# 1990: CEP 14
+bd1990_14$id_part <- car::recode(bd1990_14$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_14$pos_pol <- car::recode(bd1990_14$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1990: CEP 15
+bd1990_15$id_part <- car::recode(bd1990_15$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_15$pos_pol <- car::recode(bd1990_15$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1990: CEP 16
+bd1990_16$id_part <- car::recode(bd1990_16$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_16$pos_pol <- car::recode(bd1990_16$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+
+
+# Recodificación
+
+
+# Identificación partidaria                          #NOTA: Esta bateria es la misma para las tres encuestas de este ano
+# 1 Unión Demócrata Independiente (UDI)
+# 2 Partido Radical (PR)
+# 3 Renovación Nacional (RN)
+# 4 Partido Socialista (PS)
+# 5 Democracia Cristiana (DC)
+# 6 Partido por la Democracia (PPD)
+# 7 Partido Comunista (PC)
+# 8 Otro: ¿cuál?:
+# 9 Ninguno
+
+
+# Posición política
+#1 Derecha
+#2 Centro Derecha
+#3 Centro
+#4 Centro Izquierda
+#5 Izquierda
+#6 Independiente
+#7 Ninguna
+#8 No sabe
+
+# ---- 3.4 Guardar base de datos final ---- 
+save(bd1990_16, file = "input/data/bd1990_14.RData")
+save(bd1990_16, file = "input/data/bd1990_15.RData")
+save(bd1990_16, file = "input/data/bd1990_16.RData")
