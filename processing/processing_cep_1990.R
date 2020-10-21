@@ -187,7 +187,11 @@ frq(bd1990_16$pos_pol)
 #---- 3.3.2 Recodificación ----
 
 # 1990: CEP 14
-bd1990_14$id_part <- car::recode(bd1990_14$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_14$id_part <- car::recode(bd1990_14$id_part, "c(1,3) = 'Derecha'; 
+                                 c(2,4,5,6) = 'Centro-Izquierda concertación'; 
+                                 7 = 'Izquierda extraconcertación'; 
+                                 9 = 'Ninguno'; 
+                                 8 = NA", as.factor = T) 
 bd1990_14$pos_pol <- car::recode(bd1990_14$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -195,10 +199,14 @@ bd1990_14$pos_pol <- car::recode(bd1990_14$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
+8 = NA", as.factor = T)
 
 # 1990: CEP 15
-bd1990_15$id_part <- car::recode(bd1990_15$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_15$id_part <- car::recode(bd1990_15$id_part, "c(1,3) = 'Derecha'; 
+                                 c(2,4,5,6) = 'Centro-Izquierda concertación'; 
+                                 7 = 'Izquierda extraconcertación'; 
+                                 9 = 'Ninguno'; 
+                                 8 = NA", as.factor = T) 
 bd1990_15$pos_pol <- car::recode(bd1990_15$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -206,10 +214,14 @@ bd1990_15$pos_pol <- car::recode(bd1990_15$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
+8 = NA", as.factor = T)
 
 # 1990: CEP 16
-bd1990_16$id_part <- car::recode(bd1990_16$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_16$id_part <- car::recode(bd1990_16$id_part, "c(1,3) = 'Derecha'; 
+                                 c(2,4,5,6) = 'Centro-Izquierda concertación'; 
+                                 7 = 'Izquierda extraconcertación'; 
+                                 9 = 'Ninguno'; 
+                                 8 = NA", as.factor = T)
 bd1990_16$pos_pol <- car::recode(bd1990_16$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -217,13 +229,10 @@ bd1990_16$pos_pol <- car::recode(bd1990_16$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
-
+8 = NA", as.factor = T)
 
 
 # Recodificación
-
-
 # Identificación partidaria                          #NOTA: Esta bateria es la misma para las tres encuestas de este ano
 # 1 Unión Demócrata Independiente (UDI)
 # 2 Partido Radical (PR)

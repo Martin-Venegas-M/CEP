@@ -409,7 +409,11 @@ frq(bd1991_1993_28$pos_pol)
 #---- 3.3.2 Recodificacion ----
 
 # 1991 - 1993: CEP 17
-bd1991_1993_17$id_part <- car::recode(bd1991_1993_17$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_17$id_part <- car::recode(bd1991_1993_17$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 7 = 'Izquierda extraconcertación'; 
+                                 11 = 'Ninguno'; 
+                                 10 = NA", as.factor = T)
 bd1991_1993_17$pos_pol <- car::recode(bd1991_1993_17$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -417,12 +421,14 @@ bd1991_1993_17$pos_pol <- car::recode(bd1991_1993_17$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
-
-# NOTA: Las categorias de respuesta hasta la CEP 24 son las mismas de la recodificacion del ano 1990. En la CEP 24 se agrega una novena categoria (No contesta).
+8 = NA", as.factor = T)
 
 # 1991 - 1993: CEP 18
-bd1991_1993_18$id_part <- car::recode(bd1991_1993_18$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_18$id_part <- car::recode(bd1991_1993_18$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 11 = NA", as.factor = T) 
 bd1991_1993_18$pos_pol <- car::recode(bd1991_1993_18$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -430,10 +436,14 @@ bd1991_1993_18$pos_pol <- car::recode(bd1991_1993_18$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
+8 = NA", as.factor = T)
 
 # 1991 - 1993: CEP 19
-bd1991_1993_19$id_part <- car::recode(bd1991_1993_19$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_19$id_part <- car::recode(bd1991_1993_19$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(11,13) = NA", as.factor = T)  
 bd1991_1993_19$pos_pol <- car::recode(bd1991_1993_19$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -441,10 +451,14 @@ bd1991_1993_19$pos_pol <- car::recode(bd1991_1993_19$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
+8 = NA", as.factor = T)
 
 # 1991 - 1993: CEP 20
-bd1991_1993_20$id_part <- car::recode(bd1991_1993_20$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_20$id_part <- car::recode(bd1991_1993_20$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 11 = NA", as.factor = T)  
 bd1991_1993_20$pos_pol <- car::recode(bd1991_1993_20$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -452,10 +466,14 @@ bd1991_1993_20$pos_pol <- car::recode(bd1991_1993_20$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
+8 = NA", as.factor = T)
 
 # 1991 - 1993: CEP 21
-bd1991_1993_21$id_part <- car::recode(bd1991_1993_21$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_21$id_part <- car::recode(bd1991_1993_21$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 11 = NA", as.factor = T)
 bd1991_1993_21$pos_pol <- car::recode(bd1991_1993_21$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -463,10 +481,14 @@ bd1991_1993_21$pos_pol <- car::recode(bd1991_1993_21$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
+8 = NA", as.factor = T)
 
 # 1991 - 1993: CEP 22
-bd1991_1993_22$id_part <- car::recode(bd1991_1993_22$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_22$id_part <- car::recode(bd1991_1993_22$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 11 = NA", as.factor = T)
 bd1991_1993_22$pos_pol <- car::recode(bd1991_1993_22$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -474,10 +496,14 @@ bd1991_1993_22$pos_pol <- car::recode(bd1991_1993_22$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
+8 = NA", as.factor = T)
 
 # 1991 - 1993: CEP 23
-bd1991_1993_23$id_part <- car::recode(bd1991_1993_23$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_23$id_part <- car::recode(bd1991_1993_23$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 11 = NA", as.factor = T)
 bd1991_1993_23$pos_pol <- car::recode(bd1991_1993_23$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -485,10 +511,14 @@ bd1991_1993_23$pos_pol <- car::recode(bd1991_1993_23$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe'", as.factor = T)
+8 = NA", as.factor = T)
 
 # 1991 - 1993: CEP 24 #Aqui se introduce la categoria 9!!!
-bd1991_1993_24$id_part <- car::recode(bd1991_1993_24$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_24$id_part <- car::recode(bd1991_1993_24$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(11,13) = NA", as.factor = T) 
 bd1991_1993_24$pos_pol <- car::recode(bd1991_1993_24$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -496,11 +526,15 @@ bd1991_1993_24$pos_pol <- car::recode(bd1991_1993_24$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 1991 - 1993: CEP 25 
-bd1991_1993_25$id_part <- car::recode(bd1991_1993_25$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_25$id_part <- car::recode(bd1991_1993_25$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 11 = NA", as.factor = T)  
 bd1991_1993_25$pos_pol <- car::recode(bd1991_1993_25$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -508,11 +542,14 @@ bd1991_1993_25$pos_pol <- car::recode(bd1991_1993_25$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
-# 1991 - 1993: CEP 28 #Aqui se introduce la categoria 9!!!
-bd1991_1993_28$id_part <- car::recode(bd1991_1993_28$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_28$id_part <- car::recode(bd1991_1993_28$id_part, "c(1,3,8) = 'Derecha'; 
+                                 c(2,4,5,6,9) = 'Centro-Izquierda concertación'; 
+                                 c(7,10) = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(11, 13) = NA", as.factor = T) 
 bd1991_1993_28$pos_pol <- car::recode(bd1991_1993_28$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -520,8 +557,8 @@ bd1991_1993_28$pos_pol <- car::recode(bd1991_1993_28$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # ---- 3.4 Guardar base de datos final ---- 
 save(bd1991_1993_17, file = "input/data/bd1991_1993_17.RData")
