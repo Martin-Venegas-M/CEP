@@ -142,38 +142,111 @@ frq(bd1990_16$conf_dircortesup)
 
 #---- 3.2.2 Recodificacion ----
 ## 1990: CEP 16
+bd1990_16$conf_dirpol <- car::recode(bd1990_16$conf_dirpol,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_iglesiacat <- car::recode(bd1990_16$conf_iglesiacat,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_iglesiaev <- car::recode(bd1990_16$conf_iglesiaev, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_congreso <- car::recode(bd1990_16$conf_congreso, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_altosffaa <- car::recode(bd1990_16$conf_altosffaa, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_diremp <- car::recode(bd1990_16$conf_diremp, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1990_16$conf_dircortesup <- car::recode(bd1990_16$conf_dircortesup, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
 
-# Se guarda el siguiente bloque de recodificacion en caso de cambiar decisiones sobre presentacion de grafico.
-#bd1990_16$conf_dirpol <- car::recode(bd1990_16$conf_dirpol,"1 = 'Poca confianza'; 2 = 'Algo confianza'; 3 = 'Mucha confianza'", as.factor = T)
-#bd1990_16$conf_iglesiacat <- car::recode(bd1990_16$conf_iglesiacat,"1 = 'Poca confianza'; 2 = 'Algo confianza'; 3 = 'Mucha confianza'", as.factor = T)
-#bd1990_16$conf_iglesiaev <- car::recode(bd1990_16$conf_iglesiaev,"1 = 'Poca confianza'; 2 = 'Algo confianza'; 3 = 'Mucha confianza'", as.factor = T)
-#bd1990_16$conf_congreso <- car::recode(bd1990_16$conf_congreso, "1 = 'Poca confianza'; 2 = 'Algo confianza'; 3 = 'Mucha confianza'", as.factor = T)
-#bd1990_16$conf_altosffaa <- car::recode(bd1990_16$conf_altosffaa, "1 = 'Poca confianza'; 2 = 'Algo confianza'; 3 = 'Mucha confianza'", as.factor = T)
-#bd1990_16$conf_diremp <- car::recode(bd1990_16$conf_diremp, "1 = 'Poca confianza'; 2 = 'Algo confianza'; 3 = 'Mucha confianza'", as.factor = T)
-#bd1990_16$conf_dircortesup <- car::recode(bd1990_16$conf_dircortesup, "1 = 'Poca confianza'; 2 = 'Algo confianza'; 3 = 'Mucha confianza'", as.factor = T)
+# No olvidar
+# Codificación original
 
-bd1990_16$conf_dirpol <- car::recode(bd1990_16$conf_dirpol,"1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_iglesiacat <- car::recode(bd1990_16$conf_iglesiacat,"1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_iglesiaev <- car::recode(bd1990_16$conf_iglesiaev,"1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_congreso <- car::recode(bd1990_16$conf_congreso, "1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_altosffaa <- car::recode(bd1990_16$conf_altosffaa, "1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_diremp <- car::recode(bd1990_16$conf_diremp, "1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
-bd1990_16$conf_dircortesup <- car::recode(bd1990_16$conf_dircortesup, "1 = 'Poca confianza'; c(2,3) = 'Mucha o algo confianza'; 4 = NA", as.factor = T)
+# 1. Poca confianza
+# 2. Algo de confianza
+# 3. Mucha confianza
 
 #---- 3.2.3 Otros  ajustes ----
 ## 1990: CEP 16
 ### Construccion variable iglesia en calidad de institucion
-# Se guarda este bloque de codigos bajo la misma razon que arriba.
-#bd1990_16$iglesia[bd1990_16$conf_iglesiacat == 'Mucha confianza' | bd1990_16$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
-#bd1990_16$iglesia[bd1990_16$conf_iglesiacat == 'Algo confianza' | bd1990_16$conf_iglesiaev == 'Algo confianza'] <- 'Algo confianza'
-#bd1990_16$iglesia[bd1990_16$conf_iglesiacat == 'Poca confianza' | bd1990_16$conf_iglesiaev == 'Poca confianza'] <- 'Poca confianza'
 
-bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Mucha o algo confianza' | bd1990_16$conf_iglesiaev == 'Mucha o algo confianza'] <- 'Mucha o algo confianza'
-bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Poca confianza' | bd1990_16$conf_iglesiaev == 'Poca confianza'] <- 'Poca confianza'
+bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Mucha confianza' | bd1990_16$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Otra' & bd1990_16$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Eliminación de variables no utilzadas
 bd1990_16 <- select(bd1990_16, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete) # Sacar variables de confianza que no usaremos.
 
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd1990_16, file = "input/data/bd1990_16.RData")
+
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
+#---- 3.3.1 Frecuencias ----
+# 1990: CEP 14
+frq(bd1990_14$id_part)
+frq(bd1990_14$pos_pol)
+
+#1990: CEP 15
+frq(bd1990_15$id_part)
+frq(bd1990_15$pos_pol)
+
+# 1990: CEP 16
+frq(bd1990_16$id_part)
+frq(bd1990_16$pos_pol)
+
+#---- 3.3.2 Recodificación ----
+
+# 1990: CEP 14
+bd1990_14$id_part <- car::recode(bd1990_14$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_14$pos_pol <- car::recode(bd1990_14$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1990: CEP 15
+bd1990_15$id_part <- car::recode(bd1990_15$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_15$pos_pol <- car::recode(bd1990_15$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1990: CEP 16
+bd1990_16$id_part <- car::recode(bd1990_16$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1990_16$pos_pol <- car::recode(bd1990_16$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
 
 
+
+# Recodificación
+
+
+# Identificación partidaria                          #NOTA: Esta bateria es la misma para las tres encuestas de este ano
+# 1 Unión Demócrata Independiente (UDI)
+# 2 Partido Radical (PR)
+# 3 Renovación Nacional (RN)
+# 4 Partido Socialista (PS)
+# 5 Democracia Cristiana (DC)
+# 6 Partido por la Democracia (PPD)
+# 7 Partido Comunista (PC)
+# 8 Otro: ¿cuál?:
+# 9 Ninguno
+
+
+# Posición política
+#1 Derecha
+#2 Centro Derecha
+#3 Centro
+#4 Centro Izquierda
+#5 Izquierda
+#6 Independiente
+#7 Ninguna
+#8 No sabe
+
+# ---- 3.4 Guardar base de datos final ---- 
+save(bd1990_16, file = "input/data/bd1990_14.RData")
+save(bd1990_16, file = "input/data/bd1990_15.RData")
+save(bd1990_16, file = "input/data/bd1990_16.RData")

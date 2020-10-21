@@ -310,45 +310,53 @@ frq(bd1991_1993_23$conf_dircortesup)
 
 #---- 3.2.2 Recodificacion ----
 ## 1991-1993: CEP 17
-bd1991_1993_17$conf_dirpol <- car::recode(bd1991_1993_17$conf_dirpol,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_17$conf_iglesiacat <- car::recode(bd1991_1993_17$conf_iglesiacat,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_17$conf_iglesiaev <- car::recode(bd1991_1993_17$conf_iglesiaev, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_17$conf_congreso <- car::recode(bd1991_1993_17$conf_congreso, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_17$conf_altosffaa <- car::recode(bd1991_1993_17$conf_altosffaa, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_17$conf_diremp <- car::recode(bd1991_1993_17$conf_diremp, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_17$conf_dircortesup <- car::recode(bd1991_1993_17$conf_dircortesup, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
+bd1991_1993_17$conf_dirpol <- car::recode(bd1991_1993_17$conf_dirpol,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_17$conf_iglesiacat <- car::recode(bd1991_1993_17$conf_iglesiacat,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_17$conf_iglesiaev <- car::recode(bd1991_1993_17$conf_iglesiaev, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_17$conf_congreso <- car::recode(bd1991_1993_17$conf_congreso, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_17$conf_altosffaa <- car::recode(bd1991_1993_17$conf_altosffaa, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_17$conf_diremp <- car::recode(bd1991_1993_17$conf_diremp, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_17$conf_dircortesup <- car::recode(bd1991_1993_17$conf_dircortesup, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
 
 ## 1991-1993: CEP 18
-bd1991_1993_18$conf_dirpol <- car::recode(bd1991_1993_18$conf_dirpol,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_18$conf_iglesiacat <- car::recode(bd1991_1993_18$conf_iglesiacat,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_18$conf_iglesiaev <- car::recode(bd1991_1993_18$conf_iglesiaev, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_18$conf_congreso <- car::recode(bd1991_1993_18$conf_congreso, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_18$conf_altosffaa <- car::recode(bd1991_1993_18$conf_altosffaa, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_18$conf_diremp <- car::recode(bd1991_1993_18$conf_diremp, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_18$conf_dircortesup <- car::recode(bd1991_1993_18$conf_dircortesup, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
+bd1991_1993_18$conf_dirpol <- car::recode(bd1991_1993_18$conf_dirpol,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_18$conf_iglesiacat <- car::recode(bd1991_1993_18$conf_iglesiacat,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_18$conf_iglesiaev <- car::recode(bd1991_1993_18$conf_iglesiaev, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_18$conf_congreso <- car::recode(bd1991_1993_18$conf_congreso, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_18$conf_altosffaa <- car::recode(bd1991_1993_18$conf_altosffaa, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_18$conf_diremp <- car::recode(bd1991_1993_18$conf_diremp, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_18$conf_dircortesup <- car::recode(bd1991_1993_18$conf_dircortesup, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
 
 ## 1991-1993: CEP 23
-bd1991_1993_23$conf_dirpol <- car::recode(bd1991_1993_23$conf_dirpol,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_23$conf_iglesiacat <- car::recode(bd1991_1993_23$conf_iglesiacat,"1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_23$conf_iglesiaev <- car::recode(bd1991_1993_23$conf_iglesiaev, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_23$conf_congreso <- car::recode(bd1991_1993_23$conf_congreso, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_23$conf_altosffaa <- car::recode(bd1991_1993_23$conf_altosffaa, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_23$conf_diremp <- car::recode(bd1991_1993_23$conf_diremp, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
-bd1991_1993_23$conf_dircortesup <- car::recode(bd1991_1993_23$conf_dircortesup, "1 = 'Baja o nula confianza'; c(2,3) = 'Alta o media confianza'; 4 = NA", as.factor = T)
+bd1991_1993_23$conf_dirpol <- car::recode(bd1991_1993_23$conf_dirpol,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_23$conf_iglesiacat <- car::recode(bd1991_1993_23$conf_iglesiacat,"3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_23$conf_iglesiaev <- car::recode(bd1991_1993_23$conf_iglesiaev, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_23$conf_congreso <- car::recode(bd1991_1993_23$conf_congreso, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_23$conf_altosffaa <- car::recode(bd1991_1993_23$conf_altosffaa, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_23$conf_diremp <- car::recode(bd1991_1993_23$conf_diremp, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+bd1991_1993_23$conf_dircortesup <- car::recode(bd1991_1993_23$conf_dircortesup, "3 = 'Mucha confianza'; c(1,2) = 'Otra'; 4 = NA", as.factor = T)
+
+
+# No olvidar
+# Codificación original
+
+# 1. Poca confianza
+# 2. Algo de confianza
+# 3. Mucha confianza
 
 #---- 3.2.3 Otros ajustes ----
 ### Construccion variable iglesia en calidad de institucion
 ## 1991-1993: CEP 17
-bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Alta o media confianza' | bd1991_1993_17$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Baja o nula confianza' | bd1991_1993_17$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Mucha confianza' | bd1991_1993_17$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Otra' & bd1991_1993_17$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ## 1991-1993: CEP 18
-bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Alta o media confianza' | bd1991_1993_18$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Baja o nula confianza' | bd1991_1993_18$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Mucha confianza' | bd1991_1993_18$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Otra' & bd1991_1993_18$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ## 1991-1993: CEP 23
-bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Alta o media confianza' | bd1991_1993_236$conf_iglesiaev == 'Alta o media confianza'] <- 'Alta o media confianza'
-bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Baja o nula confianza' | bd1991_1993_23$conf_iglesiaev == 'Baja o nula confianza'] <- 'Baja o nula confianza'
+bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Mucha confianza' | bd1991_1993_23$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Otra' & bd1991_1993_23$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Sacar variables de confianza que no usaremos.
 ## 1991-1993: CEP 17
@@ -360,6 +368,169 @@ bd1991_1993_18 <- select(bd1991_1993_18, -conf_iglesiaev, -conf_iglesiacat,-conf
 ## 1991-1993: CEP 23
 bd1991_1993_23 <- select(bd1991_1993_23, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete)
 
+#---- 3.2.4 Guardar bases de confianza ----
+save(bd1991_1993_17, file = "input/data/bd1991_1993_17.RData")
+save(bd1991_1993_18, file = "input/data/bd1991_1993_18.RData")
+save(bd1991_1993_23, file = "input/data/bd1991_1993_23.RData")
+
 #---- 3.3 Tratamiento de variables de identificación partidaria e identificación política (o posición política)
+#---- 3.3.1 Frecuencias ----
 
+frq(bd1991_1993_17$id_part)
+frq(bd1991_1993_17$pos_pol)
 
+frq(bd1991_1993_18$id_part)
+frq(bd1991_1993_18$pos_pol)
+
+frq(bd1991_1993_19$id_part)
+frq(bd1991_1993_19$pos_pol)
+
+frq(bd1991_1993_20$id_part)
+frq(bd1991_1993_20$pos_pol)
+
+frq(bd1991_1993_21$id_part)
+frq(bd1991_1993_21$pos_pol)
+
+frq(bd1991_1993_22$id_part)
+frq(bd1991_1993_22$pos_pol)
+
+frq(bd1991_1993_23$id_part)
+frq(bd1991_1993_23$pos_pol)
+
+frq(bd1991_1993_24$id_part)
+frq(bd1991_1993_24$pos_pol)
+
+frq(bd1991_1993_25$id_part)
+frq(bd1991_1993_25$pos_pol)
+
+frq(bd1991_1993_28$id_part)
+frq(bd1991_1993_28$pos_pol)
+
+#---- 3.3.2 Recodificacion ----
+
+# 1991 - 1993: CEP 17
+bd1991_1993_17$id_part <- car::recode(bd1991_1993_17$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_17$pos_pol <- car::recode(bd1991_1993_17$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# NOTA: Las categorias de respuesta hasta la CEP 24 son las mismas de la recodificacion del ano 1990. En la CEP 24 se agrega una novena categoria (No contesta).
+
+# 1991 - 1993: CEP 18
+bd1991_1993_18$id_part <- car::recode(bd1991_1993_18$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_18$pos_pol <- car::recode(bd1991_1993_18$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1991 - 1993: CEP 19
+bd1991_1993_19$id_part <- car::recode(bd1991_1993_19$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_19$pos_pol <- car::recode(bd1991_1993_19$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1991 - 1993: CEP 20
+bd1991_1993_20$id_part <- car::recode(bd1991_1993_20$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_20$pos_pol <- car::recode(bd1991_1993_20$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1991 - 1993: CEP 21
+bd1991_1993_21$id_part <- car::recode(bd1991_1993_21$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_21$pos_pol <- car::recode(bd1991_1993_21$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1991 - 1993: CEP 22
+bd1991_1993_22$id_part <- car::recode(bd1991_1993_22$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_22$pos_pol <- car::recode(bd1991_1993_22$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1991 - 1993: CEP 23
+bd1991_1993_23$id_part <- car::recode(bd1991_1993_23$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_23$pos_pol <- car::recode(bd1991_1993_23$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe'", as.factor = T)
+
+# 1991 - 1993: CEP 24 #Aqui se introduce la categoria 9!!!
+bd1991_1993_24$id_part <- car::recode(bd1991_1993_24$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_24$pos_pol <- car::recode(bd1991_1993_24$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 1991 - 1993: CEP 25 
+bd1991_1993_25$id_part <- car::recode(bd1991_1993_25$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_25$pos_pol <- car::recode(bd1991_1993_25$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# 1991 - 1993: CEP 28 #Aqui se introduce la categoria 9!!!
+bd1991_1993_28$id_part <- car::recode(bd1991_1993_28$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd1991_1993_28$pos_pol <- car::recode(bd1991_1993_28$pos_pol,"1 = 'Derecha';
+2 = 'Centro Derecha';
+3 = 'Centro';
+4 = 'Centro Izquierda';
+5 = 'Izquierda';
+6 = 'Independiente';
+7 = 'Ninguna';
+8 = 'No sabe':
+9 = 'No contesta'", as.factor = T)
+
+# ---- 3.4 Guardar base de datos final ---- 
+save(bd1991_1993_17, file = "input/data/bd1991_1993_17.RData")
+save(bd1991_1993_18, file = "input/data/bd1991_1993_18.RData")
+save(bd1991_1993_19, file = "input/data/bd1991_1993_19.RData")
+save(bd1991_1993_20, file = "input/data/bd1991_1993_20.RData")
+save(bd1991_1993_21, file = "input/data/bd1991_1993_21.RData")
+save(bd1991_1993_22, file = "input/data/bd1991_1993_22.RData")
+save(bd1991_1993_23, file = "input/data/bd1991_1993_23.RData")
+save(bd1991_1993_24, file = "input/data/bd1991_1993_24.RData")
+save(bd1991_1993_25, file = "input/data/bd1991_1993_25.RData")
+save(bd1991_1993_28, file = "input/data/bd1991_1993_28.RData")
