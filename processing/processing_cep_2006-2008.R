@@ -340,11 +340,20 @@ frq(bd2006_2008_58$pos_pol)
 # ---- 3.3.2 Recodificacion ----
 
 # 2006 - 2008: CEP 52
-bd2006_2008_52$id_part <- car::recode(bd2006_2008_52$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2006_2008_52$id_part <- car::recode(bd2006_2008_52$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 10 = 'Ninguno'; 
+                                 c(9,88,99) = NA", as.factor = T) 
 
 
 # 2006 - 2008: CEP 54
-bd2006_2008_54$id_part <- car::recode(bd2006_2008_54$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2006_2008_54$id_part <- car::recode(bd2006_2008_54$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 10 = 'Ninguno'; 
+                                 c(9,88,99) = NA", as.factor = T)
+
 bd2006_2008_54$pos_pol <- car::recode(bd2006_2008_54$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -352,11 +361,15 @@ bd2006_2008_54$pos_pol <- car::recode(bd2006_2008_54$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2006 - 2008: CEP 55
-bd2006_2008_55$id_part <- car::recode(bd2006_2008_55$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2006_2008_55$id_part <- car::recode(bd2006_2008_55$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 10 = 'Ninguno'; 
+                                 c(9,88,99) = NA", as.factor = T) 
 bd2006_2008_55$pos_pol <- car::recode(bd2006_2008_55$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -364,11 +377,15 @@ bd2006_2008_55$pos_pol <- car::recode(bd2006_2008_55$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2006 - 2008: CEP 56
-bd2006_2008_56$id_part <- car::recode(bd2006_2008_56$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2006_2008_56$id_part <- car::recode(bd2006_2008_56$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 10 = 'Ninguno'; 
+                                 c(9,88,99) = NA", as.factor = T)
 bd2006_2008_56$pos_pol <- car::recode(bd2006_2008_56$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -376,11 +393,15 @@ bd2006_2008_56$pos_pol <- car::recode(bd2006_2008_56$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2006 - 2008: CEP 57
-bd2006_2008_57$id_part <- car::recode(bd2006_2008_57$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2006_2008_57$id_part <- car::recode(bd2006_2008_57$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 10 = 'Ninguno'; 
+                                 c(9,88,99) = NA", as.factor = T) 
 bd2006_2008_57$pos_pol <- car::recode(bd2006_2008_57$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -388,11 +409,15 @@ bd2006_2008_57$pos_pol <- car::recode(bd2006_2008_57$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2006 - 2008: CEP 58
-bd2006_2008_58$id_part <- car::recode(bd2006_2008_58$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2006_2008_58$id_part <- car::recode(bd2006_2008_58$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(9,10,11,88,99) = NA", as.factor = T)  
 bd2006_2008_58$pos_pol <- car::recode(bd2006_2008_58$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -400,9 +425,9 @@ bd2006_2008_58$pos_pol <- car::recode(bd2006_2008_58$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
-
+8 = NA;
+9 = NA", as.factor = T)
+freq(bd2006_2008_58$id_part)
 # ---- 3.4 Guardar base de datos final ---- 
 save(bd2006_2008_52, file = "input/data/bd2006_2008_52.RData")
 
