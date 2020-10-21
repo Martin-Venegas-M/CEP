@@ -2,7 +2,6 @@
 # Título: Documento de procesamiento para bases de datos CEP
 # Autor: Ojeda, P & Venegas, M
 # Fecha: 17 - 9 - 2020
-# HOLA
 # ---- Etapa 1: Cargar paquetes ----
 library(pacman)
 
