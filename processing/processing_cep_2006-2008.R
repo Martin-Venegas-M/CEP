@@ -427,7 +427,7 @@ bd2006_2008_58$pos_pol <- car::recode(bd2006_2008_58$pos_pol,"1 = 'Derecha';
 7 = 'Ninguna';
 8 = NA;
 9 = NA", as.factor = T)
-freq(bd2006_2008_58$id_part)
+
 # ---- 3.4 Guardar base de datos final ---- 
 save(bd2006_2008_52, file = "input/data/bd2006_2008_52.RData")
 
