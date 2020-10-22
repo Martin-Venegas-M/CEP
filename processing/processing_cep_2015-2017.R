@@ -546,10 +546,10 @@ bd2015_2017_73$pos_pol <- car::recode(bd2015_2017_73$pos_pol,"1 = 'Derecha';
 
 # 2015 - 2017: CEP 74 
 bd2015_2017_74$id_part <- car::recode(bd2015_2017_74$id_part, "c(1,4) = 'Derecha'; 
-                                 c(2,3,5,6,8) = 'Centro-Izquierda concertación'; 
-                                 c(7,11) = 'Izquierda extraconcertación'; 
-                                 9 = 'Ninguno'; 
-                                 c(8,88,99) = NA", as.factor = T)  
+                                 c(2,3,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 c(11) = 'Izquierda extraconcertación'; 
+                                 77 = 'Ninguno'; 
+                                 c(14,88,99) = NA", as.factor = T)  
 bd2015_2017_74$pos_pol <- car::recode(bd2015_2017_74$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -562,7 +562,11 @@ bd2015_2017_74$pos_pol <- car::recode(bd2015_2017_74$pos_pol,"1 = 'Derecha';
 freq(bd2015_2017_73$id_part)
 
 # 2015 - 2017: CEP 75 
-bd2015_2017_75$id_part <- car::recode(bd2015_2017_75$id_part "", as.factor = T) 
+bd2015_2017_75$id_part <- car::recode(bd2015_2017_75$id_part, "c(1,4,13,14) = 'Derecha'; 
+                                 c(2,3,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 c(9,11,10,12) = 'Izquierda extraconcertación'; 
+                                 77 = 'Ninguno'; 
+                                 c(15,88,99) = NA", as.factor = T) 
 bd2015_2017_75$pos_pol <- car::recode(bd2015_2017_75$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -576,7 +580,11 @@ bd2015_2017_75$pos_pol <- car::recode(bd2015_2017_75$pos_pol,"1 = 'Derecha';
 # No estan estas variables en la 76
 
 # 2015 - 2017: CEP 77 
-bd2015_2017_77$id_part <- car::recode(bd2015_2017_77$id_part "", as.factor = T) 
+bd2015_2017_77$id_part <- car::recode(bd2015_2017_77$id_part, "c(1,4,13,12) = 'Derecha'; 
+                                 c(2,3,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 c(9,11,10) = 'Izquierda extraconcertación'; 
+                                 77 = 'Ninguno'; 
+                                 c(14,88,99) = NA", as.factor = T) 
 bd2015_2017_77$pos_pol <- car::recode(bd2015_2017_77$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -588,7 +596,10 @@ bd2015_2017_77$pos_pol <- car::recode(bd2015_2017_77$pos_pol,"1 = 'Derecha';
 9 = NA", as.factor = T)
 
 # 2015 - 2017: CEP 78 
-bd2015_2017_78$id_part <- car::recode(bd2015_2017_78$id_part "", as.factor = T) 
+bd2015_2017_78$id_part <- car::recode(bd2015_2017_78$id_part, "c(1,4,8) = 'Derecha'; 
+                                 c(2,3,5,6,7) = 'Centro-Izquierda concertación'; 
+                                 77 = 'Ninguno'; 
+                                 c(9,88,99) = NA", as.factor = T) 
 bd2015_2017_78$pos_pol <- car::recode(bd2015_2017_78$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -602,7 +613,10 @@ bd2015_2017_78$pos_pol <- car::recode(bd2015_2017_78$pos_pol,"1 = 'Derecha';
 # No estan estas variables en a CEP 79 ni 80
 
 # 2015 - 2017: CEP 81 
-bd2015_2017_81$id_part <- car::recode(bd2015_2017_81$id_part "", as.factor = T) 
+bd2015_2017_81$id_part <- car::recode(bd2015_2017_81$id_part, "c(1,4,8) = 'Derecha'; 
+                                 c(2,3,5,6,7) = 'Centro-Izquierda concertación'; 
+                                 77 = 'Ninguno'; 
+                                 c(9,88,99) = NA", as.factor = T)  
 bd2015_2017_81$pos_pol <- car::recode(bd2015_2017_81$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
