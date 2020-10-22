@@ -213,7 +213,11 @@ frq(bd2018_2019_84$pos_pol)
 #---- 3.3.2 Recodificacion ----
 
 # 2018 - 2019: CEP 82 
-bd2018_2019_82$id_part <- car::recode(bd2018_2019_82$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2018_2019_82$id_part <- car::recode(bd2018_2019_82$id_part, "c(1,4,8) = 'Derecha'; 
+                                 c(2,3,5,6) = 'Centro-Izquierda concertación';
+                                 c(7,9)= 'Izquierda extraconcertación'; 
+                                 77 = 'Ninguno'; 
+                                 c(10,88,99) = NA", as.factor = T)  
 bd2018_2019_82$pos_pol <- car::recode(bd2018_2019_82$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -221,11 +225,15 @@ bd2018_2019_82$pos_pol <- car::recode(bd2018_2019_82$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2018 - 2019: CEP 83 
-bd2018_2019_83$id_part <- car::recode(bd2018_2019_83$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2018_2019_83$id_part <- car::recode(bd2018_2019_83$id_part, "c(1,4,8) = 'Derecha'; 
+                                 c(2,3,5,6) = 'Centro-Izquierda concertación';
+                                 c(7,9)= 'Izquierda extraconcertación'; 
+                                 77 = 'Ninguno'; 
+                                 c(10,88,99) = NA", as.factor = T)   
 bd2018_2019_83$pos_pol <- car::recode(bd2018_2019_83$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -233,11 +241,15 @@ bd2018_2019_83$pos_pol <- car::recode(bd2018_2019_83$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2018 - 2019: CEP 84 
-bd2018_2019_84$id_part <- car::recode(bd2018_2019_84$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2018_2019_84$id_part <- car::recode(bd2018_2019_84$id_part, "c(1,4,8) = 'Derecha'; 
+                                 c(2,3,5,6) = 'Centro-Izquierda concertación';
+                                 c(7,9)= 'Izquierda extraconcertación'; 
+                                 77 = 'Ninguno'; 
+                                 c(10,88,99) = NA", as.factor = T)  
 bd2018_2019_84$pos_pol <- car::recode(bd2018_2019_84$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -245,8 +257,8 @@ bd2018_2019_84$pos_pol <- car::recode(bd2018_2019_84$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # ---- 3.4 Guardar base de datos final ---- 
 save(bd2018_2019_82, file = "input/data/bd2018_2019_82.RData")
