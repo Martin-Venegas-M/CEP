@@ -473,7 +473,6 @@ bd2009_2011_65$pos_pol <- car::recode(bd2009_2011_65$pos_pol,"1 = 'Derecha';
 8 = NA;
 9 = NA", as.factor = T)
 
-
 # ---- 3.4 Guardar base de datos final ---- 
 save(bd2009_2011_59, file = "input/data/bd2009_2011_59.RData")
 save(bd2009_2011_60, file = "input/data/bd2009_2011_60.RData")
