@@ -436,7 +436,11 @@ frq(bd2012_2014_72$pos_pol)
 #---- 3.3.2 Recodificacion ----
 
 # 2012 - 2014: CEP 66 
-bd2012_2014_66$id_part <- car::recode(bd2012_2014_66$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2012_2014_66$id_part <- car::recode(bd2012_2014_66$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(9,10,11,88,99) = NA", as.factor = T) 
 bd2012_2014_66$pos_pol <- car::recode(bd2012_2014_66$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -444,11 +448,15 @@ bd2012_2014_66$pos_pol <- car::recode(bd2012_2014_66$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2012 - 2014: CEP 67 
-bd2012_2014_67$id_part <- car::recode(bd2012_2014_67$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2012_2014_67$id_part <- car::recode(bd2012_2014_67$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(9,10,11,88,99) = NA", as.factor = T)  
 bd2012_2014_67$pos_pol <- car::recode(bd2012_2014_67$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -456,11 +464,15 @@ bd2012_2014_67$pos_pol <- car::recode(bd2012_2014_67$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2012 - 2014: CEP 68 
-bd2012_2014_68$id_part <- car::recode(bd2012_2014_68$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2012_2014_68$id_part <- car::recode(bd2012_2014_68$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(9,10,11,88,99) = NA", as.factor = T)  
 bd2012_2014_68$pos_pol <- car::recode(bd2012_2014_68$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -468,11 +480,15 @@ bd2012_2014_68$pos_pol <- car::recode(bd2012_2014_68$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2012 - 2014: CEP 69 
-bd2012_2014_69$id_part <- car::recode(bd2012_2014_69$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2012_2014_69$id_part <- car::recode(bd2012_2014_69$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(9,10,11,88,99) = NA", as.factor = T) 
 bd2012_2014_69$pos_pol <- car::recode(bd2012_2014_69$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -480,11 +496,15 @@ bd2012_2014_69$pos_pol <- car::recode(bd2012_2014_69$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2012 - 2014: CEP 70 
-bd2012_2014_70$id_part <- car::recode(bd2012_2014_70$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2012_2014_70$id_part <- car::recode(bd2012_2014_70$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 12 = 'Ninguno'; 
+                                 c(9,10,11,88,99) = NA", as.factor = T)  
 bd2012_2014_70$pos_pol <- car::recode(bd2012_2014_70$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -492,11 +512,15 @@ bd2012_2014_70$pos_pol <- car::recode(bd2012_2014_70$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T) # REVISAERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+8 = NA;
+9 = NA", as.factor = T) 
 
 # 2012 - 2014: CEP 71 
-bd2012_2014_71$id_part <- car::recode(bd2012_2014_71$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2012_2014_71$id_part <- car::recode(bd2012_2014_71$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 9 = 'Ninguno'; 
+                                 c(8,88,99) = NA", as.factor = T)  
 bd2012_2014_71$pos_pol <- car::recode(bd2012_2014_71$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -504,11 +528,15 @@ bd2012_2014_71$pos_pol <- car::recode(bd2012_2014_71$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2012 - 2014: CEP 72 
-bd2012_2014_72$id_part <- car::recode(bd2012_2014_72$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2012_2014_72$id_part <- car::recode(bd2012_2014_72$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 9 = 'Ninguno'; 
+                                 c(8,88,99) = NA", as.factor = T) 
 bd2012_2014_72$pos_pol <- car::recode(bd2012_2014_72$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -516,8 +544,8 @@ bd2012_2014_72$pos_pol <- car::recode(bd2012_2014_72$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # ---- 3.4 Guardar base de datos final ---- 
 save(bd2012_2014_66, file = "input/data/bd2012_2014_66.RData")
