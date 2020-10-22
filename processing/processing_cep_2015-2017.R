@@ -529,7 +529,11 @@ frq(bd2015_2017_81$pos_pol)
 #---- 3.3.2 Recodificacion ----
 
 # 2015 - 2017: CEP 73 
-bd2015_2017_73$id_part <- car::recode(bd2015_2017_73$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2015_2017_73$id_part <- car::recode(bd2015_2017_73$id_part, "c(2,4) = 'Derecha'; 
+                                 c(1,5,6,7) = 'Centro-Izquierda concertación'; 
+                                 3 = 'Izquierda extraconcertación'; 
+                                 9 = 'Ninguno'; 
+                                 c(8,88,99) = NA", as.factor = T) 
 bd2015_2017_73$pos_pol <- car::recode(bd2015_2017_73$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -537,11 +541,15 @@ bd2015_2017_73$pos_pol <- car::recode(bd2015_2017_73$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2015 - 2017: CEP 74 
-bd2015_2017_74$id_part <- car::recode(bd2015_2017_74$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2015_2017_74$id_part <- car::recode(bd2015_2017_74$id_part, "c(1,4) = 'Derecha'; 
+                                 c(2,3,5,6,8) = 'Centro-Izquierda concertación'; 
+                                 c(7,11) = 'Izquierda extraconcertación'; 
+                                 9 = 'Ninguno'; 
+                                 c(8,88,99) = NA", as.factor = T)  
 bd2015_2017_74$pos_pol <- car::recode(bd2015_2017_74$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -549,11 +557,12 @@ bd2015_2017_74$pos_pol <- car::recode(bd2015_2017_74$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
+freq(bd2015_2017_73$id_part)
 
 # 2015 - 2017: CEP 75 
-bd2015_2017_75$id_part <- car::recode(bd2015_2017_75$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2015_2017_75$id_part <- car::recode(bd2015_2017_75$id_part "", as.factor = T) 
 bd2015_2017_75$pos_pol <- car::recode(bd2015_2017_75$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -561,13 +570,13 @@ bd2015_2017_75$pos_pol <- car::recode(bd2015_2017_75$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # No estan estas variables en la 76
 
 # 2015 - 2017: CEP 77 
-bd2015_2017_77$id_part <- car::recode(bd2015_2017_77$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2015_2017_77$id_part <- car::recode(bd2015_2017_77$id_part "", as.factor = T) 
 bd2015_2017_77$pos_pol <- car::recode(bd2015_2017_77$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -575,11 +584,11 @@ bd2015_2017_77$pos_pol <- car::recode(bd2015_2017_77$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # 2015 - 2017: CEP 78 
-bd2015_2017_78$id_part <- car::recode(bd2015_2017_78$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2015_2017_78$id_part <- car::recode(bd2015_2017_78$id_part "", as.factor = T) 
 bd2015_2017_78$pos_pol <- car::recode(bd2015_2017_78$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -587,13 +596,13 @@ bd2015_2017_78$pos_pol <- car::recode(bd2015_2017_78$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # No estan estas variables en a CEP 79 ni 80
 
 # 2015 - 2017: CEP 81 
-bd2015_2017_81$id_part <- car::recode(bd2015_2017_81$id_part "", as.factor = T) # Recodificar de acuerdo a lo que quiere avendano
+bd2015_2017_81$id_part <- car::recode(bd2015_2017_81$id_part "", as.factor = T) 
 bd2015_2017_81$pos_pol <- car::recode(bd2015_2017_81$pos_pol,"1 = 'Derecha';
 2 = 'Centro Derecha';
 3 = 'Centro';
@@ -601,8 +610,8 @@ bd2015_2017_81$pos_pol <- car::recode(bd2015_2017_81$pos_pol,"1 = 'Derecha';
 5 = 'Izquierda';
 6 = 'Independiente';
 7 = 'Ninguna';
-8 = 'No sabe':
-9 = 'No contesta'", as.factor = T)
+8 = NA;
+9 = NA", as.factor = T)
 
 # ---- 3.4 Guardar base de datos final ---- 
 save(bd2015_2017_73, file = "input/data/bd2015_2017_73.RData")

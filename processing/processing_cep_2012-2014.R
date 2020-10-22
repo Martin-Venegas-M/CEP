@@ -485,8 +485,7 @@ bd2012_2014_68$pos_pol <- car::recode(bd2012_2014_68$pos_pol,"1 = 'Derecha';
 
 # 2012 - 2014: CEP 69 
 bd2012_2014_69$id_part <- car::recode(bd2012_2014_69$id_part, "c(2,4) = 'Derecha'; 
-                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
-                                 3 = 'Izquierda extraconcertación'; 
+                                 c(1,5,6,7,8,3) = 'Centro-Izquierda concertación';
                                  12 = 'Ninguno'; 
                                  c(9,10,11,88,99) = NA", as.factor = T) 
 bd2012_2014_69$pos_pol <- car::recode(bd2012_2014_69$pos_pol,"1 = 'Derecha';
@@ -501,8 +500,7 @@ bd2012_2014_69$pos_pol <- car::recode(bd2012_2014_69$pos_pol,"1 = 'Derecha';
 
 # 2012 - 2014: CEP 70 
 bd2012_2014_70$id_part <- car::recode(bd2012_2014_70$id_part, "c(2,4) = 'Derecha'; 
-                                 c(1,5,6,7,8) = 'Centro-Izquierda concertación'; 
-                                 3 = 'Izquierda extraconcertación'; 
+                                 c(1,3,5,6,7,8) = 'Centro-Izquierda concertación'; 
                                  12 = 'Ninguno'; 
                                  c(9,10,11,88,99) = NA", as.factor = T)  
 bd2012_2014_70$pos_pol <- car::recode(bd2012_2014_70$pos_pol,"1 = 'Derecha';
@@ -517,8 +515,7 @@ bd2012_2014_70$pos_pol <- car::recode(bd2012_2014_70$pos_pol,"1 = 'Derecha';
 
 # 2012 - 2014: CEP 71 
 bd2012_2014_71$id_part <- car::recode(bd2012_2014_71$id_part, "c(2,4) = 'Derecha'; 
-                                 c(1,5,6,7) = 'Centro-Izquierda concertación'; 
-                                 3 = 'Izquierda extraconcertación'; 
+                                 c(1,3,5,6,7) = 'Centro-Izquierda concertación'; 
                                  9 = 'Ninguno'; 
                                  c(8,88,99) = NA", as.factor = T)  
 bd2012_2014_71$pos_pol <- car::recode(bd2012_2014_71$pos_pol,"1 = 'Derecha';
@@ -533,8 +530,7 @@ bd2012_2014_71$pos_pol <- car::recode(bd2012_2014_71$pos_pol,"1 = 'Derecha';
 
 # 2012 - 2014: CEP 72 
 bd2012_2014_72$id_part <- car::recode(bd2012_2014_72$id_part, "c(2,4) = 'Derecha'; 
-                                 c(1,5,6,7) = 'Centro-Izquierda concertación'; 
-                                 3 = 'Izquierda extraconcertación'; 
+                                 c(1,3,5,6,7) = 'Centro-Izquierda concertación'; 
                                  9 = 'Ninguno'; 
                                  c(8,88,99) = NA", as.factor = T) 
 bd2012_2014_72$pos_pol <- car::recode(bd2012_2014_72$pos_pol,"1 = 'Derecha';
