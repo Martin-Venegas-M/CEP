@@ -169,37 +169,37 @@ bd2006_2008_58 <- sjlabelled::remove_all_labels(bd2006_2008_58)
 
 ## 2006_2008: CEP 52
 bd2006_2008_52$nse  <- car::recode(bd2006_2008_52$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2006_2008_52$esc <- car::recode(bd2006_2008_52$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = 'NC'", as.factor = T)
+bd2006_2008_52$esc <- car::recode(bd2006_2008_52$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = NA", as.factor = T)
 bd2006_2008_52$edad <- car::recode(bd2006_2008_52$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2006_2008_52$sexo <- car::recode(bd2006_2008_52$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 2006_2008: CEP 54
 bd2006_2008_54$nse  <- car::recode(bd2006_2008_54$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2006_2008_54$esc <- car::recode(bd2006_2008_54$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = 'NC'", as.factor = T)
+bd2006_2008_54$esc <- car::recode(bd2006_2008_54$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = NA", as.factor = T)
 bd2006_2008_54$edad <- car::recode(bd2006_2008_54$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2006_2008_54$sexo <- car::recode(bd2006_2008_54$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 2006_2008: CEP 55
 bd2006_2008_55$nse  <- car::recode(bd2006_2008_55$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2006_2008_55$esc <- car::recode(bd2006_2008_55$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = 'NC'", as.factor = T)
+bd2006_2008_55$esc <- car::recode(bd2006_2008_55$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = NA", as.factor = T)
 bd2006_2008_55$edad <- car::recode(bd2006_2008_55$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2006_2008_55$sexo <- car::recode(bd2006_2008_55$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 2006_2008: CEP 56
 bd2006_2008_56$nse  <- car::recode(bd2006_2008_56$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2006_2008_56$esc <- car::recode(bd2006_2008_56$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = 'NC'", as.factor = T)
+bd2006_2008_56$esc <- car::recode(bd2006_2008_56$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = NA", as.factor = T)
 bd2006_2008_56$edad <- car::recode(bd2006_2008_56$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2006_2008_56$sexo <- car::recode(bd2006_2008_56$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 2006_2008: CEP 57
 bd2006_2008_57$nse  <- car::recode(bd2006_2008_57$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2006_2008_57$esc <- car::recode(bd2006_2008_57$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = 'NC'", as.factor = T)
+bd2006_2008_57$esc <- car::recode(bd2006_2008_57$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = NA", as.factor = T)
 bd2006_2008_57$edad <- car::recode(bd2006_2008_57$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2006_2008_57$sexo <- car::recode(bd2006_2008_57$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 2006_2008: CEP 58
 bd2006_2008_58$nse  <- car::recode(bd2006_2008_58$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2006_2008_58$esc <- car::recode(bd2006_2008_58$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = 'NC'", as.factor = T)
+bd2006_2008_58$esc <- car::recode(bd2006_2008_58$esc, "1 = '0-3'; 2 = '4-8'; 3 = '9-12'; 4 = '13 y mas'; 5 = NA", as.factor = T)
 bd2006_2008_58$edad <- car::recode(bd2006_2008_58$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2006_2008_58$sexo <- car::recode(bd2006_2008_58$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
@@ -291,7 +291,7 @@ bd2006_2008_58$conf_emppriv <- car::recode(bd2006_2008_58$conf_emppriv, "c(1, 2,
 ## 2006_2008: CEP 58
 ### Construccion variable iglesia en calidad de institucion
 
-bd2006_2008_58$conf_iglesia[bd2006_2008_58$conf_iglesiacat == 'Mucha confianza' | bd2006_2008_58$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd2006_2008_58$conf_iglesia[bd2006_2008_58$conf_iglesiacat == 'Mucha confianza' & bd2006_2008_58$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd2006_2008_58$conf_iglesia[bd2006_2008_58$conf_iglesiacat == 'Otra' & bd2006_2008_58$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Construccion variable MMC
@@ -311,7 +311,7 @@ frq(bd2006_2008_58$conf_mmc)
 
 ### Sacar variables de confianza que no usaremos.
 ### 2006_2008-2008: CEP 58
-bd2006_2008_58 <- select(bd2006_2008_58,-conf_iglesiacat, -conf_iglesiaev ,-conf_gobierno, -conf_radios, -conf_tele, -conf_sindicatos, -conf_carabineros, -conf_diarios) 
+bd2006_2008_58 <- select(bd2006_2008_58,-conf_gobierno, -conf_radios, -conf_tele, -conf_sindicatos, -conf_carabineros, -conf_diarios) 
 
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd2006_2008_58, file = "input/data/bd2006_2008_58.RData")

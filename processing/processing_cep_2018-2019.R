@@ -94,19 +94,19 @@ bd2018_2019_84 <- sjlabelled::remove_all_labels(bd2018_2019_84)
 
 ## 2018-2019: CEP 82
 bd2018_2019_82$nse  <- car::recode(bd2018_2019_82$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2018_2019_82$esc <- car::recode(bd2018_2019_82$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2018_2019_82$esc <- car::recode(bd2018_2019_82$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2018_2019_82$edad <- car::recode(bd2018_2019_82$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2018_2019_82$sexo <- car::recode(bd2018_2019_82$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 2018-2019: CEP 83
 bd2018_2019_83$nse  <- car::recode(bd2018_2019_83$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2018_2019_83$esc <- car::recode(bd2018_2019_83$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2018_2019_83$esc <- car::recode(bd2018_2019_83$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2018_2019_83$edad <- car::recode(bd2018_2019_83$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2018_2019_83$sexo <- car::recode(bd2018_2019_83$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 2018-2019: CEP 84
 bd2018_2019_84$nse  <- car::recode(bd2018_2019_84$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2018_2019_84$esc <- car::recode(bd2018_2019_84$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2018_2019_84$esc <- car::recode(bd2018_2019_84$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2018_2019_84$edad <- car::recode(bd2018_2019_84$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2018_2019_84$sexo <- car::recode(bd2018_2019_84$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
@@ -174,7 +174,7 @@ bd2018_2019_84$conf_emppriv <- car::recode(bd2018_2019_84$conf_emppriv, "c(2, 3,
 
 ### Construccion variable iglesia en calidad de institucion
 
-bd2018_2019_84$conf_iglesia[bd2018_2019_84$conf_iglesiacat == 'Mucha confianza' | bd2018_2019_84$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd2018_2019_84$conf_iglesia[bd2018_2019_84$conf_iglesiacat == 'Mucha confianza' & bd2018_2019_84$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd2018_2019_84$conf_iglesia[bd2018_2019_84$conf_iglesiacat == 'Otra' & bd2018_2019_84$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Construccion variable MMC
@@ -193,7 +193,7 @@ bd2018_2019_84$conf_mmc[bd2018_2019_84$conf_tele == 'Otra' & bd2018_2019_84$conf
 frq(bd2018_2019_84$conf_mmc)
 
 # Eliminar variables que no se usarán
-bd2018_2019_84 <- select(bd2018_2019_84, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+bd2018_2019_84 <- select(bd2018_2019_84, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
 
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd2018_2019_82, file = "input/data/bd2018_2019_82.RData")

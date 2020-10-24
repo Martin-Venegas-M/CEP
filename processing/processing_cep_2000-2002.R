@@ -136,37 +136,37 @@ frq(bd2000_2002_44$sexo)
 #---- 3.1.2 Recodificación ----
 ### 2000-2002: CEP 39
 bd2000_2002_39$nse  <- car::recode(bd2000_2002_39$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2000_2002_39$esc <- car::recode(bd2000_2002_39$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
+bd2000_2002_39$esc <- car::recode(bd2000_2002_39$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd2000_2002_39$edad <- car::recode(bd2000_2002_39$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2000_2002_39$sexo <- car::recode(bd2000_2002_39$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2000-2002: CEP 40
 bd2000_2002_40$nse  <- car::recode(bd2000_2002_40$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2000_2002_40$esc <- car::recode(bd2000_2002_40$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
+bd2000_2002_40$esc <- car::recode(bd2000_2002_40$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd2000_2002_40$edad <- car::recode(bd2000_2002_40$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2000_2002_40$sexo <- car::recode(bd2000_2002_40$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2000-2002: CEP 41
 bd2000_2002_41$nse  <- car::recode(bd2000_2002_41$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2000_2002_41$esc <- car::recode(bd2000_2002_41$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
+bd2000_2002_41$esc <- car::recode(bd2000_2002_41$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd2000_2002_41$edad <- car::recode(bd2000_2002_41$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2000_2002_41$sexo <- car::recode(bd2000_2002_41$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2000-2002: CEP 42
 bd2000_2002_42$nse  <- car::recode(bd2000_2002_42$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2000_2002_42$esc <- car::recode(bd2000_2002_42$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
+bd2000_2002_42$esc <- car::recode(bd2000_2002_42$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd2000_2002_42$edad <- car::recode(bd2000_2002_42$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2000_2002_42$sexo <- car::recode(bd2000_2002_42$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2000-2002: CEP 43
 bd2000_2002_43$nse  <- car::recode(bd2000_2002_43$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2000_2002_43$esc <- car::recode(bd2000_2002_43$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
+bd2000_2002_43$esc <- car::recode(bd2000_2002_43$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd2000_2002_43$edad <- car::recode(bd2000_2002_43$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2000_2002_43$sexo <- car::recode(bd2000_2002_43$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2000-2002: CEP 44
 bd2000_2002_44$nse  <- car::recode(bd2000_2002_44$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2000_2002_44$esc <- car::recode(bd2000_2002_44$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
+bd2000_2002_44$esc <- car::recode(bd2000_2002_44$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd2000_2002_44$edad <- car::recode(bd2000_2002_44$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2000_2002_44$sexo <- car::recode(bd2000_2002_44$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
@@ -229,11 +229,10 @@ bd2000_2002_44$conf_mmc[bd2000_2002_44$conf_tele == 'Otra' & bd2000_2002_44$conf
 ### 2000-2002: CEP 44
 bd2000_2002_44 <- select(bd2000_2002_44, -conf_carab, -conf_tele, -conf_prensa )
 
-bd2000_2002_44$conf_iglesia_per[bd2000_2002_44$conf_iglesiacat_per == 'Mucha confianza' | bd2000_2002_44$conf_iglesiaev_per == 'Mucha confianza'] <- 'Mucha confianza'
+bd2000_2002_44$conf_iglesia_per[bd2000_2002_44$conf_iglesiacat_per == 'Mucha confianza' & bd2000_2002_44$conf_iglesiaev_per == 'Mucha confianza'] <- 'Mucha confianza'
 bd2000_2002_44$conf_iglesia_per[bd2000_2002_44$conf_iglesiacat_per == 'Otra' & bd2000_2002_44$conf_iglesiaev_per == 'Otra'] <- 'Otra'
 
 ### Eliminación de variables no utilzadas
-bd2000_2002_44 <- select(bd2000_2002_44, -conf_iglesiaev_per, -conf_iglesiacat_per) # Sacar variables de confianza que no usaremos
 
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd2000_2002_44, file = "input/data/bd2000_2002_44.RData")

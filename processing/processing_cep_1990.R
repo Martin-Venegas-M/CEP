@@ -110,20 +110,20 @@ frq(bd1990_16$sexo)
 
 #---- 3.1.2 Recodificación ----
 ## 1990: CEP 14
-bd1990_14$esc <- car::recode(bd1990_14$esc, "c(1,2) = '0-3'; c(3,4) = '3-4'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1990_14$edad <- car::recode(bd1990_14$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1990_14$esc <- car::recode(bd1990_14$esc, "c(1,2) = '0-3'; c(3,4) = '3-4'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1990_14$edad <- car::recode(bd1990_14$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1990_14$sexo <- car::recode(bd1990_14$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1990: CEP 15
 bd1990_15$nse  <- car::recode(bd1990_15$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1990_15$esc <- car::recode(bd1990_15$esc, "c(1,2) = '0-3'; c(3,4) = '3-4'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1990_15$edad <- car::recode(bd1990_15$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1990_15$esc <- car::recode(bd1990_15$esc, "c(1,2) = '0-3'; c(3,4) = '3-4'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1990_15$edad <- car::recode(bd1990_15$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1990_15$sexo <- car::recode(bd1990_15$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1990: CEP 16
-bd1990_16$nse  <- car::recode(bd1990_16$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1990_16$esc <- car::recode(bd1990_16$esc, "c(1,2) = '0-3'; c(3,4) = '3-4'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1990_16$edad <- car::recode(bd1990_16$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1990_16$nse  <- car::recode(bd1990_16$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = NA", as.factor = T)
+bd1990_16$esc <- car::recode(bd1990_16$esc, "c(1,2) = '0-3'; c(3,4) = '3-4'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1990_16$edad <- car::recode(bd1990_16$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1990_16$sexo <- car::recode(bd1990_16$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 #---- 3.2 Tratamiento de variables de confianza ----
@@ -160,11 +160,11 @@ bd1990_16$conf_dircortesup <- car::recode(bd1990_16$conf_dircortesup, "3 = 'Much
 ## 1990: CEP 16
 ### Construccion variable iglesia en calidad de institucion
 
-bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Mucha confianza' | bd1990_16$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Mucha confianza' & bd1990_16$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd1990_16$conf_iglesia[bd1990_16$conf_iglesiacat == 'Otra' & bd1990_16$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Eliminación de variables no utilzadas
-bd1990_16 <- select(bd1990_16, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete) # Sacar variables de confianza que no usaremos.
+bd1990_16 <- select(bd1990_16,-conf_dirsin, -conf_gabinete) # Sacar variables de confianza que no usaremos.
 
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd1990_16, file = "input/data/bd1990_16.RData")

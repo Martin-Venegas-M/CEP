@@ -190,37 +190,37 @@ bd2012_2014_72 <- sjlabelled::remove_all_labels(bd2012_2014_72)
 
 ## 2012-2014: CEP 66
 bd2012_2014_66$nse  <- car::recode(bd2012_2014_66$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2012_2014_66$esc <- car::recode(bd2012_2014_66$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2012_2014_66$esc <- car::recode(bd2012_2014_66$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2012_2014_66$edad <- car::recode(bd2012_2014_66$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2012_2014_66$sexo <- car::recode(bd2012_2014_66$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 ## 2012-2014: CEP 67
 bd2012_2014_67$nse  <- car::recode(bd2012_2014_67$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2012_2014_67$esc <- car::recode(bd2012_2014_67$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2012_2014_67$esc <- car::recode(bd2012_2014_67$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2012_2014_67$edad <- car::recode(bd2012_2014_67$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2012_2014_67$sexo <- car::recode(bd2012_2014_67$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 ## 2012-2014: CEP 68
 bd2012_2014_68$nse  <- car::recode(bd2012_2014_68$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2012_2014_68$esc <- car::recode(bd2012_2014_68$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2012_2014_68$esc <- car::recode(bd2012_2014_68$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2012_2014_68$edad <- car::recode(bd2012_2014_68$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2012_2014_68$sexo <- car::recode(bd2012_2014_68$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 ## 2012-2014: CEP 69
 bd2012_2014_69$nse  <- car::recode(bd2012_2014_69$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2012_2014_69$esc <- car::recode(bd2012_2014_69$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2012_2014_69$esc <- car::recode(bd2012_2014_69$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2012_2014_69$edad <- car::recode(bd2012_2014_69$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2012_2014_69$sexo <- car::recode(bd2012_2014_69$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 ## 2012-2014: CEP 70
 bd2012_2014_70$nse  <- car::recode(bd2012_2014_70$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2012_2014_70$esc <- car::recode(bd2012_2014_70$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2012_2014_70$esc <- car::recode(bd2012_2014_70$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2012_2014_70$edad <- car::recode(bd2012_2014_70$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2012_2014_70$sexo <- car::recode(bd2012_2014_70$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 ## 2012-2014: CEP 71
 bd2012_2014_71$nse  <- car::recode(bd2012_2014_71$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2012_2014_71$esc <- car::recode(bd2012_2014_71$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2012_2014_71$esc <- car::recode(bd2012_2014_71$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2012_2014_71$edad <- car::recode(bd2012_2014_71$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2012_2014_71$sexo <- car::recode(bd2012_2014_71$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 ## 2012-2014: CEP 72
 bd2012_2014_72$nse  <- car::recode(bd2012_2014_72$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2012_2014_72$esc <- car::recode(bd2012_2014_72$esc, "c(88,99) = 'NS/NC'; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
+bd2012_2014_72$esc <- car::recode(bd2012_2014_72$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2012_2014_72$edad <- car::recode(bd2012_2014_72$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2012_2014_72$sexo <- car::recode(bd2012_2014_72$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
@@ -331,7 +331,7 @@ bd2012_2014_71$conf_emppriv <- car::recode(bd2012_2014_71$conf_emppriv, "c(2, 3,
 ## 2012-2014: CEP 67
 ### Construccion variable iglesia en calidad de institucion
 
-bd2012_2014_67$conf_iglesia[bd2012_2014_67$conf_iglesiacat == 'Mucha confianza' | bd2012_2014_67$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd2012_2014_67$conf_iglesia[bd2012_2014_67$conf_iglesiacat == 'Mucha confianza' & bd2012_2014_67$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd2012_2014_67$conf_iglesia[bd2012_2014_67$conf_iglesiacat == 'Otra' | bd2012_2014_67$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Construccion variable MMC
@@ -350,14 +350,14 @@ bd2012_2014_67$conf_mmc[bd2012_2014_67$conf_tele == 'Otra' & bd2012_2014_67$conf
 frq(bd2012_2014_67$conf_mmc)
 
 # Eliminar variables
-bd2012_2014_67 <- select(bd2012_2014_67, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+bd2012_2014_67 <- select(bd2012_2014_67, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
 
 
 ## 2012-2014: CEP 69
 
 ### Construccion variable iglesia en calidad de institucion
 
-bd2012_2014_69$conf_iglesia[bd2012_2014_69$conf_iglesiacat == 'Mucha confianza' | bd2012_2014_69$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd2012_2014_69$conf_iglesia[bd2012_2014_69$conf_iglesiacat == 'Mucha confianza' & bd2012_2014_69$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd2012_2014_69$conf_iglesia[bd2012_2014_69$conf_iglesiacat == 'Otra' & bd2012_2014_69$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Construccion variable MMC
@@ -376,14 +376,14 @@ bd2012_2014_69$conf_mmc[bd2012_2014_69$conf_tele == 'Otra' & bd2012_2014_69$conf
 frq(bd2012_2014_69$conf_mmc)
 
 # Eliminar variables
-bd2012_2014_69 <- select(bd2012_2014_69, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+bd2012_2014_69 <- select(bd2012_2014_69, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
 
 
 ## 2012-2014: CEP 71
 
 ### Construccion variable iglesia en calidad de institucion
 
-bd2012_2014_71$conf_iglesia[bd2012_2014_71$conf_iglesiacat == 'Mucha confianza' | bd2012_2014_71$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd2012_2014_71$conf_iglesia[bd2012_2014_71$conf_iglesiacat == 'Mucha confianza' & bd2012_2014_71$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd2012_2014_71$conf_iglesia[bd2012_2014_71$conf_iglesiacat == 'Otra' & bd2012_2014_71$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Construccion variable MMC
@@ -402,7 +402,7 @@ bd2012_2014_71$conf_mmc[bd2012_2014_71$conf_tele == 'Otra' & bd2012_2014_71$conf
 frq(bd2012_2014_71$conf_mmc)
 
 # Eliminar variables
-bd2012_2014_71 <- select(bd2012_2014_71, -conf_iglesiaev, -conf_iglesiacat, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
+bd2012_2014_71 <- select(bd2012_2014_71, -conf_radios, -conf_tele, -conf_diarios, -conf_carabineros, -conf_sindicatos)
 
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd2012_2014_67, file = "input/data/bd2012_2014_67.RData")

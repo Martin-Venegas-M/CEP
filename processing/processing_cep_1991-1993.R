@@ -206,62 +206,62 @@ frq(bd1991_1993_28$sexo)
 #---- 3.1.2 Recodificación ----
 ## 1991-1993: CEP 17
 bd1991_1993_17$nse  <- car::recode(bd1991_1993_17$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_17$esc <- car::recode(bd1991_1993_17$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_17$edad <- car::recode(bd1991_1993_17$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_17$esc <- car::recode(bd1991_1993_17$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_17$edad <- car::recode(bd1991_1993_17$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_17$sexo <- car::recode(bd1991_1993_17$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 18
 bd1991_1993_18$nse  <- car::recode(bd1991_1993_18$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_18$esc <- car::recode(bd1991_1993_18$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_18$edad <- car::recode(bd1991_1993_18$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_18$esc <- car::recode(bd1991_1993_18$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_18$edad <- car::recode(bd1991_1993_18$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_18$sexo <- car::recode(bd1991_1993_18$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 19
 bd1991_1993_19$nse  <- car::recode(bd1991_1993_19$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_19$esc <- car::recode(bd1991_1993_19$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_19$edad <- car::recode(bd1991_1993_19$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_19$esc <- car::recode(bd1991_1993_19$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_19$edad <- car::recode(bd1991_1993_19$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_19$sexo <- car::recode(bd1991_1993_19$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 20
 bd1991_1993_20$nse  <- car::recode(bd1991_1993_20$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_20$esc <- car::recode(bd1991_1993_20$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_20$edad <- car::recode(bd1991_1993_20$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_20$esc <- car::recode(bd1991_1993_20$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_20$edad <- car::recode(bd1991_1993_20$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_20$sexo <- car::recode(bd1991_1993_20$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 21
 bd1991_1993_21$nse  <- car::recode(bd1991_1993_21$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_21$esc <- car::recode(bd1991_1993_21$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_21$edad <- car::recode(bd1991_1993_21$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_21$esc <- car::recode(bd1991_1993_21$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_21$edad <- car::recode(bd1991_1993_21$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_21$sexo <- car::recode(bd1991_1993_21$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 22
 bd1991_1993_22$nse  <- car::recode(bd1991_1993_22$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_22$esc <- car::recode(bd1991_1993_22$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_22$edad <- car::recode(bd1991_1993_22$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_22$esc <- car::recode(bd1991_1993_22$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_22$edad <- car::recode(bd1991_1993_22$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_22$sexo <- car::recode(bd1991_1993_22$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 23
 bd1991_1993_23$nse  <- car::recode(bd1991_1993_23$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_23$esc <- car::recode(bd1991_1993_23$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_23$edad <- car::recode(bd1991_1993_23$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_23$esc <- car::recode(bd1991_1993_23$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_23$edad <- car::recode(bd1991_1993_23$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_23$sexo <- car::recode(bd1991_1993_23$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 24
 bd1991_1993_24$nse  <- car::recode(bd1991_1993_24$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_24$esc <- car::recode(bd1991_1993_24$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_24$edad <- car::recode(bd1991_1993_24$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_24$esc <- car::recode(bd1991_1993_24$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_24$edad <- car::recode(bd1991_1993_24$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_24$sexo <- car::recode(bd1991_1993_24$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 25
 bd1991_1993_25$nse  <- car::recode(bd1991_1993_25$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_25$esc <- car::recode(bd1991_1993_25$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_25$edad <- car::recode(bd1991_1993_25$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_25$esc <- car::recode(bd1991_1993_25$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_25$edad <- car::recode(bd1991_1993_25$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_25$sexo <- car::recode(bd1991_1993_25$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 28
 bd1991_1993_28$nse  <- car::recode(bd1991_1993_28$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1991_1993_28$esc <- car::recode(bd1991_1993_28$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = 'NC'", as.factor = T)
-bd1991_1993_28$edad <- car::recode(bd1991_1993_28$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = 'NC'", as.factor = T)
+bd1991_1993_28$esc <- car::recode(bd1991_1993_28$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1991_1993_28$edad <- car::recode(bd1991_1993_28$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1991_1993_28$sexo <- car::recode(bd1991_1993_28$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 #---- 3.2 Tratamiento de variables de confianza ----
@@ -347,26 +347,26 @@ bd1991_1993_23$conf_dircortesup <- car::recode(bd1991_1993_23$conf_dircortesup, 
 #---- 3.2.3 Otros ajustes ----
 ### Construccion variable iglesia en calidad de institucion
 ## 1991-1993: CEP 17
-bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Mucha confianza' | bd1991_1993_17$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Mucha confianza' & bd1991_1993_17$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd1991_1993_17$conf_iglesia[bd1991_1993_17$conf_iglesiacat == 'Otra' & bd1991_1993_17$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ## 1991-1993: CEP 18
-bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Mucha confianza' | bd1991_1993_18$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Mucha confianza' & bd1991_1993_18$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd1991_1993_18$conf_iglesia[bd1991_1993_18$conf_iglesiacat == 'Otra' & bd1991_1993_18$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ## 1991-1993: CEP 23
-bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Mucha confianza' | bd1991_1993_23$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
+bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Mucha confianza' & bd1991_1993_23$conf_iglesiaev == 'Mucha confianza'] <- 'Mucha confianza'
 bd1991_1993_23$conf_iglesia[bd1991_1993_23$conf_iglesiacat == 'Otra' & bd1991_1993_23$conf_iglesiaev == 'Otra'] <- 'Otra'
 
 ### Sacar variables de confianza que no usaremos.
 ## 1991-1993: CEP 17
-bd1991_1993_17 <- select(bd1991_1993_17, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete) 
+bd1991_1993_17 <- select(bd1991_1993_17, -conf_dirsin, -conf_gabinete) 
 
 ## 1991-1993: CEP 18
-bd1991_1993_18 <- select(bd1991_1993_18, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete)
+bd1991_1993_18 <- select(bd1991_1993_18, -conf_dirsin, -conf_gabinete)
 
 ## 1991-1993: CEP 23
-bd1991_1993_23 <- select(bd1991_1993_23, -conf_iglesiaev, -conf_iglesiacat,-conf_dirsin, -conf_gabinete)
+bd1991_1993_23 <- select(bd1991_1993_23, -conf_dirsin, -conf_gabinete)
 
 #---- 3.2.4 Guardar bases de confianza ----
 save(bd1991_1993_17, file = "input/data/bd1991_1993_17.RData")
