@@ -254,651 +254,2634 @@ df2019_84$year <- "2019"
 rm(list = ls()[grep("bd", ls())])
 
 #---- 3.2 Group and summarise bases de datos ----
+# Derecha
 
 # 1990
 
-df_idpart_1990_14 <- df1990_14 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1990_14 <- df1990_14 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                             length(which(id_part == "Derecha"))
-                                                          /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                              length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                          /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                              length(which(id_part == "Izquierda extraconcertación"))+
                                                               length(which(id_part == "Ninguno"))+
                                                               length(which(id_part == "Derecha"))))
 
-df_idpart_1990_15 <- df1990_15 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1990_15 <- df1990_15 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1990_16 <- df1990_16 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1990_16 <- df1990_16 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
 # Prom
 
-df_idpart_1990_14$porc_idpart <- (df_idpart_1990_14$porc_idpart + df_idpart_1990_15$porc_idpart + df_idpart_1990_16$porc_idpart)/3
-df_idpart_1990 <- df_idpart_1990_14
+df_idpart_der_1990_14$porc_idpart_der <- (df_idpart_der_1990_14$porc_idpart_der + df_idpart_der_1990_15$porc_idpart_der + df_idpart_der_1990_16$porc_idpart_der)/3
+df_idpart_der_1990 <- df_idpart_der_1990_14
 
 # 1991-1993 
 
-df_idpart_1991_17 <- df1991_17 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1991_17 <- df1991_17 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1991_18 <- df1991_18 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1991_18 <- df1991_18 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1991_19 <- df1991_19 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1991_19 <- df1991_19 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1991_20 <- df1991_20 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1991_20 <- df1991_20 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1992_21 <- df1992_21 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1992_21 <- df1992_21 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1992_22 <- df1992_22 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1992_22 <- df1992_22 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1992_23 <- df1992_23 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1992_23 <- df1992_23 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1993_24 <- df1993_24 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1993_24 <- df1993_24 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1993_25 <- df1993_25 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1993_25 <- df1993_25 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
 
-df_idpart_1993_28 <- df1993_28 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1993_28 <- df1993_28 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
 # Proms
-df_idpart_1991_17$porc_idpart <- (df_idpart_1991_17$porc_idpart + df_idpart_1991_18$porc_idpart + df_idpart_1991_19$porc_idpart + df_idpart_1991_20$porc_idpart)/4
-df_idpart_1991 <- df_idpart_1991_17
+df_idpart_der_1991_17$porc_idpart_der <- (df_idpart_der_1991_17$porc_idpart_der + df_idpart_der_1991_18$porc_idpart_der + df_idpart_der_1991_19$porc_idpart_der + df_idpart_der_1991_20$porc_idpart_der)/4
+df_idpart_der_1991 <- df_idpart_der_1991_17
 
-df_idpart_1992_21$porc_idpart <- (df_idpart_1992_21$porc_idpart + df_idpart_1992_22$porc_idpart + df_idpart_1992_23$porc_idpart)/3
-df_idpart_1992 <- df_idpart_1992_21
+df_idpart_der_1992_21$porc_idpart_der <- (df_idpart_der_1992_21$porc_idpart_der + df_idpart_der_1992_22$porc_idpart_der + df_idpart_der_1992_23$porc_idpart_der)/3
+df_idpart_der_1992 <- df_idpart_der_1992_21
 
-df_idpart_1993_24$porc_idpart <- (df_idpart_1993_24$porc_idpart + df_idpart_1993_25$porc_idpart + df_idpart_1993_28$porc_idpart)/3
-df_idpart_1993 <- df_idpart_1993_24
+df_idpart_der_1993_24$porc_idpart_der <- (df_idpart_der_1993_24$porc_idpart_der + df_idpart_der_1993_25$porc_idpart_der + df_idpart_der_1993_28$porc_idpart_der)/3
+df_idpart_der_1993 <- df_idpart_der_1993_24
 
 # 1994-1996
 
-df_idpart_1994_29 <- df1994_29 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1994_29 <- df1994_29 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1995_30 <- df1995_30 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1995_30 <- df1995_30 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1995_31 <- df1995_31 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1995_31 <- df1995_31 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1996_32 <- df1996_32 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1996_32 <- df1996_32 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_1996_33 <- df1996_33 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1996_33 <- df1996_33 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
 # Proms
-df_idpart_1994 <- df_idpart_1994_29
+df_idpart_der_1994 <- df_idpart_der_1994_29
 
-df_idpart_1995_30$porc_idpart <- (df_idpart_1995_30$porc_idpart + df_idpart_1995_31$porc_idpart)/2
-df_idpart_1995 <- df_idpart_1995_30
+df_idpart_der_1995_30$porc_idpart_der <- (df_idpart_der_1995_30$porc_idpart_der + df_idpart_der_1995_31$porc_idpart_der)/2
+df_idpart_der_1995 <- df_idpart_der_1995_30
 
-df_idpart_1996_32$porc_idpart <- (df_idpart_1996_32$porc_idpart + df_idpart_1996_33$porc_idpart)/2
-df_idpart_1996 <- df_idpart_1996_32
+df_idpart_der_1996_32$porc_idpart_der <- (df_idpart_der_1996_32$porc_idpart_der + df_idpart_der_1996_33$porc_idpart_der)/2
+df_idpart_der_1996 <- df_idpart_der_1996_32
 
 # 1997 - 1999
 
-df_idpart_1997_34 <- df1997_34 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1997_34 <- df1997_34 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_1997_35 <- df1997_35 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1997_35 <- df1997_35 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_1998_36 <- df1998_36 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1998_36 <- df1998_36 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_1999_37 <- df1999_37 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1999_37 <- df1999_37 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_1999_38 <- df1999_38 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_1999_38 <- df1999_38 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
 # Prom
 
-df_idpart_1997_34$porc_idpart <- (df_idpart_1997_34$porc_idpart + df_idpart_1997_35$porc_idpart)/2
-df_idpart_1997 <- df_idpart_1997_34
+df_idpart_der_1997_34$porc_idpart_der <- (df_idpart_der_1997_34$porc_idpart_der + df_idpart_der_1997_35$porc_idpart_der)/2
+df_idpart_der_1997 <- df_idpart_der_1997_34
 
-df_idpart_1998 <- df_idpart_1998_36
+df_idpart_der_1998 <- df_idpart_der_1998_36
 
-df_idpart_1999_37$porc_idpart <- (df_idpart_1999_37$porc_idpart + df_idpart_1999_38$porc_idpart)/2
-df_idpart_1999 <- df_idpart_1999_37
+df_idpart_der_1999_37$porc_idpart_der <- (df_idpart_der_1999_37$porc_idpart_der + df_idpart_der_1999_38$porc_idpart_der)/2
+df_idpart_der_1999 <- df_idpart_der_1999_37
 
 
 
 #2000 - 2002
 
-df_idpart_2000_39 <- df2000_39 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2000_39 <- df2000_39 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2000_40 <- df2000_40 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2000_40 <- df2000_40 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2001_41 <- df2001_41 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2001_41 <- df2001_41 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2001_42 <- df2001_42 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2001_42 <- df2001_42 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2002_43 <- df2002_43 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2002_43 <- df2002_43 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2002_44 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2002_44 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
 # Proms
 
-df_idpart_2000_39$porc_idpart <- (df_idpart_2000_39$porc_idpart + df_idpart_2000_40$porc_idpart)/2
-df_idpart_2000 <- df_idpart_2000_39
+df_idpart_der_2000_39$porc_idpart_der <- (df_idpart_der_2000_39$porc_idpart_der + df_idpart_der_2000_40$porc_idpart_der)/2
+df_idpart_der_2000 <- df_idpart_der_2000_39
 
-df_idpart_2001_41$porc_idpart <- (df_idpart_2001_41$porc_idpart + df_idpart_2001_42$porc_idpart)/2
-df_idpart_2001 <- df_idpart_2001_41
+df_idpart_der_2001_41$porc_idpart_der <- (df_idpart_der_2001_41$porc_idpart_der + df_idpart_der_2001_42$porc_idpart_der)/2
+df_idpart_der_2001 <- df_idpart_der_2001_41
 
-df_idpart_2002_43$porc_idpart <- (df_idpart_2002_43$porc_idpart + df_idpart_2002_44$porc_idpart)/2
-df_idpart_2002 <- df_idpart_2002_43
+df_idpart_der_2002_43$porc_idpart_der <- (df_idpart_der_2002_43$porc_idpart_der + df_idpart_der_2002_44$porc_idpart_der)/2
+df_idpart_der_2002 <- df_idpart_der_2002_43
 
 # 2003 - 2005
 
-df_idpart_2003_45 <- df2003_45 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2003_45 <- df2003_45 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2003_46 <- df2003_46 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2003_46 <- df2003_46 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2004_47 <- df2004_47 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2004_47 <- df2004_47 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2005_50 <- df2005_50 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2005_50 <- df2005_50 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2005_51 <- df2005_51 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2005_51 <- df2005_51 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
 # Proms
 
-df_idpart_2003_45$porc_idpart <- (df_idpart_2003_45$porc_idpart + df_idpart_2003_46$porc_idpart)/2
-df_idpart_2003 <- df_idpart_2003_45
+df_idpart_der_2003_45$porc_idpart_der <- (df_idpart_der_2003_45$porc_idpart_der + df_idpart_der_2003_46$porc_idpart_der)/2
+df_idpart_der_2003 <- df_idpart_der_2003_45
 
-df_idpart_2004_47$porc_idpart <- (df_idpart_2004_47$porc_idpart + df_idpart_2004_48$porc_idpart)/2
-df_idpart_2004 <- df_idpart_2004_47
+df_idpart_der_2004_47$porc_idpart_der <- (df_idpart_der_2004_47$porc_idpart_der + df_idpart_der_2004_48$porc_idpart_der)/2
+df_idpart_der_2004 <- df_idpart_der_2004_47
 
-df_idpart_2005_49$porc_idpart <- (df_idpart_2005_49$porc_idpart + df_idpart_2005_50$porc_idpart + df_idpart_2005_51)/3
-df_idpart_2005 <- df_idpart_2005_49
+df_idpart_der_2005_49$porc_idpart_der <- (df_idpart_der_2005_49$porc_idpart_der + df_idpart_der_2005_50$porc_idpart_der + df_idpart_der_2005_51)/3
+df_idpart_der_2005 <- df_idpart_der_2005_49
 
 # 2006-2008
 
-df_idpart_2006_52 <- df2006_52 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2006_52 <- df2006_52 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
-                                                             /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                                 length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                             /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                 length(which(id_part == "Izquierda extraconcertación"))+
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_2006_54 <- df2006_54 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2006_54 <- df2006_54 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2007_55 <- df2007_55 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2007_55 <- df2007_55 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2007_56 <- df2007_56 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2007_56 <- df2007_56 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2008_57 <- df2008_57 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2008_57 <- df2008_57 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2008_58 <- df2008_58 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2008_58 <- df2008_58 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
 #Prom
 
-df_idpart_2006_52$porc_idpart <- (df_idpart_2006_52$porc_idpart + df_idpart_2006_54$porc_idpart)/2
-df_idpart_2006 <- df_idpart_2006_52
+df_idpart_der_2006_52$porc_idpart_der <- (df_idpart_der_2006_52$porc_idpart_der + df_idpart_der_2006_54$porc_idpart_der)/2
+df_idpart_der_2006 <- df_idpart_der_2006_52
 
-df_idpart_2007_55$porc_idpart <- (df_idpart_2007_55$porc_idpart + df_idpart_2007_56$porc_idpart)/2
-df_idpart_2007 <- df_idpart_2007_55
+df_idpart_der_2007_55$porc_idpart_der <- (df_idpart_der_2007_55$porc_idpart_der + df_idpart_der_2007_56$porc_idpart_der)/2
+df_idpart_der_2007 <- df_idpart_der_2007_55
 
-df_idpart_2008_57$porc_idpart <- (df_idpart_2008_57$porc_idpart + df_idpart_2008_58$porc_idpart)/2
-df_idpart_2008 <- df_idpart_2008_57
+df_idpart_der_2008_57$porc_idpart_der <- (df_idpart_der_2008_57$porc_idpart_der + df_idpart_der_2008_58$porc_idpart_der)/2
+df_idpart_der_2008 <- df_idpart_der_2008_57
 
 # 2009 - 2011
 
-df_idpart_2009_59 <- df2009_59 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2009_59 <- df2009_59 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2009_60 <- df2009_60 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2009_60 <- df2009_60 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2009_61 <- df2009_61 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2009_61 <- df2009_61 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2010_62 <- df2010_62 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2010_62 <- df2010_62 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2010_63 <- df2010_63 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2010_63 <- df2010_63 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2011_64 <- df2011_64 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2011_64 <- df2011_64 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2011_65 <- df2011_65 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2011_65 <- df2011_65 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
 #Prom
 
-df_idpart_2009_59$porc_idpart <- (df_idpart_2009_59$porc_idpart + df_idpart_2009_60$porc_idpart + df_idpart_2009_61$porc_idpart)/3
-df_idpart_2009 <- df_idpart_2009_59
+df_idpart_der_2009_59$porc_idpart_der <- (df_idpart_der_2009_59$porc_idpart_der + df_idpart_der_2009_60$porc_idpart_der + df_idpart_der_2009_61$porc_idpart_der)/3
+df_idpart_der_2009 <- df_idpart_der_2009_59
 
 
-df_idpart_2010_62$porc_idpart <- (df_idpart_2010_62$porc_idpart + df_idpart_2010_63$porc_idpart)/2
-df_idpart_2010 <- df_idpart_2010_62
+df_idpart_der_2010_62$porc_idpart_der <- (df_idpart_der_2010_62$porc_idpart_der + df_idpart_der_2010_63$porc_idpart_der)/2
+df_idpart_der_2010 <- df_idpart_der_2010_62
 
 
-df_idpart_2011_64$porc_idpart <- (df_idpart_2011_64$porc_idpart + df_idpart_2011_65$porc_idpart)/2
-df_idpart_2011 <- df_idpart_2011_64
+df_idpart_der_2011_64$porc_idpart_der <- (df_idpart_der_2011_64$porc_idpart_der + df_idpart_der_2011_65$porc_idpart_der)/2
+df_idpart_der_2011 <- df_idpart_der_2011_64
 
 # 2012 - 2014
 
-df_idpart_2012_66 <- df2012_66 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2012_66 <- df2012_66 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2012_67 <- df2012_67 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2012_67 <- df2012_67 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2012_68 <- df2012_68 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2012_68 <- df2012_68 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2013_69 <- df2013_69 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2013_69 <- df2013_69 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2013_70 <- df2013_70 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2013_70 <- df2013_70 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2014_71 <- df2014_71 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2014_71 <- df2014_71 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2014_72 <- df2014_72 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2014_72 <- df2014_72 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
 # Prom
 
-df_idpart_2012_66$porc_idpart <- (df_idpart_2012_66$porc_idpart + df_idpart_2012_67$porc_idpart + df_idpart_2012_68$porc_idpart)/3
-df_idpart_2012 <- df_idpart_2012_66
+df_idpart_der_2012_66$porc_idpart_der <- (df_idpart_der_2012_66$porc_idpart_der + df_idpart_der_2012_67$porc_idpart_der + df_idpart_der_2012_68$porc_idpart_der)/3
+df_idpart_der_2012 <- df_idpart_der_2012_66
 
-df_idpart_2013_69$porc_idpart <- (df_idpart_2013_69$porc_idpart + df_idpart_2013_70$porc_idpart)/2
-df_idpart_2013 <- df_idpart_2013_69
+df_idpart_der_2013_69$porc_idpart_der <- (df_idpart_der_2013_69$porc_idpart_der + df_idpart_der_2013_70$porc_idpart_der)/2
+df_idpart_der_2013 <- df_idpart_der_2013_69
 
-df_idpart_2014_71$porc_idpart <- (df_idpart_2014_71$porc_idpart + df_idpart_2014_72$porc_idpart)/2
-df_idpart_2014 <- df_idpart_2014_71
+df_idpart_der_2014_71$porc_idpart_der <- (df_idpart_der_2014_71$porc_idpart_der + df_idpart_der_2014_72$porc_idpart_der)/2
+df_idpart_der_2014 <- df_idpart_der_2014_71
 
 # 2015 - 2017
 
-df_idpart_2015_73 <- df2015_73 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2015_73 <- df2015_73 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2015_74 <- df2015_74 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2015_74 <- df2015_74 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2015_75 <- df2015_75 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2015_75 <- df2015_75 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-#df_idpart_2016_76 <- df2016_76 %>%group_by(year)%>%summarise(porc_idpart = 
+#df_idpart_der_2016_76 <- df2016_76 %>%group_by(year)%>%summarise(porc_idpart_der = 
  #length(which(id_part == "Derecha"))
-  #                                               /(length(which(id_part == "Centro-Izquierda Concetación"))+
-   #                                                  length(which(id_part == "Izquierda extraparlamentaria"))+
+  #                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+   #                                                  length(which(id_part == "Izquierda extraconcertación"))+
     #                                                 length(which(id_part == "Ninguno"))+
      #                                                length(which(id_part == "Derecha"))))
 
-df_idpart_2016_77 <- df2016_77 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2016_77 <- df2016_77 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2016_78 <- df2016_78 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2016_78 <- df2016_78 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-#df_idpart_2017_79 <- df2017_79 %>%group_by(year)%>%summarise(porc_idpart = 
+#df_idpart_der_2017_79 <- df2017_79 %>%group_by(year)%>%summarise(porc_idpart_der = 
  #                                                  length(which(id_part == "Derecha"))
-  #                                               /(length(which(id_part == "Centro-Izquierda Concetación"))+
-   #                                                  length(which(id_part == "Izquierda extraparlamentaria"))+
+  #                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+   #                                                  length(which(id_part == "Izquierda extraconcertación"))+
     #                                                 length(which(id_part == "Ninguno"))+
      #                                                length(which(id_part == "Derecha"))))
 
-#df_idpart_2017_80 <- df2017_80 %>%group_by(year)%>%summarise(porc_idpart = 
+#df_idpart_der_2017_80 <- df2017_80 %>%group_by(year)%>%summarise(porc_idpart_der = 
  #                                                  length(which(id_part == "Derecha"))
-  #                                               /(length(which(id_part == "Centro-Izquierda Concetación"))+
-   #                                                  length(which(id_part == "Izquierda extraparlamentaria"))+
+  #                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+   #                                                  length(which(id_part == "Izquierda extraconcertación"))+
     #                                                 length(which(id_part == "Ninguno"))+
      #                                                length(which(id_part == "Derecha"))))
 
-df_idpart_2017_81 <- df2017_81 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2017_81 <- df2017_81 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
 # Proms
 
-#df_idpart__$porc_idpart <- (df_idpart__$porc_idpart + df_idpart__$porc_idpart + df_idpart__$porc_idpart)/3
-#df_idpart_ <- df_idpart__
+#df_idpart_der__$porc_idpart_der <- (df_idpart_der__$porc_idpart_der + df_idpart_der__$porc_idpart_der + df_idpart_der__$porc_idpart_der)/3
+#df_idpart_der_ <- df_idpart_der__
 
-df_idpart_2015_73$porc_idpart <- (df_idpart_2015_73$porc_idpart + df_idpart_2015_74$porc_idpart + df_idpart_2015_75$porc_idpart)/3
-df_idpart_2015 <- df_idpart_2015_73
+df_idpart_der_2015_73$porc_idpart_der <- (df_idpart_der_2015_73$porc_idpart_der + df_idpart_der_2015_74$porc_idpart_der + df_idpart_der_2015_75$porc_idpart_der)/3
+df_idpart_der_2015 <- df_idpart_der_2015_73
 
-df_idpart_2016_77$porc_idpart <- (df_idpart_2016_77$porc_idpart + df_idpart_2016_78$porc_idpart)/2
-df_idpart_2016 <- df_idpart_2016_77
+df_idpart_der_2016_77$porc_idpart_der <- (df_idpart_der_2016_77$porc_idpart_der + df_idpart_der_2016_78$porc_idpart_der)/2
+df_idpart_der_2016 <- df_idpart_der_2016_77
 
-df_idpart_2017 <- df_idpart_2017_81
+df_idpart_der_2017 <- df_idpart_der_2017_81
 
 # 2018 - 2019
 
-df_idpart_2018_82 <- df2018_82 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2018_82 <- df2018_82 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2019_83 <- df2019_83 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2019_83 <- df2019_83 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_2019_84 <- df2019_84 %>%group_by(year)%>%summarise(porc_idpart = 
+df_idpart_der_2019_84 <- df2019_84 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                    length(which(id_part == "Derecha"))
-                                                 /(length(which(id_part == "Centro-Izquierda Concetación"))+
-                                                     length(which(id_part == "Izquierda extraparlamentaria"))+
+                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                     length(which(id_part == "Izquierda extraconcertación"))+
                                                      length(which(id_part == "Ninguno"))+
                                                      length(which(id_part == "Derecha"))))
 
 # prom
 
-df_idpart_2018 <- df_idpart_2018_82
+df_idpart_der_2018 <- df_idpart_der_2018_82
 
-df_idpart_2019_83$porc_idpart <- (df_idpart_2019_83$porc_idpart + df_idpart_2019_84$porc_idpart)/2
-df_idpart_2019 <- df_idpart_2019_83
+df_idpart_der_2019_83$porc_idpart_der <- (df_idpart_der_2019_83$porc_idpart_der + df_idpart_der_2019_84$porc_idpart_der)/2
+df_idpart_der_2019 <- df_idpart_der_2019_83
 
 # Crear base
 
-df_idpart <- do.call("rbind", list(df_idpart_1990, 
-                                   df_idpart_1991, 
-                                   df_idpart_1992, 
-                                   df_idpart_1993, 
-                                   df_idpart_1994, 
-                                   df_idpart_1995, 
-                                   df_idpart_1996, 
-                                   df_idpart_1997, 
-                                   df_idpart_1998, 
-                                   df_idpart_1999, 
-                                   df_idpart_2000, 
-                                   df_idpart_2001, 
-                                   df_idpart_2002, 
-                                   df_idpart_2003, 
-                                   df_idpart_2004, 
-                                   df_idpart_2005, 
-                                   df_idpart_2006, 
-                                   df_idpart_2007, 
-                                   df_idpart_2008, 
-                                   df_idpart_2009, 
-                                   df_idpart_2010, 
-                                   df_idpart_2011, 
-                                   df_idpart_2012, 
-                                   df_idpart_2013, 
-                                   df_idpart_2014, 
-                                   df_idpart_2015, 
-                                   df_idpart_2016, 
-                                   df_idpart_2017, 
-                                   df_idpart_2018, 
-                                   df_idpart_2019))
+df_idpart_der <- do.call("rbind", list(df_idpart_der_1990, 
+                                   df_idpart_der_1991, 
+                                   df_idpart_der_1992, 
+                                   df_idpart_der_1993, 
+                                   df_idpart_der_1994, 
+                                   df_idpart_der_1995, 
+                                   df_idpart_der_1996, 
+                                   df_idpart_der_1997, 
+                                   df_idpart_der_1998, 
+                                   df_idpart_der_1999, 
+                                   df_idpart_der_2000, 
+                                   df_idpart_der_2001, 
+                                   df_idpart_der_2002, 
+                                   df_idpart_der_2003, 
+                                   df_idpart_der_2004, 
+                                   df_idpart_der_2005, 
+                                   df_idpart_der_2006, 
+                                   df_idpart_der_2007, 
+                                   df_idpart_der_2008, 
+                                   df_idpart_der_2009, 
+                                   df_idpart_der_2010, 
+                                   df_idpart_der_2011, 
+                                   df_idpart_der_2012, 
+                                   df_idpart_der_2013, 
+                                   df_idpart_der_2014, 
+                                   df_idpart_der_2015, 
+                                   df_idpart_der_2016, 
+                                   df_idpart_der_2017, 
+                                   df_idpart_der_2018, 
+                                   df_idpart_der_2019))
 
 # Save data base
 
+# Save database
+save(df_idpart_der, file = "output/Idpart/Derecha/CEP-Idpart-Derecha.RData")
+write.csv(df_idpart_der, "output/Idpart/Derecha/CEP-Idpart-Derecha.csv")
+write.xlsx(df_idpart_der, "output/Idpart/Derecha/CEP-Idpart-Derecha.xlsx")
+
+# Centro izquierda concertación
+
+# 1990
+
+df_idpart_centizq_1990_14 <- df1990_14 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1990_15 <- df1990_15 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1990_16 <- df1990_16 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_centizq_1990_14$porc_idpart_centizq <- (df_idpart_centizq_1990_14$porc_idpart_centizq + df_idpart_centizq_1990_15$porc_idpart_centizq + df_idpart_centizq_1990_16$porc_idpart_centizq)/3
+df_idpart_centizq_1990 <- df_idpart_centizq_1990_14
+
+# 1991-1993 
+
+df_idpart_centizq_1991_17 <- df1991_17 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1991_18 <- df1991_18 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1991_19 <- df1991_19 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1991_20 <- df1991_20 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1992_21 <- df1992_21 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1992_22 <- df1992_22 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1992_23 <- df1992_23 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1993_24 <- df1993_24 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1993_25 <- df1993_25 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+
+df_idpart_centizq_1993_28 <- df1993_28 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+df_idpart_centizq_1991_17$porc_idpart_centizq <- (df_idpart_centizq_1991_17$porc_idpart_centizq + df_idpart_centizq_1991_18$porc_idpart_centizq + df_idpart_centizq_1991_19$porc_idpart_centizq + df_idpart_centizq_1991_20$porc_idpart_centizq)/4
+df_idpart_centizq_1991 <- df_idpart_centizq_1991_17
+
+df_idpart_centizq_1992_21$porc_idpart_centizq <- (df_idpart_centizq_1992_21$porc_idpart_centizq + df_idpart_centizq_1992_22$porc_idpart_centizq + df_idpart_centizq_1992_23$porc_idpart_centizq)/3
+df_idpart_centizq_1992 <- df_idpart_centizq_1992_21
+
+df_idpart_centizq_1993_24$porc_idpart_centizq <- (df_idpart_centizq_1993_24$porc_idpart_centizq + df_idpart_centizq_1993_25$porc_idpart_centizq + df_idpart_centizq_1993_28$porc_idpart_centizq)/3
+df_idpart_centizq_1993 <- df_idpart_centizq_1993_24
+
+# 1994-1996
+
+df_idpart_centizq_1994_29 <- df1994_29 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1995_30 <- df1995_30 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1995_31 <- df1995_31 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1996_32 <- df1996_32 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1996_33 <- df1996_33 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+df_idpart_centizq_1994 <- df_idpart_centizq_1994_29
+
+df_idpart_centizq_1995_30$porc_idpart_centizq <- (df_idpart_centizq_1995_30$porc_idpart_centizq + df_idpart_centizq_1995_31$porc_idpart_centizq)/2
+df_idpart_centizq_1995 <- df_idpart_centizq_1995_30
+
+df_idpart_centizq_1996_32$porc_idpart_centizq <- (df_idpart_centizq_1996_32$porc_idpart_centizq + df_idpart_centizq_1996_33$porc_idpart_centizq)/2
+df_idpart_centizq_1996 <- df_idpart_centizq_1996_32
+
+# 1997 - 1999
+
+df_idpart_centizq_1997_34 <- df1997_34 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1997_35 <- df1997_35 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1998_36 <- df1998_36 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1999_37 <- df1999_37 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_1999_38 <- df1999_38 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_centizq_1997_34$porc_idpart_centizq <- (df_idpart_centizq_1997_34$porc_idpart_centizq + df_idpart_centizq_1997_35$porc_idpart_centizq)/2
+df_idpart_centizq_1997 <- df_idpart_centizq_1997_34
+
+df_idpart_centizq_1998 <- df_idpart_centizq_1998_36
+
+df_idpart_centizq_1999_37$porc_idpart_centizq <- (df_idpart_centizq_1999_37$porc_idpart_centizq + df_idpart_centizq_1999_38$porc_idpart_centizq)/2
+df_idpart_centizq_1999 <- df_idpart_centizq_1999_37
+
+
+
+#2000 - 2002
+
+df_idpart_centizq_2000_39 <- df2000_39 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2000_40 <- df2000_40 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2001_41 <- df2001_41 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2001_42 <- df2001_42 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2002_43 <- df2002_43 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2002_44 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+df_idpart_centizq_2000_39$porc_idpart_centizq <- (df_idpart_centizq_2000_39$porc_idpart_centizq + df_idpart_centizq_2000_40$porc_idpart_centizq)/2
+df_idpart_centizq_2000 <- df_idpart_centizq_2000_39
+
+df_idpart_centizq_2001_41$porc_idpart_centizq <- (df_idpart_centizq_2001_41$porc_idpart_centizq + df_idpart_centizq_2001_42$porc_idpart_centizq)/2
+df_idpart_centizq_2001 <- df_idpart_centizq_2001_41
+
+df_idpart_centizq_2002_43$porc_idpart_centizq <- (df_idpart_centizq_2002_43$porc_idpart_centizq + df_idpart_centizq_2002_44$porc_idpart_centizq)/2
+df_idpart_centizq_2002 <- df_idpart_centizq_2002_43
+
+# 2003 - 2005
+
+df_idpart_centizq_2003_45 <- df2003_45 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2003_46 <- df2003_46 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2004_47 <- df2004_47 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2005_50 <- df2005_50 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2005_51 <- df2005_51 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+df_idpart_centizq_2003_45$porc_idpart_centizq <- (df_idpart_centizq_2003_45$porc_idpart_centizq + df_idpart_centizq_2003_46$porc_idpart_centizq)/2
+df_idpart_centizq_2003 <- df_idpart_centizq_2003_45
+
+df_idpart_centizq_2004_47$porc_idpart_centizq <- (df_idpart_centizq_2004_47$porc_idpart_centizq + df_idpart_centizq_2004_48$porc_idpart_centizq)/2
+df_idpart_centizq_2004 <- df_idpart_centizq_2004_47
+
+df_idpart_centizq_2005_49$porc_idpart_centizq <- (df_idpart_centizq_2005_49$porc_idpart_centizq + df_idpart_centizq_2005_50$porc_idpart_centizq + df_idpart_centizq_2005_51)/3
+df_idpart_centizq_2005 <- df_idpart_centizq_2005_49
+
+# 2006-2008
+
+df_idpart_centizq_2006_52 <- df2006_52 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2006_54 <- df2006_54 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2007_55 <- df2007_55 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2007_56 <- df2007_56 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2008_57 <- df2008_57 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2008_58 <- df2008_58 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#Prom
+
+df_idpart_centizq_2006_52$porc_idpart_centizq <- (df_idpart_centizq_2006_52$porc_idpart_centizq + df_idpart_centizq_2006_54$porc_idpart_centizq)/2
+df_idpart_centizq_2006 <- df_idpart_centizq_2006_52
+
+df_idpart_centizq_2007_55$porc_idpart_centizq <- (df_idpart_centizq_2007_55$porc_idpart_centizq + df_idpart_centizq_2007_56$porc_idpart_centizq)/2
+df_idpart_centizq_2007 <- df_idpart_centizq_2007_55
+
+df_idpart_centizq_2008_57$porc_idpart_centizq <- (df_idpart_centizq_2008_57$porc_idpart_centizq + df_idpart_centizq_2008_58$porc_idpart_centizq)/2
+df_idpart_centizq_2008 <- df_idpart_centizq_2008_57
+
+# 2009 - 2011
+
+df_idpart_centizq_2009_59 <- df2009_59 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2009_60 <- df2009_60 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2009_61 <- df2009_61 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2010_62 <- df2010_62 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2010_63 <- df2010_63 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2011_64 <- df2011_64 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2011_65 <- df2011_65 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#Prom
+
+df_idpart_centizq_2009_59$porc_idpart_centizq <- (df_idpart_centizq_2009_59$porc_idpart_centizq + df_idpart_centizq_2009_60$porc_idpart_centizq + df_idpart_centizq_2009_61$porc_idpart_centizq)/3
+df_idpart_centizq_2009 <- df_idpart_centizq_2009_59
+
+
+df_idpart_centizq_2010_62$porc_idpart_centizq <- (df_idpart_centizq_2010_62$porc_idpart_centizq + df_idpart_centizq_2010_63$porc_idpart_centizq)/2
+df_idpart_centizq_2010 <- df_idpart_centizq_2010_62
+
+
+df_idpart_centizq_2011_64$porc_idpart_centizq <- (df_idpart_centizq_2011_64$porc_idpart_centizq + df_idpart_centizq_2011_65$porc_idpart_centizq)/2
+df_idpart_centizq_2011 <- df_idpart_centizq_2011_64
+
+# 2012 - 2014
+
+df_idpart_centizq_2012_66 <- df2012_66 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2012_67 <- df2012_67 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2012_68 <- df2012_68 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2013_69 <- df2013_69 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2013_70 <- df2013_70 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2014_71 <- df2014_71 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2014_72 <- df2014_72 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_centizq_2012_66$porc_idpart_centizq <- (df_idpart_centizq_2012_66$porc_idpart_centizq + df_idpart_centizq_2012_67$porc_idpart_centizq + df_idpart_centizq_2012_68$porc_idpart_centizq)/3
+df_idpart_centizq_2012 <- df_idpart_centizq_2012_66
+
+df_idpart_centizq_2013_69$porc_idpart_centizq <- (df_idpart_centizq_2013_69$porc_idpart_centizq + df_idpart_centizq_2013_70$porc_idpart_centizq)/2
+df_idpart_centizq_2013 <- df_idpart_centizq_2013_69
+
+df_idpart_centizq_2014_71$porc_idpart_centizq <- (df_idpart_centizq_2014_71$porc_idpart_centizq + df_idpart_centizq_2014_72$porc_idpart_centizq)/2
+df_idpart_centizq_2014 <- df_idpart_centizq_2014_71
+
+# 2015 - 2017
+
+df_idpart_centizq_2015_73 <- df2015_73 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2015_74 <- df2015_74 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2015_75 <- df2015_75 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#df_idpart_centizq_2016_76 <- df2016_76 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+#length(which(id_part == "Centro-Izquierda concertación"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2016_77 <- df2016_77 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2016_78 <- df2016_78 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#df_idpart_centizq_2017_79 <- df2017_79 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+#                                                  length(which(id_part == "Centro-Izquierda concertación"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+#df_idpart_centizq_2017_80 <- df2017_80 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+#                                                  length(which(id_part == "Centro-Izquierda concertación"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2017_81 <- df2017_81 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+#df_idpart_centizq__$porc_idpart_centizq <- (df_idpart_centizq__$porc_idpart_centizq + df_idpart_centizq__$porc_idpart_centizq + df_idpart_centizq__$porc_idpart_centizq)/3
+#df_idpart_centizq_ <- df_idpart_centizq__
+
+df_idpart_centizq_2015_73$porc_idpart_centizq <- (df_idpart_centizq_2015_73$porc_idpart_centizq + df_idpart_centizq_2015_74$porc_idpart_centizq + df_idpart_centizq_2015_75$porc_idpart_centizq)/3
+df_idpart_centizq_2015 <- df_idpart_centizq_2015_73
+
+df_idpart_centizq_2016_77$porc_idpart_centizq <- (df_idpart_centizq_2016_77$porc_idpart_centizq + df_idpart_centizq_2016_78$porc_idpart_centizq)/2
+df_idpart_centizq_2016 <- df_idpart_centizq_2016_77
+
+df_idpart_centizq_2017 <- df_idpart_centizq_2017_81
+
+# 2018 - 2019
+
+df_idpart_centizq_2018_82 <- df2018_82 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2019_83 <- df2019_83 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_centizq_2019_84 <- df2019_84 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+                                                                   length(which(id_part == "Centro-Izquierda concertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# prom
+
+df_idpart_centizq_2018 <- df_idpart_centizq_2018_82
+
+df_idpart_centizq_2019_83$porc_idpart_centizq <- (df_idpart_centizq_2019_83$porc_idpart_centizq + df_idpart_centizq_2019_84$porc_idpart_centizq)/2
+df_idpart_centizq_2019 <- df_idpart_centizq_2019_83
+
+# Crear base
+
+df_idpart_centizq <- do.call("rbind", list(df_idpart_centizq_1990, 
+                                       df_idpart_centizq_1991, 
+                                       df_idpart_centizq_1992, 
+                                       df_idpart_centizq_1993, 
+                                       df_idpart_centizq_1994, 
+                                       df_idpart_centizq_1995, 
+                                       df_idpart_centizq_1996, 
+                                       df_idpart_centizq_1997, 
+                                       df_idpart_centizq_1998, 
+                                       df_idpart_centizq_1999, 
+                                       df_idpart_centizq_2000, 
+                                       df_idpart_centizq_2001, 
+                                       df_idpart_centizq_2002, 
+                                       df_idpart_centizq_2003, 
+                                       df_idpart_centizq_2004, 
+                                       df_idpart_centizq_2005, 
+                                       df_idpart_centizq_2006, 
+                                       df_idpart_centizq_2007, 
+                                       df_idpart_centizq_2008, 
+                                       df_idpart_centizq_2009, 
+                                       df_idpart_centizq_2010, 
+                                       df_idpart_centizq_2011, 
+                                       df_idpart_centizq_2012, 
+                                       df_idpart_centizq_2013, 
+                                       df_idpart_centizq_2014, 
+                                       df_idpart_centizq_2015, 
+                                       df_idpart_centizq_2016, 
+                                       df_idpart_centizq_2017, 
+                                       df_idpart_centizq_2018, 
+                                       df_idpart_centizq_2019))
+
+# Save data base
+
+# Save database
+save(df_idpart_centizq, file = "output/Idpart/Centro-Izquierda-Concertacion/CEP-Idpart-Centro-Izquierda-Concertacion.RData")
+write.csv(df_idpart_centizq, "output/Idpart/Centro-Izquierda-Concertacion/CEP-Idpart-Centro-Izquierda-Concertacion.csv")
+write.xlsx(df_idpart_centizq, "output/Idpart/Centro-Izquierda-Concertacion/CEP-Idpart-Centro-Izquierda-Concertacion.xlsx")
+
+
+
+# Ninguno
+
+# 1990
+
+df_idpart_nin_1990_14 <- df1990_14 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1990_15 <- df1990_15 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1990_16 <- df1990_16 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_nin_1990_14$porc_idpart_nin <- (df_idpart_nin_1990_14$porc_idpart_nin + df_idpart_nin_1990_15$porc_idpart_nin + df_idpart_nin_1990_16$porc_idpart_nin)/3
+df_idpart_nin_1990 <- df_idpart_nin_1990_14
+
+# 1991-1993 
+
+df_idpart_nin_1991_17 <- df1991_17 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1991_18 <- df1991_18 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1991_19 <- df1991_19 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1991_20 <- df1991_20 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1992_21 <- df1992_21 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1992_22 <- df1992_22 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1992_23 <- df1992_23 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1993_24 <- df1993_24 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1993_25 <- df1993_25 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+
+df_idpart_nin_1993_28 <- df1993_28 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+df_idpart_nin_1991_17$porc_idpart_nin <- (df_idpart_nin_1991_17$porc_idpart_nin + df_idpart_nin_1991_18$porc_idpart_nin + df_idpart_nin_1991_19$porc_idpart_nin + df_idpart_nin_1991_20$porc_idpart_nin)/4
+df_idpart_nin_1991 <- df_idpart_nin_1991_17
+
+df_idpart_nin_1992_21$porc_idpart_nin <- (df_idpart_nin_1992_21$porc_idpart_nin + df_idpart_nin_1992_22$porc_idpart_nin + df_idpart_nin_1992_23$porc_idpart_nin)/3
+df_idpart_nin_1992 <- df_idpart_nin_1992_21
+
+df_idpart_nin_1993_24$porc_idpart_nin <- (df_idpart_nin_1993_24$porc_idpart_nin + df_idpart_nin_1993_25$porc_idpart_nin + df_idpart_nin_1993_28$porc_idpart_nin)/3
+df_idpart_nin_1993 <- df_idpart_nin_1993_24
+
+# 1994-1996
+
+df_idpart_nin_1994_29 <- df1994_29 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1995_30 <- df1995_30 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1995_31 <- df1995_31 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1996_32 <- df1996_32 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1996_33 <- df1996_33 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+df_idpart_nin_1994 <- df_idpart_nin_1994_29
+
+df_idpart_nin_1995_30$porc_idpart_nin <- (df_idpart_nin_1995_30$porc_idpart_nin + df_idpart_nin_1995_31$porc_idpart_nin)/2
+df_idpart_nin_1995 <- df_idpart_nin_1995_30
+
+df_idpart_nin_1996_32$porc_idpart_nin <- (df_idpart_nin_1996_32$porc_idpart_nin + df_idpart_nin_1996_33$porc_idpart_nin)/2
+df_idpart_nin_1996 <- df_idpart_nin_1996_32
+
+# 1997 - 1999
+
+df_idpart_nin_1997_34 <- df1997_34 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1997_35 <- df1997_35 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1998_36 <- df1998_36 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1999_37 <- df1999_37 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_1999_38 <- df1999_38 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_nin_1997_34$porc_idpart_nin <- (df_idpart_nin_1997_34$porc_idpart_nin + df_idpart_nin_1997_35$porc_idpart_nin)/2
+df_idpart_nin_1997 <- df_idpart_nin_1997_34
+
+df_idpart_nin_1998 <- df_idpart_nin_1998_36
+
+df_idpart_nin_1999_37$porc_idpart_nin <- (df_idpart_nin_1999_37$porc_idpart_nin + df_idpart_nin_1999_38$porc_idpart_nin)/2
+df_idpart_nin_1999 <- df_idpart_nin_1999_37
+
+
+
+#2000 - 2002
+
+df_idpart_nin_2000_39 <- df2000_39 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2000_40 <- df2000_40 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2001_41 <- df2001_41 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2001_42 <- df2001_42 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2002_43 <- df2002_43 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2002_44 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+df_idpart_nin_2000_39$porc_idpart_nin <- (df_idpart_nin_2000_39$porc_idpart_nin + df_idpart_nin_2000_40$porc_idpart_nin)/2
+df_idpart_nin_2000 <- df_idpart_nin_2000_39
+
+df_idpart_nin_2001_41$porc_idpart_nin <- (df_idpart_nin_2001_41$porc_idpart_nin + df_idpart_nin_2001_42$porc_idpart_nin)/2
+df_idpart_nin_2001 <- df_idpart_nin_2001_41
+
+df_idpart_nin_2002_43$porc_idpart_nin <- (df_idpart_nin_2002_43$porc_idpart_nin + df_idpart_nin_2002_44$porc_idpart_nin)/2
+df_idpart_nin_2002 <- df_idpart_nin_2002_43
+
+# 2003 - 2005
+
+df_idpart_nin_2003_45 <- df2003_45 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2003_46 <- df2003_46 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2004_47 <- df2004_47 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2005_50 <- df2005_50 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2005_51 <- df2005_51 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+df_idpart_nin_2003_45$porc_idpart_nin <- (df_idpart_nin_2003_45$porc_idpart_nin + df_idpart_nin_2003_46$porc_idpart_nin)/2
+df_idpart_nin_2003 <- df_idpart_nin_2003_45
+
+df_idpart_nin_2004_47$porc_idpart_nin <- (df_idpart_nin_2004_47$porc_idpart_nin + df_idpart_nin_2004_48$porc_idpart_nin)/2
+df_idpart_nin_2004 <- df_idpart_nin_2004_47
+
+df_idpart_nin_2005_49$porc_idpart_nin <- (df_idpart_nin_2005_49$porc_idpart_nin + df_idpart_nin_2005_50$porc_idpart_nin + df_idpart_nin_2005_51)/3
+df_idpart_nin_2005 <- df_idpart_nin_2005_49
+
+# 2006-2008
+
+df_idpart_nin_2006_52 <- df2006_52 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2006_54 <- df2006_54 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2007_55 <- df2007_55 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2007_56 <- df2007_56 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2008_57 <- df2008_57 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2008_58 <- df2008_58 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#Prom
+
+df_idpart_nin_2006_52$porc_idpart_nin <- (df_idpart_nin_2006_52$porc_idpart_nin + df_idpart_nin_2006_54$porc_idpart_nin)/2
+df_idpart_nin_2006 <- df_idpart_nin_2006_52
+
+df_idpart_nin_2007_55$porc_idpart_nin <- (df_idpart_nin_2007_55$porc_idpart_nin + df_idpart_nin_2007_56$porc_idpart_nin)/2
+df_idpart_nin_2007 <- df_idpart_nin_2007_55
+
+df_idpart_nin_2008_57$porc_idpart_nin <- (df_idpart_nin_2008_57$porc_idpart_nin + df_idpart_nin_2008_58$porc_idpart_nin)/2
+df_idpart_nin_2008 <- df_idpart_nin_2008_57
+
+# 2009 - 2011
+
+df_idpart_nin_2009_59 <- df2009_59 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2009_60 <- df2009_60 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2009_61 <- df2009_61 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2010_62 <- df2010_62 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2010_63 <- df2010_63 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2011_64 <- df2011_64 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2011_65 <- df2011_65 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#Prom
+
+df_idpart_nin_2009_59$porc_idpart_nin <- (df_idpart_nin_2009_59$porc_idpart_nin + df_idpart_nin_2009_60$porc_idpart_nin + df_idpart_nin_2009_61$porc_idpart_nin)/3
+df_idpart_nin_2009 <- df_idpart_nin_2009_59
+
+
+df_idpart_nin_2010_62$porc_idpart_nin <- (df_idpart_nin_2010_62$porc_idpart_nin + df_idpart_nin_2010_63$porc_idpart_nin)/2
+df_idpart_nin_2010 <- df_idpart_nin_2010_62
+
+
+df_idpart_nin_2011_64$porc_idpart_nin <- (df_idpart_nin_2011_64$porc_idpart_nin + df_idpart_nin_2011_65$porc_idpart_nin)/2
+df_idpart_nin_2011 <- df_idpart_nin_2011_64
+
+# 2012 - 2014
+
+df_idpart_nin_2012_66 <- df2012_66 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2012_67 <- df2012_67 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2012_68 <- df2012_68 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2013_69 <- df2013_69 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2013_70 <- df2013_70 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2014_71 <- df2014_71 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2014_72 <- df2014_72 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_nin_2012_66$porc_idpart_nin <- (df_idpart_nin_2012_66$porc_idpart_nin + df_idpart_nin_2012_67$porc_idpart_nin + df_idpart_nin_2012_68$porc_idpart_nin)/3
+df_idpart_nin_2012 <- df_idpart_nin_2012_66
+
+df_idpart_nin_2013_69$porc_idpart_nin <- (df_idpart_nin_2013_69$porc_idpart_nin + df_idpart_nin_2013_70$porc_idpart_nin)/2
+df_idpart_nin_2013 <- df_idpart_nin_2013_69
+
+df_idpart_nin_2014_71$porc_idpart_nin <- (df_idpart_nin_2014_71$porc_idpart_nin + df_idpart_nin_2014_72$porc_idpart_nin)/2
+df_idpart_nin_2014 <- df_idpart_nin_2014_71
+
+# 2015 - 2017
+
+df_idpart_nin_2015_73 <- df2015_73 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2015_74 <- df2015_74 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2015_75 <- df2015_75 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#df_idpart_nin_2016_76 <- df2016_76 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+#length(which(id_part == "Ninguno"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2016_77 <- df2016_77 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2016_78 <- df2016_78 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#df_idpart_nin_2017_79 <- df2017_79 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+#                                                  length(which(id_part == "Ninguno"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+#df_idpart_nin_2017_80 <- df2017_80 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+#                                                  length(which(id_part == "Ninguno"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2017_81 <- df2017_81 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+#df_idpart_nin__$porc_idpart_nin <- (df_idpart_nin__$porc_idpart_nin + df_idpart_nin__$porc_idpart_nin + df_idpart_nin__$porc_idpart_nin)/3
+#df_idpart_nin_ <- df_idpart_nin__
+
+df_idpart_nin_2015_73$porc_idpart_nin <- (df_idpart_nin_2015_73$porc_idpart_nin + df_idpart_nin_2015_74$porc_idpart_nin + df_idpart_nin_2015_75$porc_idpart_nin)/3
+df_idpart_nin_2015 <- df_idpart_nin_2015_73
+
+df_idpart_nin_2016_77$porc_idpart_nin <- (df_idpart_nin_2016_77$porc_idpart_nin + df_idpart_nin_2016_78$porc_idpart_nin)/2
+df_idpart_nin_2016 <- df_idpart_nin_2016_77
+
+df_idpart_nin_2017 <- df_idpart_nin_2017_81
+
+# 2018 - 2019
+
+df_idpart_nin_2018_82 <- df2018_82 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2019_83 <- df2019_83 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_nin_2019_84 <- df2019_84 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+                                                                   length(which(id_part == "Ninguno"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# prom
+
+df_idpart_nin_2018 <- df_idpart_nin_2018_82
+
+df_idpart_nin_2019_83$porc_idpart_nin <- (df_idpart_nin_2019_83$porc_idpart_nin + df_idpart_nin_2019_84$porc_idpart_nin)/2
+df_idpart_nin_2019 <- df_idpart_nin_2019_83
+
+# Crear base
+
+df_idpart_nin <- do.call("rbind", list(df_idpart_nin_1990, 
+                                       df_idpart_nin_1991, 
+                                       df_idpart_nin_1992, 
+                                       df_idpart_nin_1993, 
+                                       df_idpart_nin_1994, 
+                                       df_idpart_nin_1995, 
+                                       df_idpart_nin_1996, 
+                                       df_idpart_nin_1997, 
+                                       df_idpart_nin_1998, 
+                                       df_idpart_nin_1999, 
+                                       df_idpart_nin_2000, 
+                                       df_idpart_nin_2001, 
+                                       df_idpart_nin_2002, 
+                                       df_idpart_nin_2003, 
+                                       df_idpart_nin_2004, 
+                                       df_idpart_nin_2005, 
+                                       df_idpart_nin_2006, 
+                                       df_idpart_nin_2007, 
+                                       df_idpart_nin_2008, 
+                                       df_idpart_nin_2009, 
+                                       df_idpart_nin_2010, 
+                                       df_idpart_nin_2011, 
+                                       df_idpart_nin_2012, 
+                                       df_idpart_nin_2013, 
+                                       df_idpart_nin_2014, 
+                                       df_idpart_nin_2015, 
+                                       df_idpart_nin_2016, 
+                                       df_idpart_nin_2017, 
+                                       df_idpart_nin_2018, 
+                                       df_idpart_nin_2019))
+
+# Save data base
+
+# Save database
+save(df_idpart_nin, file = "output/Idpart/Ninguno/CEP-Idpart-Ninguno.RData")
+write.csv(df_idpart_nin, "output/Idpart/Ninguno/CEP-Idpart-Ninguno.csv")
+write.xlsx(df_idpart_nin, "output/Idpart/Ninguno/CEP-Idpart-Ninguno.xlsx")
+
+# Izquierda extraconcertación
+
+# 1990
+
+df_idpart_izqext_1990_14 <- df1990_14 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1990_15 <- df1990_15 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1990_16 <- df1990_16 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_izqext_1990_14$porc_idpart_izqext <- (df_idpart_izqext_1990_14$porc_idpart_izqext + df_idpart_izqext_1990_15$porc_idpart_izqext + df_idpart_izqext_1990_16$porc_idpart_izqext)/3
+df_idpart_izqext_1990 <- df_idpart_izqext_1990_14
+
+# 1991-1993 
+
+df_idpart_izqext_1991_17 <- df1991_17 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1991_18 <- df1991_18 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1991_19 <- df1991_19 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1991_20 <- df1991_20 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1992_21 <- df1992_21 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1992_22 <- df1992_22 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1992_23 <- df1992_23 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1993_24 <- df1993_24 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1993_25 <- df1993_25 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+
+df_idpart_izqext_1993_28 <- df1993_28 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+df_idpart_izqext_1991_17$porc_idpart_izqext <- (df_idpart_izqext_1991_17$porc_idpart_izqext + df_idpart_izqext_1991_18$porc_idpart_izqext + df_idpart_izqext_1991_19$porc_idpart_izqext + df_idpart_izqext_1991_20$porc_idpart_izqext)/4
+df_idpart_izqext_1991 <- df_idpart_izqext_1991_17
+
+df_idpart_izqext_1992_21$porc_idpart_izqext <- (df_idpart_izqext_1992_21$porc_idpart_izqext + df_idpart_izqext_1992_22$porc_idpart_izqext + df_idpart_izqext_1992_23$porc_idpart_izqext)/3
+df_idpart_izqext_1992 <- df_idpart_izqext_1992_21
+
+df_idpart_izqext_1993_24$porc_idpart_izqext <- (df_idpart_izqext_1993_24$porc_idpart_izqext + df_idpart_izqext_1993_25$porc_idpart_izqext + df_idpart_izqext_1993_28$porc_idpart_izqext)/3
+df_idpart_izqext_1993 <- df_idpart_izqext_1993_24
+
+# 1994-1996
+
+df_idpart_izqext_1994_29 <- df1994_29 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1995_30 <- df1995_30 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1995_31 <- df1995_31 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1996_32 <- df1996_32 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1996_33 <- df1996_33 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+df_idpart_izqext_1994 <- df_idpart_izqext_1994_29
+
+df_idpart_izqext_1995_30$porc_idpart_izqext <- (df_idpart_izqext_1995_30$porc_idpart_izqext + df_idpart_izqext_1995_31$porc_idpart_izqext)/2
+df_idpart_izqext_1995 <- df_idpart_izqext_1995_30
+
+df_idpart_izqext_1996_32$porc_idpart_izqext <- (df_idpart_izqext_1996_32$porc_idpart_izqext + df_idpart_izqext_1996_33$porc_idpart_izqext)/2
+df_idpart_izqext_1996 <- df_idpart_izqext_1996_32
+
+# 1997 - 1999
+
+df_idpart_izqext_1997_34 <- df1997_34 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1997_35 <- df1997_35 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1998_36 <- df1998_36 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1999_37 <- df1999_37 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_1999_38 <- df1999_38 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_izqext_1997_34$porc_idpart_izqext <- (df_idpart_izqext_1997_34$porc_idpart_izqext + df_idpart_izqext_1997_35$porc_idpart_izqext)/2
+df_idpart_izqext_1997 <- df_idpart_izqext_1997_34
+
+df_idpart_izqext_1998 <- df_idpart_izqext_1998_36
+
+df_idpart_izqext_1999_37$porc_idpart_izqext <- (df_idpart_izqext_1999_37$porc_idpart_izqext + df_idpart_izqext_1999_38$porc_idpart_izqext)/2
+df_idpart_izqext_1999 <- df_idpart_izqext_1999_37
+
+
+
+#2000 - 2002
+
+df_idpart_izqext_2000_39 <- df2000_39 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2000_40 <- df2000_40 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2001_41 <- df2001_41 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2001_42 <- df2001_42 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2002_43 <- df2002_43 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2002_44 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+df_idpart_izqext_2000_39$porc_idpart_izqext <- (df_idpart_izqext_2000_39$porc_idpart_izqext + df_idpart_izqext_2000_40$porc_idpart_izqext)/2
+df_idpart_izqext_2000 <- df_idpart_izqext_2000_39
+
+df_idpart_izqext_2001_41$porc_idpart_izqext <- (df_idpart_izqext_2001_41$porc_idpart_izqext + df_idpart_izqext_2001_42$porc_idpart_izqext)/2
+df_idpart_izqext_2001 <- df_idpart_izqext_2001_41
+
+df_idpart_izqext_2002_43$porc_idpart_izqext <- (df_idpart_izqext_2002_43$porc_idpart_izqext + df_idpart_izqext_2002_44$porc_idpart_izqext)/2
+df_idpart_izqext_2002 <- df_idpart_izqext_2002_43
+
+# 2003 - 2005
+
+df_idpart_izqext_2003_45 <- df2003_45 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2003_46 <- df2003_46 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2004_47 <- df2004_47 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2005_50 <- df2005_50 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2005_51 <- df2005_51 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+df_idpart_izqext_2003_45$porc_idpart_izqext <- (df_idpart_izqext_2003_45$porc_idpart_izqext + df_idpart_izqext_2003_46$porc_idpart_izqext)/2
+df_idpart_izqext_2003 <- df_idpart_izqext_2003_45
+
+df_idpart_izqext_2004_47$porc_idpart_izqext <- (df_idpart_izqext_2004_47$porc_idpart_izqext + df_idpart_izqext_2004_48$porc_idpart_izqext)/2
+df_idpart_izqext_2004 <- df_idpart_izqext_2004_47
+
+df_idpart_izqext_2005_49$porc_idpart_izqext <- (df_idpart_izqext_2005_49$porc_idpart_izqext + df_idpart_izqext_2005_50$porc_idpart_izqext + df_idpart_izqext_2005_51)/3
+df_idpart_izqext_2005 <- df_idpart_izqext_2005_49
+
+# 2006-2008
+
+df_idpart_izqext_2006_52 <- df2006_52 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2006_54 <- df2006_54 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2007_55 <- df2007_55 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2007_56 <- df2007_56 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2008_57 <- df2008_57 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2008_58 <- df2008_58 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#Prom
+
+df_idpart_izqext_2006_52$porc_idpart_izqext <- (df_idpart_izqext_2006_52$porc_idpart_izqext + df_idpart_izqext_2006_54$porc_idpart_izqext)/2
+df_idpart_izqext_2006 <- df_idpart_izqext_2006_52
+
+df_idpart_izqext_2007_55$porc_idpart_izqext <- (df_idpart_izqext_2007_55$porc_idpart_izqext + df_idpart_izqext_2007_56$porc_idpart_izqext)/2
+df_idpart_izqext_2007 <- df_idpart_izqext_2007_55
+
+df_idpart_izqext_2008_57$porc_idpart_izqext <- (df_idpart_izqext_2008_57$porc_idpart_izqext + df_idpart_izqext_2008_58$porc_idpart_izqext)/2
+df_idpart_izqext_2008 <- df_idpart_izqext_2008_57
+
+# 2009 - 2011
+
+df_idpart_izqext_2009_59 <- df2009_59 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2009_60 <- df2009_60 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2009_61 <- df2009_61 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2010_62 <- df2010_62 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2010_63 <- df2010_63 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2011_64 <- df2011_64 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2011_65 <- df2011_65 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#Prom
+
+df_idpart_izqext_2009_59$porc_idpart_izqext <- (df_idpart_izqext_2009_59$porc_idpart_izqext + df_idpart_izqext_2009_60$porc_idpart_izqext + df_idpart_izqext_2009_61$porc_idpart_izqext)/3
+df_idpart_izqext_2009 <- df_idpart_izqext_2009_59
+
+
+df_idpart_izqext_2010_62$porc_idpart_izqext <- (df_idpart_izqext_2010_62$porc_idpart_izqext + df_idpart_izqext_2010_63$porc_idpart_izqext)/2
+df_idpart_izqext_2010 <- df_idpart_izqext_2010_62
+
+
+df_idpart_izqext_2011_64$porc_idpart_izqext <- (df_idpart_izqext_2011_64$porc_idpart_izqext + df_idpart_izqext_2011_65$porc_idpart_izqext)/2
+df_idpart_izqext_2011 <- df_idpart_izqext_2011_64
+
+# 2012 - 2014
+
+df_idpart_izqext_2012_66 <- df2012_66 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2012_67 <- df2012_67 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2012_68 <- df2012_68 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2013_69 <- df2013_69 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2013_70 <- df2013_70 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2014_71 <- df2014_71 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2014_72 <- df2014_72 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Prom
+
+df_idpart_izqext_2012_66$porc_idpart_izqext <- (df_idpart_izqext_2012_66$porc_idpart_izqext + df_idpart_izqext_2012_67$porc_idpart_izqext + df_idpart_izqext_2012_68$porc_idpart_izqext)/3
+df_idpart_izqext_2012 <- df_idpart_izqext_2012_66
+
+df_idpart_izqext_2013_69$porc_idpart_izqext <- (df_idpart_izqext_2013_69$porc_idpart_izqext + df_idpart_izqext_2013_70$porc_idpart_izqext)/2
+df_idpart_izqext_2013 <- df_idpart_izqext_2013_69
+
+df_idpart_izqext_2014_71$porc_idpart_izqext <- (df_idpart_izqext_2014_71$porc_idpart_izqext + df_idpart_izqext_2014_72$porc_idpart_izqext)/2
+df_idpart_izqext_2014 <- df_idpart_izqext_2014_71
+
+# 2015 - 2017
+
+df_idpart_izqext_2015_73 <- df2015_73 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2015_74 <- df2015_74 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2015_75 <- df2015_75 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#df_idpart_izqext_2016_76 <- df2016_76 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+#length(which(id_part == "Izquierda extraconcertación"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2016_77 <- df2016_77 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2016_78 <- df2016_78 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+#df_idpart_izqext_2017_79 <- df2017_79 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+#                                                  length(which(id_part == "Izquierda extraconcertación"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+#df_idpart_izqext_2017_80 <- df2017_80 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+#                                                  length(which(id_part == "Izquierda extraconcertación"))
+#                                               /(length(which(id_part == "Centro-Izquierda concertación"))+
+#                                                  length(which(id_part == "Izquierda extraconcertación"))+
+#                                                 length(which(id_part == "Ninguno"))+
+#                                                length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2017_81 <- df2017_81 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# Proms
+
+#df_idpart_izqext__$porc_idpart_izqext <- (df_idpart_izqext__$porc_idpart_izqext + df_idpart_izqext__$porc_idpart_izqext + df_idpart_izqext__$porc_idpart_izqext)/3
+#df_idpart_izqext_ <- df_idpart_izqext__
+
+df_idpart_izqext_2015_73$porc_idpart_izqext <- (df_idpart_izqext_2015_73$porc_idpart_izqext + df_idpart_izqext_2015_74$porc_idpart_izqext + df_idpart_izqext_2015_75$porc_idpart_izqext)/3
+df_idpart_izqext_2015 <- df_idpart_izqext_2015_73
+
+df_idpart_izqext_2016_77$porc_idpart_izqext <- (df_idpart_izqext_2016_77$porc_idpart_izqext + df_idpart_izqext_2016_78$porc_idpart_izqext)/2
+df_idpart_izqext_2016 <- df_idpart_izqext_2016_77
+
+df_idpart_izqext_2017 <- df_idpart_izqext_2017_81
+
+# 2018 - 2019
+
+df_idpart_izqext_2018_82 <- df2018_82 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2019_83 <- df2019_83 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+df_idpart_izqext_2019_84 <- df2019_84 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+                                                                   length(which(id_part == "Izquierda extraconcertación"))
+                                                                 /(length(which(id_part == "Centro-Izquierda concertación"))+
+                                                                     length(which(id_part == "Izquierda extraconcertación"))+
+                                                                     length(which(id_part == "Ninguno"))+
+                                                                     length(which(id_part == "Derecha"))))
+
+# prom
+
+df_idpart_izqext_2018 <- df_idpart_izqext_2018_82
+
+df_idpart_izqext_2019_83$porc_idpart_izqext <- (df_idpart_izqext_2019_83$porc_idpart_izqext + df_idpart_izqext_2019_84$porc_idpart_izqext)/2
+df_idpart_izqext_2019 <- df_idpart_izqext_2019_83
+
+# Crear base
+
+df_idpart_izqext <- do.call("rbind", list(df_idpart_izqext_1990, 
+                                       df_idpart_izqext_1991, 
+                                       df_idpart_izqext_1992, 
+                                       df_idpart_izqext_1993, 
+                                       df_idpart_izqext_1994, 
+                                       df_idpart_izqext_1995, 
+                                       df_idpart_izqext_1996, 
+                                       df_idpart_izqext_1997, 
+                                       df_idpart_izqext_1998, 
+                                       df_idpart_izqext_1999, 
+                                       df_idpart_izqext_2000, 
+                                       df_idpart_izqext_2001, 
+                                       df_idpart_izqext_2002, 
+                                       df_idpart_izqext_2003, 
+                                       df_idpart_izqext_2004, 
+                                       df_idpart_izqext_2005, 
+                                       df_idpart_izqext_2006, 
+                                       df_idpart_izqext_2007, 
+                                       df_idpart_izqext_2008, 
+                                       df_idpart_izqext_2009, 
+                                       df_idpart_izqext_2010, 
+                                       df_idpart_izqext_2011, 
+                                       df_idpart_izqext_2012, 
+                                       df_idpart_izqext_2013, 
+                                       df_idpart_izqext_2014, 
+                                       df_idpart_izqext_2015, 
+                                       df_idpart_izqext_2016, 
+                                       df_idpart_izqext_2017, 
+                                       df_idpart_izqext_2018, 
+                                       df_idpart_izqext_2019))
+
+# Save data base
+
+# Save database
+save(df_idpart_izqext, file = "output/Idpart/Izquierda-extraconcertacion/CEP-Idpart-Izquierda-extraconcertacion.RData")
+write.csv(df_idpart_izqext, "output/Idpart/Izquierda-extraconcertacion/CEP-Idpart-Izquierda-extraconcertacion.csv")
+write.xlsx(df_idpart_izqext, "output/Idpart/Izquierda-extraconcertacion/CEP-Idpart-Izquierda-extraconcertacion.xlsx")
+
+# Merging all data frames
+
+# df_idpart  <- merge(merge(merge(
+  #df_idpart_izqext, df_idpart_der, by = "year", all = TRUE),
+  #df_idpart_nin, by = "year", all = TRUE),
+  #df_idpart_centizq, by = "year", all = TRUE)
+
+
+# Save database with all variables
+
+#save(df_idpart, file = "output/Idpart/CEP-Idpart.RData")
+#write.csv(df_idpart, "output/Idpart/CEP-Idpart.csv")
+#write.xlsx(df_idpart, "output/Idpart/CEP-Idpart.xlsx")
