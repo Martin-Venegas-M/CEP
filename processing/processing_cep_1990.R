@@ -255,6 +255,6 @@ bd1990_16$pos_pol <- car::recode(bd1990_16$pos_pol,"1 = 'Derecha';
 #8 No sabe
 
 # ---- 3.4 Guardar base de datos final ---- 
-save(bd1990_16, file = "input/data/bd1990_14.RData")
-save(bd1990_16, file = "input/data/bd1990_15.RData")
+save(bd1990_14, file = "input/data/bd1990_14.RData")
+save(bd1990_15, file = "input/data/bd1990_15.RData")
 save(bd1990_16, file = "input/data/bd1990_16.RData")

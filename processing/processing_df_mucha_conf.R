@@ -46,12 +46,12 @@
   df2002_44 <- bd2000_2002_44
   
   df2003_45 <- bd2003_2005_45
-  df2008_58 <- bd2008_58
+  df2008_58 <- bd2006_2008_58
   df2009_61 <- bd2009_2011_61
   df2012_67 <- bd2012_2014_67
   df2013_69 <- bd2012_2014_69
   df2014_71 <- bd2012_2014_71
-  df2017_79 <- bd2017_79
+  df2017_79 <- bd2015_2017_79
   df2019_84 <- bd2018_2019_84
   
   
@@ -683,11 +683,11 @@ partidos
 
 
 # Save database
-save(df_conf_cep_inst, file = "output/conf_cep_inst_mucha.RData")
-write.csv(df_conf_cep_inst, "output/conf_cep_inst_mucha.csv")
-write.xlsx(df_conf_cep_inst, "output/conf_cep_inst_mucha.xlsx")
+save(df_conf_cep_inst, file = "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Inst.RData")
+write.csv(df_conf_cep_inst, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Inst.csv")
+write.xlsx(df_conf_cep_inst, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Inst.xlsx")
 
-save(df_conf_cep_per, file = "output/conf_cep_per_mucha.RData")
-write.csv(df_conf_cep_per, "output/conf_cep_per_mucha.csv")
-write.xlsx(df_conf_cep_per, "output/conf_cep_per_mucha.xlsx")
+save(df_conf_cep_per, file = "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Per.RData")
+write.csv(df_conf_cep_per, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Per.csv")
+write.xlsx(df_conf_cep_per, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Per.xlsx")
 
