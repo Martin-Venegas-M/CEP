@@ -147,42 +147,42 @@ frq(bd2003_2005_51$sexo)
 #---- 3.1.2 Recodificación ----
 ### 2003-2005: CEP 45
 bd2003_2005_45$nse  <- car::recode(bd2003_2005_45$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2003_2005_45$esc <- car::recode(bd2003_2005_45$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd2003_2005_45$esc <- car::recode(bd2003_2005_45$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2003_2005_45$edad <- car::recode(bd2003_2005_45$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2003_2005_45$sexo <- car::recode(bd2003_2005_45$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2003-2005: CEP 46
 bd2003_2005_46$nse  <- car::recode(bd2003_2005_46$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2003_2005_46$esc <- car::recode(bd2003_2005_46$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd2003_2005_46$esc <- car::recode(bd2003_2005_46$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2003_2005_46$edad <- car::recode(bd2003_2005_46$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2003_2005_46$sexo <- car::recode(bd2003_2005_46$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2003-2005: CEP 47
 bd2003_2005_47$nse  <- car::recode(bd2003_2005_47$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2003_2005_47$esc <- car::recode(bd2003_2005_47$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd2003_2005_47$esc <- car::recode(bd2003_2005_47$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2003_2005_47$edad <- car::recode(bd2003_2005_47$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2003_2005_47$sexo <- car::recode(bd2003_2005_47$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2003-2005: CEP 48
 bd2003_2005_48$nse  <- car::recode(bd2003_2005_48$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2003_2005_48$esc <- car::recode(bd2003_2005_48$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd2003_2005_48$esc <- car::recode(bd2003_2005_48$esc, "'No Contesta' = NA; 'Nunca Estudio' = 0 ; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2003_2005_48$edad <- car::recode(bd2003_2005_48$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2003_2005_48$sexo <- car::recode(bd2003_2005_48$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2003-2005: CEP 49
 bd2003_2005_49$nse  <- car::recode(bd2003_2005_49$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2003_2005_49$esc <- car::recode(bd2003_2005_49$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd2003_2005_49$esc <- car::recode(bd2003_2005_49$esc, "'No Contesta' = NA; c(70,90) = NA; 'Nunca Estudio' = 0 ; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2003_2005_49$edad <- car::recode(bd2003_2005_49$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2003_2005_49$sexo <- car::recode(bd2003_2005_49$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 2003-2005: CEP 50
 bd2003_2005_50$nse  <- car::recode(bd2003_2005_50$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2003_2005_50$esc <- car::recode(bd2003_2005_50$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd2003_2005_50$esc <- car::recode(bd2003_2005_50$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2003_2005_50$edad <- car::recode(bd2003_2005_50$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2003_2005_50$sexo <- car::recode(bd2003_2005_50$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 ### 2003-2005: CEP 51
 bd2003_2005_51$nse  <- car::recode(bd2003_2005_51$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd2003_2005_51$esc <- car::recode(bd2003_2005_51$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd2003_2005_51$esc <- car::recode(bd2003_2005_51$esc, "c(88,99) = NA; 0:3 = '0-3'; 4:8 = '4-8'; 9:12 = '9-12'; else = '13 y mas'", as.factor = T)
 bd2003_2005_51$edad <- car::recode(bd2003_2005_51$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd2003_2005_51$sexo <- car::recode(bd2003_2005_51$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 

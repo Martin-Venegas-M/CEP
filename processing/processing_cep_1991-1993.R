@@ -231,19 +231,19 @@ bd1991_1993_20$sexo <- car::recode(bd1991_1993_20$sexo, "1 = 'Hombre'; 2 = 'Muje
 ## 1991-1993: CEP 21
 bd1991_1993_21$nse  <- car::recode(bd1991_1993_21$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
 bd1991_1993_21$esc <- car::recode(bd1991_1993_21$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
-bd1991_1993_21$edad <- car::recode(bd1991_1993_21$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
+bd1991_1993_21$edad <- car::recode(bd1991_1993_21$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd1991_1993_21$sexo <- car::recode(bd1991_1993_21$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 22
 bd1991_1993_22$nse  <- car::recode(bd1991_1993_22$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
 bd1991_1993_22$esc <- car::recode(bd1991_1993_22$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
-bd1991_1993_22$edad <- car::recode(bd1991_1993_22$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
+bd1991_1993_22$edad <- car::recode(bd1991_1993_22$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd1991_1993_22$sexo <- car::recode(bd1991_1993_22$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 23
 bd1991_1993_23$nse  <- car::recode(bd1991_1993_23$nse,  "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
 bd1991_1993_23$esc <- car::recode(bd1991_1993_23$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
-bd1991_1993_23$edad <- car::recode(bd1991_1993_23$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
+bd1991_1993_23$edad <- car::recode(bd1991_1993_23$edad, "18:24 = '18-24'; 25:34 = '25-34'; 35:54 = '35-54'; else = '55 y mas'", as.factor = T)
 bd1991_1993_23$sexo <- car::recode(bd1991_1993_23$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ## 1991-1993: CEP 24
