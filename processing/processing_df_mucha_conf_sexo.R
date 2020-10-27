@@ -683,10 +683,10 @@ partidos
 
 
 # Save database
-save(df_conf_cep_inst_sexo, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Inst-Sexo.RData")
-write.csv(df_conf_cep_inst_sexo, "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Inst-Sexo.csv")
+#save(df_conf_cep_inst_sexo, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Inst-Sexo.RData")
+#write.csv(df_conf_cep_inst_sexo, "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Inst-Sexo.csv")
 write.xlsx(df_conf_cep_inst_sexo, "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Inst-Sexo.xlsx")
 
-save(df_conf_cep_per_sexo, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Per-Sexo.RData")
-write.csv(df_conf_cep_per_sexo, "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Per-Sexo.csv")
+#save(df_conf_cep_per_sexo, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Per-Sexo.RData")
+#write.csv(df_conf_cep_per_sexo, "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Per-Sexo.csv")
 write.xlsx(df_conf_cep_per_sexo, "output/Confianza-Mucha-Conf/Mucha-Conf-Sexo/CEP-Mucha-Conf-Per-Sexo.xlsx")

@@ -683,10 +683,10 @@ partidos
 
 
 # Save database
-save(df_conf_cep_inst_nse, file = "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Inst-NSE.RData")
-write.csv(df_conf_cep_inst_nse, "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Inst-NSE.csv")
+#save(df_conf_cep_inst_nse, file = "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Inst-NSE.RData")
+#write.csv(df_conf_cep_inst_nse, "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Inst-NSE.csv")
 write.xlsx(df_conf_cep_inst_nse, "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Inst-NSE.xlsx")
 
-save(df_conf_cep_per_nse, file = "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Per-NSE.RData")
-write.csv(df_conf_cep_per_nse, "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Per-NSE.csv")
+#save(df_conf_cep_per_nse, file = "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Per-NSE.RData")
+#write.csv(df_conf_cep_per_nse, "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Per-NSE.csv")
 write.xlsx(df_conf_cep_per_nse, "output/Confianza-Mucha-Conf/Mucha-Conf-NSE/CEP-Mucha-Conf-Per-NSE.xlsx")

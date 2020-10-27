@@ -683,10 +683,10 @@ partidos
 
 
 # Save database
-save(df_conf_cep_inst_esc, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Inst-Escolaridad.RData")
-write.csv(df_conf_cep_inst_esc, "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Inst-Escolaridad.csv")
+#save(df_conf_cep_inst_esc, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Inst-Escolaridad.RData")
+#write.csv(df_conf_cep_inst_esc, "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Inst-Escolaridad.csv")
 write.xlsx(df_conf_cep_inst_esc, "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Inst-Escolaridad.xlsx")
 
-save(df_conf_cep_per_esc, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Per-Escolaridad.RData")
-write.csv(df_conf_cep_per_esc, "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Per-Escolaridad.csv")
+#save(df_conf_cep_per_esc, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Per-Escolaridad.RData")
+#write.csv(df_conf_cep_per_esc, "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Per-Escolaridad.csv")
 write.xlsx(df_conf_cep_per_esc, "output/Confianza-Mucha-Conf/Mucha-Conf-Escolaridad/CEP-Mucha-Conf-Per-Escolaridad.xlsx")

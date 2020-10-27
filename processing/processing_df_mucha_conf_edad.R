@@ -683,10 +683,10 @@ partidos
 
 
 # Save database
-save(df_conf_cep_inst_edad, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Inst-Edad.RData")
-write.csv(df_conf_cep_inst_edad, "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Inst-Edad.csv")
+#save(df_conf_cep_inst_edad, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Inst-Edad.RData")
+#write.csv(df_conf_cep_inst_edad, "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Inst-Edad.csv")
 write.xlsx(df_conf_cep_inst_edad, "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Inst-Edad.xlsx")
 
-save(df_conf_cep_per_edad, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Per-Edad.RData")
-write.csv(df_conf_cep_per_edad, "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Per-Edad.csv")
+#save(df_conf_cep_per_edad, file = "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Per-Edad.RData")
+#write.csv(df_conf_cep_per_edad, "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Per-Edad.csv")
 write.xlsx(df_conf_cep_per_edad, "output/Confianza-Mucha-Conf/Mucha-Conf-Edad/CEP-Mucha-Conf-Per-Edad.xlsx")
