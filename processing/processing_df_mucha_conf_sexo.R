@@ -665,6 +665,10 @@ df_conf_cep_per_sexo  <- merge(merge(merge(merge(merge(
   df_conf_congreso_personas, by = c("year", "sexo"), all = TRUE),
   df_conf_dircortesup_personas, by = c("year", "sexo"), all = TRUE)
 
+# Borrar rows repetidas y NA
+df_conf_cep_inst_sexo <- df_conf_cep_inst_sexo[-c(7,9),]
+df_conf_cep_per_sexo <- df_conf_cep_per_sexo[-3,] 
+
 # Test grafic                
 df_conf_partidos_inst %>%
   tail(10) %>%

@@ -289,6 +289,7 @@ df_pospol_der_1990_16 <- df1990_16 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_der_1990_14[nrow(df_pospol_der_1990_14)+1,] <- NA
 
 df_pospol_der_1990_14$porc_pospol_der <- (df_pospol_der_1990_14$porc_pospol_der + df_pospol_der_1990_15$porc_pospol_der + df_pospol_der_1990_16$porc_pospol_der)/3
 df_pospol_der_1990 <- df_pospol_der_1990_14
@@ -397,6 +398,9 @@ df_pospol_der_1993_28 <- df1993_28 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_der_1992_21[nrow(df_pospol_der_1992_21)+1,] <- NA
+df_pospol_der_1993_24[nrow(df_pospol_der_1993_24)+1,] <- NA
+
 df_pospol_der_1991_17$porc_pospol_der <- (df_pospol_der_1991_17$porc_pospol_der + df_pospol_der_1991_18$porc_pospol_der + df_pospol_der_1991_19$porc_pospol_der + df_pospol_der_1991_20$porc_pospol_der)/4
 df_pospol_der_1991 <- df_pospol_der_1991_17
 
@@ -519,6 +523,8 @@ df_pospol_der_1999_38 <- df1999_38 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Prom
+
+df_pospol_der_1999_38[nrow(df_pospol_der_1999_38)+1,] <- NA
 
 df_pospol_der_1997_34$porc_pospol_der <- (df_pospol_der_1997_34$porc_pospol_der + df_pospol_der_1997_35$porc_pospol_der)/2
 df_pospol_der_1997 <- df_pospol_der_1997_34
@@ -645,7 +651,7 @@ df_pospol_der_2004_48 <- df2004_48 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Independiente")) + 
                                                                            length(which(pos_pol == "Ninguna"))))
 
-df_pospol_der_2005_49 <- df2002_44 %>%group_by(year, esc)%>%summarise(porc_pospol_der = 
+df_pospol_der_2005_49 <- df2005_49 %>%group_by(year, esc)%>%summarise(porc_pospol_der = 
                                                                          length(which(pos_pol == "Derecha"))
                                                                        /(length(which(pos_pol == "Derecha"))+
                                                                            length(which(pos_pol == "Centro Derecha"))+
@@ -676,6 +682,7 @@ df_pospol_der_2005_51 <- df2005_51 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_der_2005_49[nrow(df_pospol_der_2005_49)+1,] <- NA
 
 df_pospol_der_2003_45$porc_pospol_der <- (df_pospol_der_2003_45$porc_pospol_der + df_pospol_der_2003_46$porc_pospol_der)/2
 df_pospol_der_2003 <- df_pospol_der_2003_45
@@ -683,7 +690,7 @@ df_pospol_der_2003 <- df_pospol_der_2003_45
 df_pospol_der_2004_47$porc_pospol_der <- (df_pospol_der_2004_47$porc_pospol_der + df_pospol_der_2004_48$porc_pospol_der)/2
 df_pospol_der_2004 <- df_pospol_der_2004_47
 
-df_pospol_der_2005_49$porc_pospol_der <- (df_pospol_der_2005_49$porc_pospol_der + df_pospol_der_2005_50$porc_pospol_der + df_pospol_der_2005_51)/3
+df_pospol_der_2005_49$porc_pospol_der <- (df_pospol_der_2005_49$porc_pospol_der + df_pospol_der_2005_50$porc_pospol_der + df_pospol_der_2005_51$porc_pospol_der)/3
 df_pospol_der_2005 <- df_pospol_der_2005_49
 
 # 2006-2008
@@ -917,6 +924,8 @@ df_pospol_der_2014_72 <- df2014_72 %>%group_by(year, esc)%>%summarise(porc_pospo
 
 # Prom
 
+df_pospol_der_2014_72[nrow(df_pospol_der_2014_72)+1,] <- NA
+
 df_pospol_der_2012_66$porc_pospol_der <- (df_pospol_der_2012_66$porc_pospol_der + df_pospol_der_2012_67$porc_pospol_der + df_pospol_der_2012_68$porc_pospol_der)/3
 df_pospol_der_2012 <- df_pospol_der_2012_66
 
@@ -1097,8 +1106,8 @@ df_pospol_der <- do.call("rbind", list(df_pospol_der_1990,
 # Save data base
 
 # Save database
-save(df_pospol_der, file = "output/pospol/Derecha/Derecha-Escolaridad/CEP-pospol-Derecha-Escolaridad.RData")
-write.csv(df_pospol_der, "output/pospol/Derecha/Derecha-Escolaridad/CEP-pospol-Derecha-Escolaridad.csv")
+#save(df_pospol_der, file = "output/pospol/Derecha/Derecha-Escolaridad/CEP-pospol-Derecha-Escolaridad.RData")
+#write.csv(df_pospol_der, "output/pospol/Derecha/Derecha-Escolaridad/CEP-pospol-Derecha-Escolaridad.csv")
 write.xlsx(df_pospol_der, "output/pospol/Derecha/Derecha-Escolaridad/CEP-pospol-Derecha-Escolaridad.xlsx")
 
 
@@ -1137,6 +1146,7 @@ df_pospol_centder_1990_16 <- df1990_16 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_centder_1990_14[nrow(df_pospol_centder_1990_14)+1,] <- NA
 
 df_pospol_centder_1990_14$porc_pospol_centder <- (df_pospol_centder_1990_14$porc_pospol_centder + df_pospol_centder_1990_15$porc_pospol_centder + df_pospol_centder_1990_16$porc_pospol_centder)/3
 df_pospol_centder_1990 <- df_pospol_centder_1990_14
@@ -1245,6 +1255,9 @@ df_pospol_centder_1993_28 <- df1993_28 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_centder_1992_21[nrow(df_pospol_centder_1992_21)+1,] <- NA
+df_pospol_centder_1993_24[nrow(df_pospol_centder_1993_24)+1,] <- NA
+
 df_pospol_centder_1991_17$porc_pospol_centder <- (df_pospol_centder_1991_17$porc_pospol_centder + df_pospol_centder_1991_18$porc_pospol_centder + df_pospol_centder_1991_19$porc_pospol_centder + df_pospol_centder_1991_20$porc_pospol_centder)/4
 df_pospol_centder_1991 <- df_pospol_centder_1991_17
 
@@ -1367,6 +1380,8 @@ df_pospol_centder_1999_38 <- df1999_38 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Prom
+
+df_pospol_centder_1999_38[nrow(df_pospol_centder_1999_38)+1,] <- NA
 
 df_pospol_centder_1997_34$porc_pospol_centder <- (df_pospol_centder_1997_34$porc_pospol_centder + df_pospol_centder_1997_35$porc_pospol_centder)/2
 df_pospol_centder_1997 <- df_pospol_centder_1997_34
@@ -1493,7 +1508,7 @@ df_pospol_centder_2004_48 <- df2004_48 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Independiente")) + 
                                                                                length(which(pos_pol == "Ninguna"))))
 
-df_pospol_centder_2005_49 <- df2002_44 %>%group_by(year, esc)%>%summarise(porc_pospol_centder = 
+df_pospol_centder_2005_49 <- df2005_49 %>%group_by(year, esc)%>%summarise(porc_pospol_centder = 
                                                                              length(which(pos_pol == "Centro Derecha"))
                                                                            /(length(which(pos_pol == "Derecha"))+
                                                                                length(which(pos_pol == "Centro Derecha"))+
@@ -1524,6 +1539,7 @@ df_pospol_centder_2005_51 <- df2005_51 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_centder_2005_49[nrow(df_pospol_centder_2005_49)+1,] <- NA
 
 df_pospol_centder_2003_45$porc_pospol_centder <- (df_pospol_centder_2003_45$porc_pospol_centder + df_pospol_centder_2003_46$porc_pospol_centder)/2
 df_pospol_centder_2003 <- df_pospol_centder_2003_45
@@ -1531,7 +1547,7 @@ df_pospol_centder_2003 <- df_pospol_centder_2003_45
 df_pospol_centder_2004_47$porc_pospol_centder <- (df_pospol_centder_2004_47$porc_pospol_centder + df_pospol_centder_2004_48$porc_pospol_centder)/2
 df_pospol_centder_2004 <- df_pospol_centder_2004_47
 
-df_pospol_centder_2005_49$porc_pospol_centder <- (df_pospol_centder_2005_49$porc_pospol_centder + df_pospol_centder_2005_50$porc_pospol_centder + df_pospol_centder_2005_51)/3
+df_pospol_centder_2005_49$porc_pospol_centder <- (df_pospol_centder_2005_49$porc_pospol_centder + df_pospol_centder_2005_50$porc_pospol_centder + df_pospol_centder_2005_51$porc_pospol_centder)/3
 df_pospol_centder_2005 <- df_pospol_centder_2005_49
 
 # 2006-2008
@@ -1764,6 +1780,7 @@ df_pospol_centder_2014_72 <- df2014_72 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_centder_2014_72[nrow(df_pospol_centder_2014_72)+1,] <- NA
 
 df_pospol_centder_2012_66$porc_pospol_centder <- (df_pospol_centder_2012_66$porc_pospol_centder + df_pospol_centder_2012_67$porc_pospol_centder + df_pospol_centder_2012_68$porc_pospol_centder)/3
 df_pospol_centder_2012 <- df_pospol_centder_2012_66
@@ -1945,8 +1962,8 @@ df_pospol_centder <- do.call("rbind", list(df_pospol_centder_1990,
 # Save data base
 
 # Save database
-save(df_pospol_centder, file = "output/pospol/Centro-Derecha/Centro-Derecha-Escolaridad/CEP-pospol-Centro-Derecha-Escolaridad.RData")
-write.csv(df_pospol_centder, "output/pospol/Centro-Derecha/Centro-Derecha-Escolaridad/CEP-pospol-Centro-Derecha-Escolaridad.csv")
+#save(df_pospol_centder, file = "output/pospol/Centro-Derecha/Centro-Derecha-Escolaridad/CEP-pospol-Centro-Derecha-Escolaridad.RData")
+#write.csv(df_pospol_centder, "output/pospol/Centro-Derecha/Centro-Derecha-Escolaridad/CEP-pospol-Centro-Derecha-Escolaridad.csv")
 write.xlsx(df_pospol_centder, "output/pospol/Centro-Derecha/Centro-Derecha-Escolaridad/CEP-pospol-Centro-Derecha-Escolaridad.xlsx")
 
 # Centro
@@ -1984,6 +2001,8 @@ df_pospol_cent_1990_16 <- df1990_16 %>%group_by(year, esc)%>%summarise(porc_posp
                                                                             length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_cent_1990_14[nrow(df_pospol_cent_1990_14)+1,] <- NA
+
 
 df_pospol_cent_1990_14$porc_pospol_cent <- (df_pospol_cent_1990_14$porc_pospol_cent + df_pospol_cent_1990_15$porc_pospol_cent + df_pospol_cent_1990_16$porc_pospol_cent)/3
 df_pospol_cent_1990 <- df_pospol_cent_1990_14
@@ -2092,6 +2111,9 @@ df_pospol_cent_1993_28 <- df1993_28 %>%group_by(year, esc)%>%summarise(porc_posp
                                                                             length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_cent_1992_21[nrow(df_pospol_cent_1992_21)+1,] <- NA
+df_pospol_cent_1993_24[nrow(df_pospol_cent_1993_24)+1,] <- NA
+
 df_pospol_cent_1991_17$porc_pospol_cent <- (df_pospol_cent_1991_17$porc_pospol_cent + df_pospol_cent_1991_18$porc_pospol_cent + df_pospol_cent_1991_19$porc_pospol_cent + df_pospol_cent_1991_20$porc_pospol_cent)/4
 df_pospol_cent_1991 <- df_pospol_cent_1991_17
 
@@ -2214,6 +2236,8 @@ df_pospol_cent_1999_38 <- df1999_38 %>%group_by(year, esc)%>%summarise(porc_posp
                                                                             length(which(pos_pol == "Ninguna"))))
 
 # Prom
+
+df_pospol_cent_1999_38[nrow(df_pospol_cent_1999_38)+1,] <- NA
 
 df_pospol_cent_1997_34$porc_pospol_cent <- (df_pospol_cent_1997_34$porc_pospol_cent + df_pospol_cent_1997_35$porc_pospol_cent)/2
 df_pospol_cent_1997 <- df_pospol_cent_1997_34
@@ -2340,7 +2364,7 @@ df_pospol_cent_2004_48 <- df2004_48 %>%group_by(year, esc)%>%summarise(porc_posp
                                                                             length(which(pos_pol == "Independiente")) + 
                                                                             length(which(pos_pol == "Ninguna"))))
 
-df_pospol_cent_2005_49 <- df2002_44 %>%group_by(year, esc)%>%summarise(porc_pospol_cent = 
+df_pospol_cent_2005_49 <- df2005_49 %>%group_by(year, esc)%>%summarise(porc_pospol_cent = 
                                                                           length(which(pos_pol == "Centro"))
                                                                         /(length(which(pos_pol == "Derecha"))+
                                                                             length(which(pos_pol == "Centro Derecha"))+
@@ -2372,13 +2396,15 @@ df_pospol_cent_2005_51 <- df2005_51 %>%group_by(year, esc)%>%summarise(porc_posp
 
 # Proms
 
+df_pospol_cent_2005_49[nrow(df_pospol_cent_2005_49)+1,] <- NA
+
 df_pospol_cent_2003_45$porc_pospol_cent <- (df_pospol_cent_2003_45$porc_pospol_cent + df_pospol_cent_2003_46$porc_pospol_cent)/2
 df_pospol_cent_2003 <- df_pospol_cent_2003_45
 
 df_pospol_cent_2004_47$porc_pospol_cent <- (df_pospol_cent_2004_47$porc_pospol_cent + df_pospol_cent_2004_48$porc_pospol_cent)/2
 df_pospol_cent_2004 <- df_pospol_cent_2004_47
 
-df_pospol_cent_2005_49$porc_pospol_cent <- (df_pospol_cent_2005_49$porc_pospol_cent + df_pospol_cent_2005_50$porc_pospol_cent + df_pospol_cent_2005_51)/3
+df_pospol_cent_2005_49$porc_pospol_cent <- (df_pospol_cent_2005_49$porc_pospol_cent + df_pospol_cent_2005_50$porc_pospol_cent + df_pospol_cent_2005_51$porc_pospol_cent)/3
 df_pospol_cent_2005 <- df_pospol_cent_2005_49
 
 # 2006-2008
@@ -2612,6 +2638,8 @@ df_pospol_cent_2014_72 <- df2014_72 %>%group_by(year, esc)%>%summarise(porc_posp
 
 # Prom
 
+df_pospol_cent_2014_72[nrow(df_pospol_cent_2014_72)+1,] <- NA
+
 df_pospol_cent_2012_66$porc_pospol_cent <- (df_pospol_cent_2012_66$porc_pospol_cent + df_pospol_cent_2012_67$porc_pospol_cent + df_pospol_cent_2012_68$porc_pospol_cent)/3
 df_pospol_cent_2012 <- df_pospol_cent_2012_66
 
@@ -2792,8 +2820,8 @@ df_pospol_cent <- do.call("rbind", list(df_pospol_cent_1990,
 # Save data base
 
 # Save database
-save(df_pospol_cent, file = "output/pospol/Centro/Centro-Escolaridad/CEP-pospol-Centro-Escolaridad.RData")
-write.csv(df_pospol_cent, "output/pospol/Centro/Centro-Escolaridad/CEP-pospol-Centro-Escolaridad.csv")
+#save(df_pospol_cent, file = "output/pospol/Centro/Centro-Escolaridad/CEP-pospol-Centro-Escolaridad.RData")
+#write.csv(df_pospol_cent, "output/pospol/Centro/Centro-Escolaridad/CEP-pospol-Centro-Escolaridad.csv")
 write.xlsx(df_pospol_cent, "output/pospol/Centro/Centro-Escolaridad/CEP-pospol-Centro-Escolaridad.xlsx")
 
 # Centro Izquierda
@@ -2831,6 +2859,7 @@ df_pospol_centizq_1990_16 <- df1990_16 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_centizq_1990_14[nrow(df_pospol_centizq_1990_14)+1,] <- NA
 
 df_pospol_centizq_1990_14$porc_pospol_centizq <- (df_pospol_centizq_1990_14$porc_pospol_centizq + df_pospol_centizq_1990_15$porc_pospol_centizq + df_pospol_centizq_1990_16$porc_pospol_centizq)/3
 df_pospol_centizq_1990 <- df_pospol_centizq_1990_14
@@ -2939,6 +2968,9 @@ df_pospol_centizq_1993_28 <- df1993_28 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_centizq_1992_21[nrow(df_pospol_centizq_1992_21)+1,] <- NA
+df_pospol_centizq_1993_24[nrow(df_pospol_centizq_1993_24)+1,] <- NA
+
 df_pospol_centizq_1991_17$porc_pospol_centizq <- (df_pospol_centizq_1991_17$porc_pospol_centizq + df_pospol_centizq_1991_18$porc_pospol_centizq + df_pospol_centizq_1991_19$porc_pospol_centizq + df_pospol_centizq_1991_20$porc_pospol_centizq)/4
 df_pospol_centizq_1991 <- df_pospol_centizq_1991_17
 
@@ -3061,6 +3093,8 @@ df_pospol_centizq_1999_38 <- df1999_38 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Prom
+
+df_pospol_centizq_1999_38[nrow(df_pospol_centizq_1999_38)+1,] <- NA
 
 df_pospol_centizq_1997_34$porc_pospol_centizq <- (df_pospol_centizq_1997_34$porc_pospol_centizq + df_pospol_centizq_1997_35$porc_pospol_centizq)/2
 df_pospol_centizq_1997 <- df_pospol_centizq_1997_34
@@ -3187,7 +3221,7 @@ df_pospol_centizq_2004_48 <- df2004_48 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Independiente")) + 
                                                                                length(which(pos_pol == "Ninguna"))))
 
-df_pospol_centizq_2005_49 <- df2002_44 %>%group_by(year, esc)%>%summarise(porc_pospol_centizq = 
+df_pospol_centizq_2005_49 <- df2005_49 %>%group_by(year, esc)%>%summarise(porc_pospol_centizq = 
                                                                              length(which(pos_pol == "Centro Izquierda"))
                                                                            /(length(which(pos_pol == "Derecha"))+
                                                                                length(which(pos_pol == "Centro Derecha"))+
@@ -3218,6 +3252,7 @@ df_pospol_centizq_2005_51 <- df2005_51 %>%group_by(year, esc)%>%summarise(porc_p
                                                                                length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_centizq_2005_49[nrow(df_pospol_centizq_2005_49)+1,] <- NA
 
 df_pospol_centizq_2003_45$porc_pospol_centizq <- (df_pospol_centizq_2003_45$porc_pospol_centizq + df_pospol_centizq_2003_46$porc_pospol_centizq)/2
 df_pospol_centizq_2003 <- df_pospol_centizq_2003_45
@@ -3225,7 +3260,7 @@ df_pospol_centizq_2003 <- df_pospol_centizq_2003_45
 df_pospol_centizq_2004_47$porc_pospol_centizq <- (df_pospol_centizq_2004_47$porc_pospol_centizq + df_pospol_centizq_2004_48$porc_pospol_centizq)/2
 df_pospol_centizq_2004 <- df_pospol_centizq_2004_47
 
-df_pospol_centizq_2005_49$porc_pospol_centizq <- (df_pospol_centizq_2005_49$porc_pospol_centizq + df_pospol_centizq_2005_50$porc_pospol_centizq + df_pospol_centizq_2005_51)/3
+df_pospol_centizq_2005_49$porc_pospol_centizq <- (df_pospol_centizq_2005_49$porc_pospol_centizq + df_pospol_centizq_2005_50$porc_pospol_centizq + df_pospol_centizq_2005_51$porc_pospol_centizq)/3
 df_pospol_centizq_2005 <- df_pospol_centizq_2005_49
 
 # 2006-2008
@@ -3459,6 +3494,8 @@ df_pospol_centizq_2014_72 <- df2014_72 %>%group_by(year, esc)%>%summarise(porc_p
 
 # Prom
 
+df_pospol_centizq_2014_72[nrow(df_pospol_centizq_2014_72)+1,] <- NA
+
 df_pospol_centizq_2012_66$porc_pospol_centizq <- (df_pospol_centizq_2012_66$porc_pospol_centizq + df_pospol_centizq_2012_67$porc_pospol_centizq + df_pospol_centizq_2012_68$porc_pospol_centizq)/3
 df_pospol_centizq_2012 <- df_pospol_centizq_2012_66
 
@@ -3639,8 +3676,8 @@ df_pospol_centizq <- do.call("rbind", list(df_pospol_centizq_1990,
 # Save data base
 
 # Save database
-save(df_pospol_centizq, file = "output/pospol/Centro-Izquierda/Centro-Izquierda-Escolaridad/CEP-pospol-Centro-Izquierda-Escolaridad.RData")
-write.csv(df_pospol_centizq, "output/pospol/Centro-Izquierda/Centro-Izquierda-Escolaridad/CEP-pospol-Centro-Izquierda-Escolaridad.csv")
+#save(df_pospol_centizq, file = "output/pospol/Centro-Izquierda/Centro-Izquierda-Escolaridad/CEP-pospol-Centro-Izquierda-Escolaridad.RData")
+#write.csv(df_pospol_centizq, "output/pospol/Centro-Izquierda/Centro-Izquierda-Escolaridad/CEP-pospol-Centro-Izquierda-Escolaridad.csv")
 write.xlsx(df_pospol_centizq, "output/pospol/Centro-Izquierda/Centro-Izquierda-Escolaridad/CEP-pospol-Centro-Izquierda-Escolaridad.xlsx")
 
 # Derecha
@@ -3678,6 +3715,7 @@ df_pospol_izq_1990_16 <- df1990_16 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_izq_1990_14[nrow(df_pospol_izq_1990_14)+1,] <- NA
 
 df_pospol_izq_1990_14$porc_pospol_izq <- (df_pospol_izq_1990_14$porc_pospol_izq + df_pospol_izq_1990_15$porc_pospol_izq + df_pospol_izq_1990_16$porc_pospol_izq)/3
 df_pospol_izq_1990 <- df_pospol_izq_1990_14
@@ -3786,6 +3824,9 @@ df_pospol_izq_1993_28 <- df1993_28 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_izq_1992_21[nrow(df_pospol_izq_1992_21)+1,] <- NA
+df_pospol_izq_1993_24[nrow(df_pospol_izq_1993_24)+1,] <- NA
+
 df_pospol_izq_1991_17$porc_pospol_izq <- (df_pospol_izq_1991_17$porc_pospol_izq + df_pospol_izq_1991_18$porc_pospol_izq + df_pospol_izq_1991_19$porc_pospol_izq + df_pospol_izq_1991_20$porc_pospol_izq)/4
 df_pospol_izq_1991 <- df_pospol_izq_1991_17
 
@@ -3908,6 +3949,8 @@ df_pospol_izq_1999_38 <- df1999_38 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Prom
+
+df_pospol_izq_1999_38[nrow(df_pospol_izq_1999_38)+1,] <- NA
 
 df_pospol_izq_1997_34$porc_pospol_izq <- (df_pospol_izq_1997_34$porc_pospol_izq + df_pospol_izq_1997_35$porc_pospol_izq)/2
 df_pospol_izq_1997 <- df_pospol_izq_1997_34
@@ -4034,7 +4077,7 @@ df_pospol_izq_2004_48 <- df2004_48 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Independiente")) + 
                                                                            length(which(pos_pol == "Ninguna"))))
 
-df_pospol_izq_2005_49 <- df2002_44 %>%group_by(year, esc)%>%summarise(porc_pospol_izq = 
+df_pospol_izq_2005_49 <- df2005_49 %>%group_by(year, esc)%>%summarise(porc_pospol_izq = 
                                                                          length(which(pos_pol == "Izquierda"))
                                                                        /(length(which(pos_pol == "Derecha"))+
                                                                            length(which(pos_pol == "Centro Derecha"))+
@@ -4065,6 +4108,7 @@ df_pospol_izq_2005_51 <- df2005_51 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_izq_2005_49[nrow(df_pospol_izq_2005_49)+1,] <- NA
 
 df_pospol_izq_2003_45$porc_pospol_izq <- (df_pospol_izq_2003_45$porc_pospol_izq + df_pospol_izq_2003_46$porc_pospol_izq)/2
 df_pospol_izq_2003 <- df_pospol_izq_2003_45
@@ -4072,7 +4116,7 @@ df_pospol_izq_2003 <- df_pospol_izq_2003_45
 df_pospol_izq_2004_47$porc_pospol_izq <- (df_pospol_izq_2004_47$porc_pospol_izq + df_pospol_izq_2004_48$porc_pospol_izq)/2
 df_pospol_izq_2004 <- df_pospol_izq_2004_47
 
-df_pospol_izq_2005_49$porc_pospol_izq <- (df_pospol_izq_2005_49$porc_pospol_izq + df_pospol_izq_2005_50$porc_pospol_izq + df_pospol_izq_2005_51)/3
+df_pospol_izq_2005_49$porc_pospol_izq <- (df_pospol_izq_2005_49$porc_pospol_izq + df_pospol_izq_2005_50$porc_pospol_izq + df_pospol_izq_2005_51$porc_pospol_izq)/3
 df_pospol_izq_2005 <- df_pospol_izq_2005_49
 
 # 2006-2008
@@ -4306,6 +4350,8 @@ df_pospol_izq_2014_72 <- df2014_72 %>%group_by(year, esc)%>%summarise(porc_pospo
 
 # Prom
 
+df_pospol_izq_2014_72[nrow(df_pospol_izq_2014_72)+1,] <- NA
+
 df_pospol_izq_2012_66$porc_pospol_izq <- (df_pospol_izq_2012_66$porc_pospol_izq + df_pospol_izq_2012_67$porc_pospol_izq + df_pospol_izq_2012_68$porc_pospol_izq)/3
 df_pospol_izq_2012 <- df_pospol_izq_2012_66
 
@@ -4486,8 +4532,8 @@ df_pospol_izq <- do.call("rbind", list(df_pospol_izq_1990,
 # Save data base
 
 # Save database
-save(df_pospol_izq, file = "output/pospol/Izquierda/Izquierda-Escolaridad/CEP-pospol-Izquierda-Escolaridad.RData")
-write.csv(df_pospol_izq, "output/pospol/Izquierda/Izquierda-Escolaridad/CEP-pospol-Izquierda-Escolaridad.csv")
+#save(df_pospol_izq, file = "output/pospol/Izquierda/Izquierda-Escolaridad/CEP-pospol-Izquierda-Escolaridad.RData")
+#write.csv(df_pospol_izq, "output/pospol/Izquierda/Izquierda-Escolaridad/CEP-pospol-Izquierda-Escolaridad.csv")
 write.xlsx(df_pospol_izq, "output/pospol/Izquierda/Izquierda-Escolaridad/CEP-pospol-Izquierda-Escolaridad.xlsx")
 
 # Derecha
@@ -4525,6 +4571,7 @@ df_pospol_indep_1990_16 <- df1990_16 %>%group_by(year, esc)%>%summarise(porc_pos
                                                                              length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_indep_1990_14[nrow(df_pospol_indep_1990_14)+1,] <- NA
 
 df_pospol_indep_1990_14$porc_pospol_indep <- (df_pospol_indep_1990_14$porc_pospol_indep + df_pospol_indep_1990_15$porc_pospol_indep + df_pospol_indep_1990_16$porc_pospol_indep)/3
 df_pospol_indep_1990 <- df_pospol_indep_1990_14
@@ -4633,6 +4680,9 @@ df_pospol_indep_1993_28 <- df1993_28 %>%group_by(year, esc)%>%summarise(porc_pos
                                                                              length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_indep_1992_21[nrow(df_pospol_indep_1992_21)+1,] <- NA
+df_pospol_indep_1993_24[nrow(df_pospol_indep_1993_24)+1,] <- NA
+
 df_pospol_indep_1991_17$porc_pospol_indep <- (df_pospol_indep_1991_17$porc_pospol_indep + df_pospol_indep_1991_18$porc_pospol_indep + df_pospol_indep_1991_19$porc_pospol_indep + df_pospol_indep_1991_20$porc_pospol_indep)/4
 df_pospol_indep_1991 <- df_pospol_indep_1991_17
 
@@ -4755,6 +4805,7 @@ df_pospol_indep_1999_38 <- df1999_38 %>%group_by(year, esc)%>%summarise(porc_pos
                                                                              length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_indep_1999_38[nrow(df_pospol_indep_1999_38)+1,] <- NA
 
 df_pospol_indep_1997_34$porc_pospol_indep <- (df_pospol_indep_1997_34$porc_pospol_indep + df_pospol_indep_1997_35$porc_pospol_indep)/2
 df_pospol_indep_1997 <- df_pospol_indep_1997_34
@@ -4881,7 +4932,7 @@ df_pospol_indep_2004_48 <- df2004_48 %>%group_by(year, esc)%>%summarise(porc_pos
                                                                              length(which(pos_pol == "Independiente")) + 
                                                                              length(which(pos_pol == "Ninguna"))))
 
-df_pospol_indep_2005_49 <- df2002_44 %>%group_by(year, esc)%>%summarise(porc_pospol_indep = 
+df_pospol_indep_2005_49 <- df2005_49 %>%group_by(year, esc)%>%summarise(porc_pospol_indep = 
                                                                            length(which(pos_pol == "Independiente"))
                                                                          /(length(which(pos_pol == "Derecha"))+
                                                                              length(which(pos_pol == "Centro Derecha"))+
@@ -4912,6 +4963,7 @@ df_pospol_indep_2005_51 <- df2005_51 %>%group_by(year, esc)%>%summarise(porc_pos
                                                                              length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_indep_2005_49[nrow(df_pospol_indep_2005_49)+1,] <- NA
 
 df_pospol_indep_2003_45$porc_pospol_indep <- (df_pospol_indep_2003_45$porc_pospol_indep + df_pospol_indep_2003_46$porc_pospol_indep)/2
 df_pospol_indep_2003 <- df_pospol_indep_2003_45
@@ -4919,7 +4971,7 @@ df_pospol_indep_2003 <- df_pospol_indep_2003_45
 df_pospol_indep_2004_47$porc_pospol_indep <- (df_pospol_indep_2004_47$porc_pospol_indep + df_pospol_indep_2004_48$porc_pospol_indep)/2
 df_pospol_indep_2004 <- df_pospol_indep_2004_47
 
-df_pospol_indep_2005_49$porc_pospol_indep <- (df_pospol_indep_2005_49$porc_pospol_indep + df_pospol_indep_2005_50$porc_pospol_indep + df_pospol_indep_2005_51)/3
+df_pospol_indep_2005_49$porc_pospol_indep <- (df_pospol_indep_2005_49$porc_pospol_indep + df_pospol_indep_2005_50$porc_pospol_indep + df_pospol_indep_2005_51$porc_pospol_indep)/3
 df_pospol_indep_2005 <- df_pospol_indep_2005_49
 
 # 2006-2008
@@ -5152,6 +5204,7 @@ df_pospol_indep_2014_72 <- df2014_72 %>%group_by(year, esc)%>%summarise(porc_pos
                                                                              length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_indep_2014_72[nrow(df_pospol_indep_2014_72)+1,] <- NA
 
 df_pospol_indep_2012_66$porc_pospol_indep <- (df_pospol_indep_2012_66$porc_pospol_indep + df_pospol_indep_2012_67$porc_pospol_indep + df_pospol_indep_2012_68$porc_pospol_indep)/3
 df_pospol_indep_2012 <- df_pospol_indep_2012_66
@@ -5333,8 +5386,8 @@ df_pospol_indep <- do.call("rbind", list(df_pospol_indep_1990,
 # Save data base
 
 # Save database
-save(df_pospol_indep, file = "output/pospol/Independiente/Independiente-Escolaridad/CEP-pospol-Independiente-Escolaridad.RData")
-write.csv(df_pospol_indep, "output/pospol/Independiente/Independiente-Escolaridad/CEP-pospol-Independiente-Escolaridad.csv")
+#save(df_pospol_indep, file = "output/pospol/Independiente/Independiente-Escolaridad/CEP-pospol-Independiente-Escolaridad.RData")
+#write.csv(df_pospol_indep, "output/pospol/Independiente/Independiente-Escolaridad/CEP-pospol-Independiente-Escolaridad.csv")
 write.xlsx(df_pospol_indep, "output/pospol/Independiente/Independiente-Escolaridad/CEP-pospol-Independiente-Escolaridad.xlsx")
 
 # Derecha
@@ -5372,6 +5425,7 @@ df_pospol_nin_1990_16 <- df1990_16 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_nin_1990_14[nrow(df_pospol_nin_1990_14)+1,] <- NA
 
 df_pospol_nin_1990_14$porc_pospol_nin <- (df_pospol_nin_1990_14$porc_pospol_nin + df_pospol_nin_1990_15$porc_pospol_nin + df_pospol_nin_1990_16$porc_pospol_nin)/3
 df_pospol_nin_1990 <- df_pospol_nin_1990_14
@@ -5480,6 +5534,9 @@ df_pospol_nin_1993_28 <- df1993_28 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_nin_1992_21[nrow(df_pospol_nin_1992_21)+1,] <- NA
+df_pospol_nin_1993_24[nrow(df_pospol_nin_1993_24)+1,] <- NA
+
 df_pospol_nin_1991_17$porc_pospol_nin <- (df_pospol_nin_1991_17$porc_pospol_nin + df_pospol_nin_1991_18$porc_pospol_nin + df_pospol_nin_1991_19$porc_pospol_nin + df_pospol_nin_1991_20$porc_pospol_nin)/4
 df_pospol_nin_1991 <- df_pospol_nin_1991_17
 
@@ -5602,6 +5659,7 @@ df_pospol_nin_1999_38 <- df1999_38 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_nin_1999_38[nrow(df_pospol_nin_1999_38)+1,] <- NA
 
 df_pospol_nin_1997_34$porc_pospol_nin <- (df_pospol_nin_1997_34$porc_pospol_nin + df_pospol_nin_1997_35$porc_pospol_nin)/2
 df_pospol_nin_1997 <- df_pospol_nin_1997_34
@@ -5728,7 +5786,7 @@ df_pospol_nin_2004_48 <- df2004_48 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Independiente")) + 
                                                                            length(which(pos_pol == "Ninguna"))))
 
-df_pospol_nin_2005_49 <- df2002_44 %>%group_by(year, esc)%>%summarise(porc_pospol_nin = 
+df_pospol_nin_2005_49 <- df2005_49 %>%group_by(year, esc)%>%summarise(porc_pospol_nin = 
                                                                          length(which(pos_pol == "Ninguna"))
                                                                        /(length(which(pos_pol == "Derecha"))+
                                                                            length(which(pos_pol == "Centro Derecha"))+
@@ -5759,6 +5817,7 @@ df_pospol_nin_2005_51 <- df2005_51 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Proms
+df_pospol_nin_2005_49[nrow(df_pospol_nin_2005_49)+1,] <- NA
 
 df_pospol_nin_2003_45$porc_pospol_nin <- (df_pospol_nin_2003_45$porc_pospol_nin + df_pospol_nin_2003_46$porc_pospol_nin)/2
 df_pospol_nin_2003 <- df_pospol_nin_2003_45
@@ -5766,7 +5825,7 @@ df_pospol_nin_2003 <- df_pospol_nin_2003_45
 df_pospol_nin_2004_47$porc_pospol_nin <- (df_pospol_nin_2004_47$porc_pospol_nin + df_pospol_nin_2004_48$porc_pospol_nin)/2
 df_pospol_nin_2004 <- df_pospol_nin_2004_47
 
-df_pospol_nin_2005_49$porc_pospol_nin <- (df_pospol_nin_2005_49$porc_pospol_nin + df_pospol_nin_2005_50$porc_pospol_nin + df_pospol_nin_2005_51)/3
+df_pospol_nin_2005_49$porc_pospol_nin <- (df_pospol_nin_2005_49$porc_pospol_nin + df_pospol_nin_2005_50$porc_pospol_nin + df_pospol_nin_2005_51$porc_pospol_nin)/3
 df_pospol_nin_2005 <- df_pospol_nin_2005_49
 
 # 2006-2008
@@ -5999,6 +6058,7 @@ df_pospol_nin_2014_72 <- df2014_72 %>%group_by(year, esc)%>%summarise(porc_pospo
                                                                            length(which(pos_pol == "Ninguna"))))
 
 # Prom
+df_pospol_nin_2014_72[nrow(df_pospol_nin_2014_72)+1,] <- NA
 
 df_pospol_nin_2012_66$porc_pospol_nin <- (df_pospol_nin_2012_66$porc_pospol_nin + df_pospol_nin_2012_67$porc_pospol_nin + df_pospol_nin_2012_68$porc_pospol_nin)/3
 df_pospol_nin_2012 <- df_pospol_nin_2012_66
@@ -6180,6 +6240,6 @@ df_pospol_nin <- do.call("rbind", list(df_pospol_nin_1990,
 # Save data base
 
 # Save database
-save(df_pospol_nin, file = "output/pospol/Ninguna/Ninguna-Escolaridad/CEP-pospol-Ninguna-Escolaridad.RData")
-write.csv(df_pospol_nin, "output/pospol/Ninguna/Ninguna-Escolaridad/CEP-pospol-Ninguna-Escolaridad.csv")
+#save(df_pospol_nin, file = "output/pospol/Ninguna/Ninguna-Escolaridad/CEP-pospol-Ninguna-Escolaridad.RData")
+#write.csv(df_pospol_nin, "output/pospol/Ninguna/Ninguna-Escolaridad/CEP-pospol-Ninguna-Escolaridad.csv")
 write.xlsx(df_pospol_nin, "output/pospol/Ninguna/Ninguna-Escolaridad/CEP-pospol-Ninguna-Escolaridad.xlsx")

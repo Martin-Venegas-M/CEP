@@ -127,7 +127,7 @@ bd1994_1996_32$sexo <- car::recode(bd1994_1996_32$sexo, "1 = 'Hombre'; 2 = 'Muje
 
 ### 1994-1996: CEP 33
 bd1994_1996_33$nse  <- car::recode(bd1994_1996_33$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1994_1996_33$esc <- car::recode(bd1994_1996_33$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1994_1996_33$esc <- car::recode(bd1994_1996_33$esc, "c(0,1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd1994_1996_33$edad <- car::recode(bd1994_1996_33$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1994_1996_33$sexo <- car::recode(bd1994_1996_33$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 

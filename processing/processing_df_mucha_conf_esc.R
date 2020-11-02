@@ -665,6 +665,12 @@ df_conf_cep_per_esc  <- merge(merge(merge(merge(merge(
   df_conf_congreso_personas, by = c("year", "esc"), all = TRUE),
   df_conf_dircortesup_personas, by = c("year", "esc"), all = TRUE)
 
+# Eliminar rows repetidas y categorias NA
+
+df_conf_cep_inst_esc <- df_conf_cep_inst_esc[-c(5, 10, 15, 16, 18, 20, 22, 24, 30, 35, 40, 45, 50),]
+df_conf_cep_per_esc <- df_conf_cep_per_esc[-c(5, 10, 15, 20),]
+
+
 # Test grafic                
 df_conf_partidos_inst %>%
   tail(10) %>%

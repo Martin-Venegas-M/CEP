@@ -109,13 +109,13 @@ frq(bd1997_1999_38$sexo)
 #---- 3.1.2 Recodificación ----
 ### 1997-1999: CEP 34
 bd1997_1999_34$nse  <- car::recode(bd1997_1999_34$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1997_1999_34$esc <- car::recode(bd1997_1999_34$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1997_1999_34$esc <- car::recode(bd1997_1999_34$esc, "c(0,1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd1997_1999_34$edad <- car::recode(bd1997_1999_34$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1997_1999_34$sexo <- car::recode(bd1997_1999_34$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 
 ### 1997-1999: CEP 35
 bd1997_1999_35$nse  <- car::recode(bd1997_1999_35$nse, "1 = 'ABC1'; 2 = 'C2'; 3 = 'C3'; 4 = 'D'; 5 = 'E'", as.factor = T)
-bd1997_1999_35$esc <- car::recode(bd1997_1999_35$esc, "c(1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
+bd1997_1999_35$esc <- car::recode(bd1997_1999_35$esc, "c(0,1,2) = '0-3'; c(3,4) = '4-8'; c(5,6) = '9-12'; c(7,8) = '13 y mas'; 9 = NA", as.factor = T)
 bd1997_1999_35$edad <- car::recode(bd1997_1999_35$edad, "1 = '18-24'; 2 = '25-34'; c(3,4) = '35-54'; c(5,6) = '55 y mas'; 7 = NA", as.factor = T)
 bd1997_1999_35$sexo <- car::recode(bd1997_1999_35$sexo, "1 = 'Hombre'; 2 = 'Mujer'", as.factor = T)
 

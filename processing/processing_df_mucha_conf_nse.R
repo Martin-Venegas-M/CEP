@@ -665,6 +665,11 @@ df_conf_cep_per_nse  <- merge(merge(merge(merge(merge(
   df_conf_congreso_personas, by = c("year", "nse"), all = TRUE),
   df_conf_dircortesup_personas, by = c("year", "nse"), all = TRUE)
 
+# Eliminar rows NA y repetidas
+df_conf_cep_inst_nse <- df_conf_cep_inst_nse[-c(16,18,20,22,24),]
+df_conf_cep_per_nse <- df_conf_cep_per_nse[-c(5,11),]
+
+
 # Test grafic                
 df_conf_partidos_inst %>%
   tail(10) %>%

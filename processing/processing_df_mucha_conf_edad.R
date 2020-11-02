@@ -656,6 +656,10 @@ df_conf_cep_inst_edad  <- merge(merge(merge(merge(merge(merge(
   df_conf_partidos_inst, by = c("year", "edad"), all = TRUE),
   df_conf_congreso_inst, by = c("year", "edad"), all = TRUE)
 
+# Delet repeated rows
+
+df_conf_cep_inst_edad <- df_conf_cep_inst_edad[-c(13,15,17,19),]
+
 # Merge all per
 
 df_conf_cep_per_edad  <- merge(merge(merge(merge(merge(

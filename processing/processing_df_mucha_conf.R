@@ -656,6 +656,10 @@ df_conf_cep_inst  <- merge(merge(merge(merge(merge(merge(
  df_conf_partidos_inst, by = "year", all = TRUE),
  df_conf_congreso_inst, by = "year", all = TRUE)
 
+# Delete repeated row
+
+df_conf_cep_inst <- df_conf_cep_inst[-4,]
+
 # Merge all per
 
 df_conf_cep_per  <- merge(merge(merge(merge(merge(
@@ -683,11 +687,11 @@ partidos
 
 
 # Save database
-save(df_conf_cep_inst, file = "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Inst.RData")
-write.csv(df_conf_cep_inst, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Inst.csv")
+#save(df_conf_cep_inst, file = "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Inst.RData")
+#write.csv(df_conf_cep_inst, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Inst.csv")
 write.xlsx(df_conf_cep_inst, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Inst.xlsx")
 
-save(df_conf_cep_per, file = "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Per.RData")
-write.csv(df_conf_cep_per, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Per.csv")
+#save(df_conf_cep_per, file = "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Per.RData")
+#write.csv(df_conf_cep_per, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Per.csv")
 write.xlsx(df_conf_cep_per, "output/Confianza-Mucha-Conf/CEP-Mucha-Conf-Per.xlsx")
 

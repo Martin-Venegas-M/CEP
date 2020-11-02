@@ -547,7 +547,7 @@ df_idpart_der_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart_der
                                                                  length(which(id_part == "Ninguno"))+
                                                                  length(which(id_part == "Derecha"))))
 
-df_idpart_der_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_der = 
+df_idpart_der_2005_49 <- df2005_49 %>%group_by(year)%>%summarise(porc_idpart_der = 
                                                                length(which(id_part == "Derecha"))
                                                              /(length(which(id_part == "Centro-Izquierda concertación"))+
                                                                  length(which(id_part == "Izquierda extraconcertación"))+
@@ -576,7 +576,7 @@ df_idpart_der_2003 <- df_idpart_der_2003_45
 df_idpart_der_2004_47$porc_idpart_der <- (df_idpart_der_2004_47$porc_idpart_der + df_idpart_der_2004_48$porc_idpart_der)/2
 df_idpart_der_2004 <- df_idpart_der_2004_47
 
-df_idpart_der_2005_49$porc_idpart_der <- (df_idpart_der_2005_49$porc_idpart_der + df_idpart_der_2005_50$porc_idpart_der + df_idpart_der_2005_51)/3
+df_idpart_der_2005_49$porc_idpart_der <- (df_idpart_der_2005_49$porc_idpart_der + df_idpart_der_2005_50$porc_idpart_der + df_idpart_der_2005_51$porc_idpart_der)/3
 df_idpart_der_2005 <- df_idpart_der_2005_49
 
 # 2006-2008
@@ -904,8 +904,8 @@ df_idpart_der <- do.call("rbind", list(df_idpart_der_1990,
 # Save data base
 
 # Save database
-save(df_idpart_der, file = "output/Idpart/Derecha/CEP-Idpart-Derecha.RData")
-write.csv(df_idpart_der, "output/Idpart/Derecha/CEP-Idpart-Derecha.csv")
+#save(df_idpart_der, file = "output/Idpart/Derecha/CEP-Idpart-Derecha.RData")
+#write.csv(df_idpart_der, "output/Idpart/Derecha/CEP-Idpart-Derecha.csv")
 write.xlsx(df_idpart_der, "output/Idpart/Derecha/CEP-Idpart-Derecha.xlsx")
 
 # Centro izquierda concertación
@@ -1201,7 +1201,7 @@ df_idpart_centizq_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart
                                                                      length(which(id_part == "Ninguno"))+
                                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_centizq_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
+df_idpart_centizq_2005_49 <- df2005_49 %>%group_by(year)%>%summarise(porc_idpart_centizq = 
                                                                    length(which(id_part == "Centro-Izquierda concertación"))
                                                                  /(length(which(id_part == "Centro-Izquierda concertación"))+
                                                                      length(which(id_part == "Izquierda extraconcertación"))+
@@ -1230,7 +1230,7 @@ df_idpart_centizq_2003 <- df_idpart_centizq_2003_45
 df_idpart_centizq_2004_47$porc_idpart_centizq <- (df_idpart_centizq_2004_47$porc_idpart_centizq + df_idpart_centizq_2004_48$porc_idpart_centizq)/2
 df_idpart_centizq_2004 <- df_idpart_centizq_2004_47
 
-df_idpart_centizq_2005_49$porc_idpart_centizq <- (df_idpart_centizq_2005_49$porc_idpart_centizq + df_idpart_centizq_2005_50$porc_idpart_centizq + df_idpart_centizq_2005_51)/3
+df_idpart_centizq_2005_49$porc_idpart_centizq <- (df_idpart_centizq_2005_49$porc_idpart_centizq + df_idpart_centizq_2005_50$porc_idpart_centizq + df_idpart_centizq_2005_51$porc_idpart_centizq)/3
 df_idpart_centizq_2005 <- df_idpart_centizq_2005_49
 
 # 2006-2008
@@ -1558,8 +1558,8 @@ df_idpart_centizq <- do.call("rbind", list(df_idpart_centizq_1990,
 # Save data base
 
 # Save database
-save(df_idpart_centizq, file = "output/Idpart/Centro-Izquierda-Concertacion/CEP-Idpart-Centro-Izquierda-Concertacion.RData")
-write.csv(df_idpart_centizq, "output/Idpart/Centro-Izquierda-Concertacion/CEP-Idpart-Centro-Izquierda-Concertacion.csv")
+#save(df_idpart_centizq, file = "output/Idpart/Centro-Izquierda-Concertacion/CEP-Idpart-Centro-Izquierda-Concertacion.RData")
+#write.csv(df_idpart_centizq, "output/Idpart/Centro-Izquierda-Concertacion/CEP-Idpart-Centro-Izquierda-Concertacion.csv")
 write.xlsx(df_idpart_centizq, "output/Idpart/Centro-Izquierda-Concertacion/CEP-Idpart-Centro-Izquierda-Concertacion.xlsx")
 
 
@@ -1857,7 +1857,7 @@ df_idpart_nin_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart_nin
                                                                      length(which(id_part == "Ninguno"))+
                                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_nin_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_nin = 
+df_idpart_nin_2005_49 <- df2005_49 %>%group_by(year)%>%summarise(porc_idpart_nin = 
                                                                    length(which(id_part == "Ninguno"))
                                                                  /(length(which(id_part == "Centro-Izquierda concertación"))+
                                                                      length(which(id_part == "Izquierda extraconcertación"))+
@@ -1886,7 +1886,7 @@ df_idpart_nin_2003 <- df_idpart_nin_2003_45
 df_idpart_nin_2004_47$porc_idpart_nin <- (df_idpart_nin_2004_47$porc_idpart_nin + df_idpart_nin_2004_48$porc_idpart_nin)/2
 df_idpart_nin_2004 <- df_idpart_nin_2004_47
 
-df_idpart_nin_2005_49$porc_idpart_nin <- (df_idpart_nin_2005_49$porc_idpart_nin + df_idpart_nin_2005_50$porc_idpart_nin + df_idpart_nin_2005_51)/3
+df_idpart_nin_2005_49$porc_idpart_nin <- (df_idpart_nin_2005_49$porc_idpart_nin + df_idpart_nin_2005_50$porc_idpart_nin + df_idpart_nin_2005_51$porc_idpart_nin)/3
 df_idpart_nin_2005 <- df_idpart_nin_2005_49
 
 # 2006-2008
@@ -2214,8 +2214,8 @@ df_idpart_nin <- do.call("rbind", list(df_idpart_nin_1990,
 # Save data base
 
 # Save database
-save(df_idpart_nin, file = "output/Idpart/Ninguno/CEP-Idpart-Ninguno.RData")
-write.csv(df_idpart_nin, "output/Idpart/Ninguno/CEP-Idpart-Ninguno.csv")
+#save(df_idpart_nin, file = "output/Idpart/Ninguno/CEP-Idpart-Ninguno.RData")
+#write.csv(df_idpart_nin, "output/Idpart/Ninguno/CEP-Idpart-Ninguno.csv")
 write.xlsx(df_idpart_nin, "output/Idpart/Ninguno/CEP-Idpart-Ninguno.xlsx")
 
 # Izquierda extraconcertación
@@ -2511,7 +2511,7 @@ df_idpart_izqext_2004_48 <- df2004_48 %>%group_by(year)%>%summarise(porc_idpart_
                                                                      length(which(id_part == "Ninguno"))+
                                                                      length(which(id_part == "Derecha"))))
 
-df_idpart_izqext_2005_49 <- df2002_44 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
+df_idpart_izqext_2005_49 <- df2005_49 %>%group_by(year)%>%summarise(porc_idpart_izqext = 
                                                                    length(which(id_part == "Izquierda extraconcertación"))
                                                                  /(length(which(id_part == "Centro-Izquierda concertación"))+
                                                                      length(which(id_part == "Izquierda extraconcertación"))+
@@ -2540,7 +2540,7 @@ df_idpart_izqext_2003 <- df_idpart_izqext_2003_45
 df_idpart_izqext_2004_47$porc_idpart_izqext <- (df_idpart_izqext_2004_47$porc_idpart_izqext + df_idpart_izqext_2004_48$porc_idpart_izqext)/2
 df_idpart_izqext_2004 <- df_idpart_izqext_2004_47
 
-df_idpart_izqext_2005_49$porc_idpart_izqext <- (df_idpart_izqext_2005_49$porc_idpart_izqext + df_idpart_izqext_2005_50$porc_idpart_izqext + df_idpart_izqext_2005_51)/3
+df_idpart_izqext_2005_49$porc_idpart_izqext <- (df_idpart_izqext_2005_49$porc_idpart_izqext + df_idpart_izqext_2005_50$porc_idpart_izqext + df_idpart_izqext_2005_51$porc_idpart_izqext)/3
 df_idpart_izqext_2005 <- df_idpart_izqext_2005_49
 
 # 2006-2008
@@ -2868,8 +2868,8 @@ df_idpart_izqext <- do.call("rbind", list(df_idpart_izqext_1990,
 # Save data base
 
 # Save database
-save(df_idpart_izqext, file = "output/Idpart/Izquierda-extraconcertacion/CEP-Idpart-Izquierda-extraconcertacion.RData")
-write.csv(df_idpart_izqext, "output/Idpart/Izquierda-extraconcertacion/CEP-Idpart-Izquierda-extraconcertacion.csv")
+#save(df_idpart_izqext, file = "output/Idpart/Izquierda-extraconcertacion/CEP-Idpart-Izquierda-extraconcertacion.RData")
+#write.csv(df_idpart_izqext, "output/Idpart/Izquierda-extraconcertacion/CEP-Idpart-Izquierda-extraconcertacion.csv")
 write.xlsx(df_idpart_izqext, "output/Idpart/Izquierda-extraconcertacion/CEP-Idpart-Izquierda-extraconcertacion.xlsx")
 
 # Merging all data frames
