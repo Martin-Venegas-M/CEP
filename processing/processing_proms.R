@@ -361,12 +361,12 @@ writexl::write_xlsx(ip_nin_nse, "output/CEP-Datasets/V.2CEP-Idpart-Ninguno-NSE.x
 writexl::write_xlsx(ip_nin_sexo, "output/CEP-Datasets/V.2CEP-Idpart-Ninguno-Sexo.xlsx")
 
 # Izquierda extraconcertacion
-writexl::write_xlsx(ip_nin, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion.xlsx")
+writexl::write_xlsx(ip_izqext, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion.xlsx")
 
-writexl::write_xlsx(ip_nin_edad, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion-Edad.xlsx")
-writexl::write_xlsx(ip_nin_esc, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion-Escolaridad.xlsx")
-writexl::write_xlsx(ip_nin_nse, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion-NSE.xlsx")
-writexl::write_xlsx(ip_nin_sexo, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion-Sexo.xlsx")
+writexl::write_xlsx(ip_izqext_edad, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion-Edad.xlsx")
+writexl::write_xlsx(ip_izqext_esc, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion-Escolaridad.xlsx")
+writexl::write_xlsx(ip_izqext_nse, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion-NSE.xlsx")
+writexl::write_xlsx(ip_izqext_sexo, "output/CEP-Datasets/V.2CEP-Idpart-Izquierda-Extraconcertacion-Sexo.xlsx")
 
 # Posicion politica
 
